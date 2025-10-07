@@ -1,0 +1,21 @@
+{% extends 'events/base.html' %}
+
+{% block title %}RSVP{% endblock %}
+
+{% block content %}
+<h2>Réponse à l'invitation : {{ guest_email }}</h2>
+
+{% if error %}
+<div class="alert alert-danger">{{ error }}</div>
+{% else %}
+{% if message %}
+<div class="alert alert-success">{{ message }}</div>
+{% endif %}
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit" name="status" value="Accepted" class="btn btn-success">Accepter ✅</button>
+    <button type="submit" name="status" value="Declined" class="btn btn-danger">Refuser ❌</button>
+</form>
+{% endif %}
+{% endblock %}

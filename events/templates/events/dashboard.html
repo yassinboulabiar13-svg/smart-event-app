@@ -1,0 +1,40 @@
+{% extends 'events/base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h1 class="mb-4 text-center">📊 Tableau de bord</h1>
+
+{% if event_data %}
+<div class="row g-4">
+    {% for item in event_data %}
+    <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="card-title text-primary">{{ item.event.title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ item.event.date|date:"d/m/Y H:i" }}</h6>
+                <p class="card-text mt-2">{{ item.event.description }}</p>
+                <p><strong>📍 Lieu :</strong> {{ item.event.location }}</p>
+                <p><strong>✉️ Invités :</strong> {{ item.event.guests_emails }}</p>
+
+                <hr>
+                <h6 class="fw-bold mb-2">Statistiques :</h6>
+                <ul class="list-group list-group-flush mb-3">
+                    <li class="list-group-item">✅ Accepté : <strong>{{ item.accepted }}</strong></li>
+                    <li class="list-group-item">❌ Refusé : <strong>{{ item.declined }}</strong></li>
+                    <li class="list-group-item">⏳ En attente : <strong>{{ item.pending }}</strong></li>
+                </ul>
+
+                <div class="text-center">
+                    <p class="fw-bold">QR Code :</p>
+                    <img src="data:image/png;base64,{{ item.qr_code }}" alt="QR Code" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="alert alert-info text-center">Aucun événement pour le moment.</div>
+{% endif %}
+{% endblock %}
