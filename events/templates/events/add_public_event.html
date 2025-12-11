@@ -1,0 +1,360 @@
+{% extends 'events/base.html' %}
+{% load widget_tweaks %}
+{% block title %}Ajouter un événement public{% endblock %}
+{% block hero_title %}➕ Ajouter un événement public{% endblock %}
+
+{% block content %}
+<section class="dashboard-section py-5">
+  <div class="container">
+    <div class="event-card-glow p-4 mb-5">
+      <div class="event-header" style="--accent:#00bcd4;">➕ Créer un nouvel événement public</div>
+
+      <div class="event-body">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+
+        <form method="POST" novalidate enctype="multipart/form-data">
+          {% csrf_token %}
+
+          <!-- Titre -->
+          <div class="mb-3">
+            <label class="form-label text-light fw-bold">Titre de l'événement</label>
+            {{ form.title|add_class:"form-control-dark" }}
+            {% if form.title.errors %}
+              <div class="text-danger small">{{ form.title.errors }}</div>
+            {% endif %}
+          </div>
+
+          <!-- Description -->
+          <div class="mb-3">
+            <label class="form-label text-light fw-bold">Description</label>
+            {{ form.description|add_class:"form-control-dark" }}
+            {% if form.description.errors %}
+              <div class="text-danger small">{{ form.description.errors }}</div>
+            {% endif %}
+          </div>
+
+          <!-- Date -->
+          <div class="mb-3">
+            <label class="form-label text-light fw-bold">Date et heure</label>
+            {{ form.date|add_class:"form-control-dark" }}
+            {% if form.date.errors %}
+              <div class="text-danger small">{{ form.date.errors }}</div>
+            {% endif %}
+          </div>
+
+          <!-- Lieu -->
+          <div class="mb-3">
+            <label class="form-label text-light fw-bold">Lieu</label>
+            {{ form.location|add_class:"form-control-dark" }}
+            {% if form.location.errors %}
+              <div class="text-danger small">{{ form.location.errors }}</div>
+            {% endif %}
+          </div>
+
+          <!-- Lien en ligne -->
+          <div class="mb-3">
+            <label class="form-label text-light fw-bold">Lien en ligne (optionnel)</label>
+            {{ form.online_link|add_class:"form-control-dark" }}
+            {% if form.online_link.errors %}
+              <div class="text-danger small">{{ form.online_link.errors }}</div>
+            {% endif %}
+          </div>
+
+          <!-- Type d'événement -->
+          <div class="mb-3">
+            <label class="form-label text-light fw-bold">Type d'événement</label>
+            {{ form.is_paid|add_class:"form-select-dark" }}
+            {% if form.is_paid.errors %}
+              <div class="text-danger small">{{ form.is_paid.errors }}</div>
+            {% endif %}
+          </div>
+
+          <!-- Prix (affiché seulement si payant) -->
+          <div class="mb-3" id="price-field" style="display: none;">
+            <label class="form-label text-light fw-bold">Prix (DT) <span class="text-danger">*</span></label>
+            {{ form.price|add_class:"form-control-dark" }}
+            {% if form.price.errors %}
+              <div class="text-danger small">{{ form.price.errors }}</div>
+            {% endif %}
+            <div class="form-text text-muted">Entrez le prix en dinars tunisiens (ex: 25.00)</div>
+          </div>
+
+          <!-- Participants maximum -->
+          <div class="mb-3">
+            <label class="form-label text-light fw-bold">Nombre maximum de participants (optionnel)</label>
+            {{ form.max_participants|add_class:"form-control-dark" }}
+            {% if form.max_participants.errors %}
+              <div class="text-danger small">{{ form.max_participants.errors }}</div>
+            {% endif %}
+            <div class="form-text text-muted">Laissez vide pour un nombre illimité de participants</div>
+          </div>
+
+          <!-- Image -->
+          <div class="mb-3">
+            <label class="form-label text-light fw-bold">Image de l'événement (optionnel)</label>
+            {{ form.image|add_class:"form-control-dark" }}
+            {% if form.image.errors %}
+              <div class="text-danger small">{{ form.image.errors }}</div>
+            {% endif %}
+            <div class="form-text text-muted">Formats acceptés: JPG, PNG, GIF</div>
+          </div>
+
+          <!-- Boutons -->
+          <div class="text-center mt-4">
+            <button type="submit" class="btn-neon edit px-4 py-2">💾 Créer l'événement</button>
+            <a href="{% url 'dashboard' %}" class="btn-neon neutral px-4 py-2 ms-2">⬅ Annuler</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const eventTypeSelect = document.querySelector('select[name="is_paid"]');
+  const priceField = document.getElementById('price-field');
+  const priceInput = document.querySelector('input[name="price"]');
+
+  function togglePriceField() {
+    if (eventTypeSelect.value === 'paid') {
+      priceField.style.display = 'block';
+      if (priceInput) {
+        priceInput.required = true;
+      }
+    } else {
+      priceField.style.display = 'none';
+      if (priceInput) {
+        priceInput.required = false;
+        priceInput.value = '';
+      }
+    }
+  }
+
+  // Initial state - check current value
+  if (eventTypeSelect) {
+    togglePriceField();
+    
+    // On change event
+    eventTypeSelect.addEventListener('change', togglePriceField);
+  }
+
+  // Form validation
+  const form = document.querySelector('form');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      if (eventTypeSelect && eventTypeSelect.value === 'paid' && priceInput) {
+        const priceValue = parseFloat(priceInput.value);
+        if (!priceValue || priceValue <= 0) {
+          e.preventDefault();
+          alert('Veuillez entrer un prix valide supérieur à 0 pour un événement payant.');
+          priceInput.focus();
+          return false;
+        }
+      }
+      
+      // Additional validation for date
+      const dateInput = document.querySelector('input[type="datetime-local"]');
+      if (dateInput && dateInput.value) {
+        const selectedDate = new Date(dateInput.value);
+        const now = new Date();
+        if (selectedDate < now) {
+          e.preventDefault();
+          alert('La date de l\'événement ne peut pas être dans le passé.');
+          dateInput.focus();
+          return false;
+        }
+      }
+    });
+  }
+});
+</script>
+
+<style>
+/* === Style Dashboard / futuriste cohérent === */
+.dashboard-section {
+  background: rgba(0,0,0,0.85);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 0 25px rgba(138,95,255,0.15);
+}
+
+.event-card-glow {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.event-card-glow:hover {
+  box-shadow: 0 0 30px var(--accent, #6a5acd);
+}
+
+.event-header {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.event-body {
+  padding: 1.5rem;
+}
+
+/* Champs formulaire */
+.form-control-dark, .form-select-dark {
+  width: 100%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.form-control-dark:focus, .form-select-dark:focus {
+  background: rgba(255,255,255,0.15);
+  border-color: #00bcd4;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+  outline: none;
+}
+
+.form-select-dark {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 16px 12px;
+}
+
+.form-select-dark option {
+  background: #2d2d2d;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+/* Boutons */
+.btn-neon {
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.btn-neon:hover {
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 0 15px currentColor;  
+  color: #fff;
+  transform: translateY(-2px);
+}
+.btn-neon.edit { 
+  color: #00bcd4;
+  border-color: #00bcd4;
+}
+.btn-neon.neutral { 
+  color: #9e9e9e;
+  border-color: #9e9e9e;
+}
+
+/* Texte et labels */
+label.form-label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.text-danger { 
+  color: #ff6b6b !important; 
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.text-danger small {
+  font-size: 0.8rem;
+}
+
+/* Animation pour l'apparition du champ prix */
+#price-field {
+  transition: all 0.3s ease-in-out;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-text {
+  font-size: 0.85rem;
+  color: #aaa !important;
+  margin-top: 0.25rem;
+}
+
+/* Alert messages */
+.alert {
+  border-radius: 8px;
+  border: none;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.alert-success {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.alert-error, 
+.alert-danger {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+.alert-info {
+  background: rgba(33, 150, 243, 0.2);
+  color: #2196f3;
+  border: 1px solid rgba(33, 150, 243, 0.3);
+}
+
+/* Required field indicator */
+.text-danger[class*="text-danger"] {
+  color: #ff6b6b !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dashboard-section {
+    padding: 1rem;
+  }
+  
+  .event-body {
+    padding: 1rem;
+  }
+  
+  .btn-neon {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .btn-neon.ms-2 {
+    margin-left: 0 !important;
+  }
+}
+</style>
+{% endblock %}

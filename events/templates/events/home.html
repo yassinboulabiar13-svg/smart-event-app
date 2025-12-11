@@ -1,0 +1,69 @@
+{% extends 'events/base.html' %}
+
+{% block title %}Accueil — Smart Event{% endblock %}
+{% block hero_title %}Bienvenue sur Smart Event{% endblock %}
+
+{% block content %}
+<div class="text-center">
+  <h2 class="mb-4" style="color:#b0b9ff;">
+    Créez, gérez et partagez vos événements en toute simplicité
+  </h2>
+  <p style="max-width:700px;margin:0 auto;color:#aaa;">
+    Smart Event est la plateforme qui simplifie l'organisation d'événements. 
+    Que vous soyez un particulier, une entreprise ou une association, vous pouvez créer, gérer et promouvoir vos événements facilement.
+  </p>
+
+  <div class="mt-5">
+    <a href="{% url 'register' %}" class="btn btn-primary me-3" style="background-color:#8a5fff;border:none;">
+      Commencer maintenant
+    </a>
+    <a href="{% url 'about' %}" class="btn btn-outline-light">
+      En savoir plus
+    </a>
+  </div>
+</div>
+<div class="text-center mt-4">
+  <form method="GET" class="d-flex justify-content-center" style="gap: 0.5rem;">
+    <input type="text" name="q" value="{{ query }}" placeholder="Rechercher un événement..." 
+           class="form-control form-control-dark" style="width: 300px;">
+    <button type="submit" class="btn btn-primary" style="background-color:#8a5fff;border:none;">🔍 Rechercher</button>
+  </form>
+</div>
+
+<hr style="margin: 3rem 0; border-color: #444;">
+
+<h3 class="text-center" style="color:#b0b9ff;">🌍 Événements publics à venir</h3>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 2rem;">
+  {% if events %}
+    {% for event in events %}
+      <div style="background-color: #1e1e2f; padding: 1.2rem; border-radius: 10px; width: 280px; text-align: left; box-shadow: 0 0 10px rgba(0,0,0,0.4);">
+        <h4 style="color: #fff;">{{ event.title }}</h4>
+        <p style="color: #bbb; margin: 0.3rem 0;">📅 {{ event.date|date:"d/m/Y H:i" }}</p>
+        <p style="color: #bbb; margin: 0.3rem 0;">📍 {{ event.location }}</p>
+        {% if event.description %}
+          <p style="color: #999;">{{ event.description|truncatechars:80 }}</p>
+        {% endif %}
+        <a href="{% url 'event_detail' 'public' event.id %}" style="display: inline-block; margin-top: 0.5rem; color: #8a5fff; text-decoration: none;">Voir les détails →</a>
+      </div>
+    {% empty %}
+      <p style="width: 100%; text-align: center; color: #999;">
+        {% if query %}
+          Aucun événement trouvé pour "{{ query }}".
+        {% else %}
+          Aucun événement à venir pour le moment.
+        {% endif %}
+      </p>
+    {% endfor %}
+  {% else %}
+    <p style="width: 100%; text-align: center; color: #999;">
+      {% if query %}
+        Aucun événement trouvé pour "{{ query }}".
+      {% else %}
+        Aucun événement à venir pour le moment.
+      {% endif %}
+    </p>
+  {% endif %}
+</div>
+
+{% endblock %}

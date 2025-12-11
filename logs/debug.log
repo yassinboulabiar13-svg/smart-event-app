@@ -1,0 +1,2184 @@
+INFO 2025-12-09 13:28:18,889 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 13:28:18,911 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 13:28:18,990 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 13:28:19,071 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 13:28:19,209 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 13:28:19,256 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 13:28:19,302 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 13:28:19,303 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 13:28:24,757 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 13:28:51,120 base Session data corrupted
+INFO 2025-12-09 13:28:51,205 basehttp "GET /add/private/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:28:51,278 basehttp "GET /login/?next=/add/private/ HTTP/1.1" 200 7337
+INFO 2025-12-09 13:28:55,401 basehttp "POST /login/?next=/add/private/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:28:55,478 basehttp "GET /add/private/ HTTP/1.1" 200 9408
+INFO 2025-12-09 13:29:23,620 views Début de l'envoi des invitations
+INFO 2025-12-09 13:29:23,620 views Début de l'envoi des invitations
+INFO 2025-12-09 13:29:25,875 views Email envoyé avec succès à yassinboulabiar13@gmail.com
+INFO 2025-12-09 13:29:25,875 views Email envoyé avec succès à yassinboulabiar13@gmail.com
+INFO 2025-12-09 13:29:25,925 basehttp "POST /add/private/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:29:26,158 basehttp "GET /dashboard/ HTTP/1.1" 200 66493
+INFO 2025-12-09 13:29:43,772 basehttp "GET /rsvp/afbcf743-2f76-4d5d-a97b-ea5440e41e7b/ HTTP/1.1" 200 7803
+INFO 2025-12-09 13:29:46,204 basehttp "POST /rsvp/afbcf743-2f76-4d5d-a97b-ea5440e41e7b/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:29:46,294 basehttp "GET /rsvp/afbcf743-2f76-4d5d-a97b-ea5440e41e7b/confirm/ HTTP/1.1" 200 6723
+INFO 2025-12-09 13:29:48,679 basehttp "GET /dashboard/ HTTP/1.1" 200 66568
+INFO 2025-12-09 17:19:21,072 autoreload C:\Users\ovic\smart_event - Copie\events\urls.py changed, reloading.
+INFO 2025-12-09 17:19:24,519 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:19:27,484 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:19:29,359 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:19:43,344 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:19:45,208 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:19:53,968 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:19:55,876 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:20:25,635 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:20:27,546 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:21:05,453 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:21:07,438 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:21:38,010 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:21:39,940 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:21:52,972 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:21:54,856 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:22:20,314 autoreload C:\Users\ovic\smart_event - Copie\events\urls.py changed, reloading.
+INFO 2025-12-09 17:22:22,187 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:22:27,819 autoreload C:\Users\ovic\smart_event - Copie\events\urls.py changed, reloading.
+INFO 2025-12-09 17:22:29,866 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:22:50,068 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:22:52,027 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:23:01,878 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:23:03,626 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:23:46,839 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:24:04,386 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:24:06,098 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:24:17,895 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:24:19,944 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:26:48,446 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:26:50,365 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:27:03,609 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:27:05,864 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:27:21,212 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:27:23,770 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:29:16,436 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:29:18,620 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:37:40,215 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:37:42,022 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:38:48,508 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:38:50,346 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:40:21,563 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:40:24,081 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:42:15,454 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:42:17,545 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:43:48,294 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:43:50,451 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:44:01,577 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:44:04,029 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:44:22,474 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:44:24,944 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:45:08,230 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:45:10,172 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:46:29,075 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:47:07,549 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:47:09,331 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:47:20,397 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:47:22,875 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:48:46,546 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:48:48,546 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:51:59,860 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:52:02,272 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:54:43,339 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:54:45,727 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 17:57:18,767 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 17:57:20,893 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 18:00:35,258 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-09 18:00:35,292 basehttp "GET /login/?next=/dashboard/ HTTP/1.1" 200 7337
+INFO 2025-12-09 18:00:38,491 basehttp "POST /login/?next=/dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-09 18:00:38,586 basehttp "GET /dashboard/ HTTP/1.1" 200 66575
+INFO 2025-12-09 18:01:52,925 basehttp "GET /dashboard/ HTTP/1.1" 200 66575
+INFO 2025-12-09 18:12:15,190 autoreload C:\Users\ovic\smart_event - Copie\smart_event\settings.py changed, reloading.
+INFO 2025-12-09 18:12:17,802 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 18:16:53,024 basehttp "GET /dashboard/ HTTP/1.1" 200 66575
+INFO 2025-12-09 18:16:54,763 basehttp "GET /dashboard/ HTTP/1.1" 200 66575
+INFO 2025-12-09 18:16:55,498 basehttp "GET /dashboard/ HTTP/1.1" 200 66575
+INFO 2025-12-09 18:17:01,850 basehttp "GET /about/ HTTP/1.1" 200 6533
+INFO 2025-12-09 18:17:03,846 basehttp "GET /home/ HTTP/1.1" 200 6744
+INFO 2025-12-09 18:27:46,520 autoreload C:\Users\ovic\smart_event - Copie\events\urls.py changed, reloading.
+INFO 2025-12-09 18:27:49,233 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 18:27:53,089 autoreload C:\Users\ovic\smart_event - Copie\events\urls.py changed, reloading.
+INFO 2025-12-09 18:27:55,647 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 18:32:26,607 basehttp "GET /home/ HTTP/1.1" 200 6744
+INFO 2025-12-09 18:32:28,036 basehttp "GET /home/ HTTP/1.1" 200 6744
+ERROR 2025-12-09 18:32:32,325 log Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ovic\smart_event - Copie\events\views.py", line 1187, in profile
+    'public_events': PublicEvent.objects.filter(owner=request.user).order_by('-date_created'),
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\query.py", line 1722, in order_by
+    obj.query.add_ordering(*field_names)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\sql\query.py", line 2305, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'date_created' into field. Choices are: created_at, date, description, guests, id, image, is_paid, location, max_participants, online_link, owner, owner_id, price, rsvps, title, updated_at
+ERROR 2025-12-09 18:32:32,335 basehttp "GET /profile/ HTTP/1.1" 500 91007
+INFO 2025-12-09 18:32:55,105 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 18:32:57,077 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 18:33:07,483 basehttp "GET /profile/ HTTP/1.1" 200 12907
+INFO 2025-12-09 18:33:07,625 basehttp "GET /media/profiles/ceasar_challenge.png HTTP/1.1" 200 48714
+INFO 2025-12-09 18:33:14,505 basehttp "GET /home/ HTTP/1.1" 200 6744
+INFO 2025-12-09 18:33:26,488 basehttp "GET /dashboard/?type=private HTTP/1.1" 200 56269
+INFO 2025-12-09 18:33:29,064 basehttp "GET /dashboard/?type=public HTTP/1.1" 200 22376
+INFO 2025-12-09 18:33:31,180 basehttp "GET /contact/ HTTP/1.1" 200 7099
+INFO 2025-12-09 18:33:32,986 basehttp "GET /about/ HTTP/1.1" 200 6533
+INFO 2025-12-09 18:33:34,994 basehttp "GET /home/ HTTP/1.1" 200 6744
+INFO 2025-12-09 18:34:27,170 basehttp "GET /home/ HTTP/1.1" 200 6744
+INFO 2025-12-09 18:34:43,398 basehttp "GET /profile/ HTTP/1.1" 200 12907
+INFO 2025-12-09 18:36:58,940 basehttp "GET /profile/ HTTP/1.1" 200 12907
+INFO 2025-12-09 18:37:01,029 basehttp "GET /profile/ HTTP/1.1" 200 12907
+INFO 2025-12-09 18:39:22,544 basehttp "GET /dashboard/ HTTP/1.1" 200 66589
+INFO 2025-12-09 18:39:25,772 basehttp "GET /dashboard/ HTTP/1.1" 200 66589
+INFO 2025-12-09 18:39:33,104 basehttp "GET /dashboard/ HTTP/1.1" 200 66589
+INFO 2025-12-09 18:42:05,846 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 18:42:07,767 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 18:42:34,847 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 18:42:36,951 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 18:42:48,204 autoreload C:\Users\ovic\smart_event - Copie\events\urls.py changed, reloading.
+INFO 2025-12-09 18:42:51,010 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 18:44:40,744 basehttp "GET /profile/ HTTP/1.1" 200 12983
+INFO 2025-12-09 18:44:43,029 basehttp "GET /statistiques/ HTTP/1.1" 200 12823
+INFO 2025-12-09 18:48:37,739 basehttp "GET /home/ HTTP/1.1" 200 6820
+INFO 2025-12-09 18:48:46,035 basehttp "GET /dashboard/?type=all HTTP/1.1" 200 66651
+INFO 2025-12-09 18:48:50,690 basehttp "GET /home/ HTTP/1.1" 200 6820
+INFO 2025-12-09 18:49:00,259 basehttp "GET /home/?q=event1 HTTP/1.1" 200 6820
+INFO 2025-12-09 18:49:12,250 basehttp "GET /home/ HTTP/1.1" 200 6820
+INFO 2025-12-09 18:52:13,658 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 18:52:15,617 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 18:52:51,468 basehttp "GET /home/ HTTP/1.1" 200 6885
+INFO 2025-12-09 18:53:00,895 basehttp "GET /home/ HTTP/1.1" 200 6885
+INFO 2025-12-09 18:53:11,706 basehttp "GET /home/ HTTP/1.1" 200 6885
+INFO 2025-12-09 18:54:22,407 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 18:54:24,461 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 18:54:40,909 basehttp "GET /home/ HTTP/1.1" 200 9624
+INFO 2025-12-09 18:54:47,147 basehttp "GET /home/?q=event1 HTTP/1.1" 200 6889
+INFO 2025-12-09 18:54:49,708 basehttp "GET /home/?q=event1 HTTP/1.1" 200 6889
+INFO 2025-12-09 18:54:53,368 basehttp "GET /home/?q=event1 HTTP/1.1" 200 6889
+INFO 2025-12-09 19:11:38,907 basehttp "GET /home/?q=event1 HTTP/1.1" 200 6889
+INFO 2025-12-09 19:11:42,194 basehttp "GET /home/?q=event1 HTTP/1.1" 200 6889
+INFO 2025-12-09 19:11:49,854 basehttp "GET /home/ HTTP/1.1" 200 9624
+INFO 2025-12-09 19:11:55,878 basehttp "GET /home/?q=x HTTP/1.1" 200 7315
+INFO 2025-12-09 19:12:03,457 basehttp "GET /home/?q=x HTTP/1.1" 200 7315
+INFO 2025-12-09 19:12:21,225 basehttp "GET /dashboard/?type=all HTTP/1.1" 200 66651
+INFO 2025-12-09 19:12:31,184 basehttp "GET /home/ HTTP/1.1" 200 9624
+INFO 2025-12-09 19:12:44,857 basehttp "GET /dashboard/?type=all HTTP/1.1" 200 66651
+INFO 2025-12-09 19:13:02,511 basehttp "GET /home/ HTTP/1.1" 200 9624
+INFO 2025-12-09 19:13:11,144 basehttp "GET /event/public/1/ HTTP/1.1" 200 14974
+INFO 2025-12-09 19:13:21,958 basehttp "GET /home/ HTTP/1.1" 200 9624
+INFO 2025-12-09 19:22:01,534 basehttp "GET /dashboard/?type=all HTTP/1.1" 200 66651
+INFO 2025-12-09 19:22:33,687 basehttp "GET /event/private/11/ HTTP/1.1" 200 14247
+INFO 2025-12-09 19:22:47,725 basehttp "GET /admin/auth/user/ HTTP/1.1" 302 0
+INFO 2025-12-09 19:22:47,937 basehttp "GET /admin/login/?next=/admin/auth/user/ HTTP/1.1" 200 3823
+INFO 2025-12-09 19:22:47,968 basehttp "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2025-12-09 19:22:51,639 basehttp "POST /admin/login/?next=/admin/auth/user/ HTTP/1.1" 200 4071
+INFO 2025-12-09 19:23:04,030 basehttp "POST /admin/login/?next=/admin/auth/user/ HTTP/1.1" 200 4071
+INFO 2025-12-09 19:23:22,134 basehttp "POST /admin/login/?next=/admin/auth/user/ HTTP/1.1" 200 4070
+INFO 2025-12-09 19:25:34,191 basehttp "POST /admin/login/?next=/admin/auth/user/ HTTP/1.1" 200 3870
+INFO 2025-12-09 19:25:48,012 basehttp "POST /admin/login/?next=/admin/auth/user/ HTTP/1.1" 200 3871
+INFO 2025-12-09 19:27:31,210 basehttp "POST /admin/login/?next=/admin/auth/user/ HTTP/1.1" 302 0
+INFO 2025-12-09 19:27:31,603 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 15197
+INFO 2025-12-09 19:27:31,736 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8634
+INFO 2025-12-09 19:27:41,318 basehttp "GET /admin/auth/user/3/change/ HTTP/1.1" 200 27291
+INFO 2025-12-09 19:27:41,388 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8634
+INFO 2025-12-09 19:27:51,236 basehttp "POST /admin/auth/user/3/change/ HTTP/1.1" 302 0
+INFO 2025-12-09 19:27:51,298 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 15381
+INFO 2025-12-09 19:27:51,357 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8634
+INFO 2025-12-09 19:27:53,032 basehttp "GET /admin/auth/user/3/change/ HTTP/1.1" 200 27249
+INFO 2025-12-09 19:27:53,093 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8634
+INFO 2025-12-09 19:28:04,571 basehttp "GET /admin/auth/user/3/password/ HTTP/1.1" 200 12328
+INFO 2025-12-09 19:28:17,770 basehttp "POST /admin/auth/user/3/password/ HTTP/1.1" 302 0
+INFO 2025-12-09 19:28:17,867 basehttp "GET /admin/auth/user/3/change/ HTTP/1.1" 200 27389
+INFO 2025-12-09 19:28:17,958 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8634
+INFO 2025-12-09 19:28:25,148 basehttp "GET /admin/ HTTP/1.1" 200 10939
+INFO 2025-12-09 19:28:28,616 basehttp "GET /admin/events/contactmessage/ HTTP/1.1" 200 10698
+INFO 2025-12-09 19:28:28,667 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8634
+INFO 2025-12-09 19:28:30,494 basehttp "GET /admin/ HTTP/1.1" 200 10939
+INFO 2025-12-09 19:28:32,060 basehttp "GET /admin/events/userprofile/ HTTP/1.1" 200 12176
+INFO 2025-12-09 19:28:32,112 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8634
+INFO 2025-12-09 19:28:36,068 basehttp "GET /admin/events/userprofile/2/change/ HTTP/1.1" 200 14974
+INFO 2025-12-09 19:28:36,127 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8634
+INFO 2025-12-09 19:28:38,634 basehttp "GET /admin/events/userprofile/ HTTP/1.1" 200 12176
+INFO 2025-12-09 19:28:40,101 basehttp "GET /admin/events/privateevent/ HTTP/1.1" 200 16965
+INFO 2025-12-09 19:28:40,151 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8634
+INFO 2025-12-09 19:28:41,712 basehttp "GET /admin/events/publicevent/ HTTP/1.1" 200 14338
+INFO 2025-12-09 19:28:41,765 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8634
+INFO 2025-12-09 19:28:44,958 basehttp "GET /admin/auth/group/ HTTP/1.1" 200 10969
+INFO 2025-12-09 19:28:45,005 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8634
+INFO 2025-12-09 19:37:14,527 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 19:37:17,307 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 19:37:24,543 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 19:37:27,051 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 19:37:37,506 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 19:37:39,888 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 19:38:00,323 basehttp "GET /add/private/ HTTP/1.1" 200 9790
+INFO 2025-12-09 19:38:33,560 basehttp "POST /add/private/ HTTP/1.1" 200 10144
+INFO 2025-12-09 19:38:53,048 views Début de l'envoi des invitations
+INFO 2025-12-09 19:38:53,048 views Début de l'envoi des invitations
+ERROR 2025-12-09 19:38:53,284 views Échec d'envoi à yassinboulabiar13@gmail.com
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event - Copie\events\views.py", line 498, in add_private_event
+    email_msg.attach(
+    ~~~~~~~~~~~~~~~~^
+        'qrcode.png',
+        ^^^^^^^^^^^^^
+    ...<5 lines>...
+        }
+        ^
+    )
+    ^
+TypeError: EmailMessage.attach() got an unexpected keyword argument 'headers'
+ERROR 2025-12-09 19:38:53,284 views Échec d'envoi à yassinboulabiar13@gmail.com
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event - Copie\events\views.py", line 498, in add_private_event
+    email_msg.attach(
+    ~~~~~~~~~~~~~~~~^
+        'qrcode.png',
+        ^^^^^^^^^^^^^
+    ...<5 lines>...
+        }
+        ^
+    )
+    ^
+TypeError: EmailMessage.attach() got an unexpected keyword argument 'headers'
+INFO 2025-12-09 19:38:53,313 basehttp "POST /add/private/ HTTP/1.1" 302 0
+INFO 2025-12-09 19:38:53,486 basehttp "GET /dashboard/ HTTP/1.1" 200 70706
+INFO 2025-12-09 19:41:06,590 autoreload C:\Users\ovic\smart_event - Copie\smart_event\settings.py changed, reloading.
+INFO 2025-12-09 19:41:09,313 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 19:41:18,673 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 19:41:21,039 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 19:41:30,663 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 19:41:33,013 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 19:42:04,475 log Not Found: /admin/stats/
+WARNING 2025-12-09 19:42:04,476 basehttp "GET /admin/stats/ HTTP/1.1" 404 6713
+INFO 2025-12-09 19:42:13,073 basehttp "GET /admin/ HTTP/1.1" 200 11153
+INFO 2025-12-09 19:42:21,759 basehttp "GET /add/private/ HTTP/1.1" 200 9790
+INFO 2025-12-09 19:43:10,001 views Début de l'envoi des invitations
+INFO 2025-12-09 19:43:10,001 views Début de l'envoi des invitations
+ERROR 2025-12-09 19:43:10,141 views Échec d'envoi à yassinboulabiar13@gmail.com
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event - Copie\events\views.py", line 498, in add_private_event
+    email_msg.attach(
+    ~~~~~~~~~~~~~~~~^
+        'qrcode.png',
+        ^^^^^^^^^^^^^
+    ...<5 lines>...
+        }
+        ^
+    )
+    ^
+TypeError: EmailMessage.attach() got an unexpected keyword argument 'headers'
+ERROR 2025-12-09 19:43:10,141 views Échec d'envoi à yassinboulabiar13@gmail.com
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event - Copie\events\views.py", line 498, in add_private_event
+    email_msg.attach(
+    ~~~~~~~~~~~~~~~~^
+        'qrcode.png',
+        ^^^^^^^^^^^^^
+    ...<5 lines>...
+        }
+        ^
+    )
+    ^
+TypeError: EmailMessage.attach() got an unexpected keyword argument 'headers'
+INFO 2025-12-09 19:43:10,187 basehttp "POST /add/private/ HTTP/1.1" 302 0
+INFO 2025-12-09 19:43:10,340 basehttp "GET /dashboard/ HTTP/1.1" 200 74471
+INFO 2025-12-09 19:44:47,329 autoreload C:\Users\ovic\smart_event - Copie\smart_event\settings.py changed, reloading.
+INFO 2025-12-09 19:44:50,171 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 19:45:00,664 autoreload C:\Users\ovic\smart_event - Copie\smart_event\settings.py changed, reloading.
+INFO 2025-12-09 19:45:03,487 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 19:46:39,445 basehttp "GET /add/private/ HTTP/1.1" 200 9989
+INFO 2025-12-09 19:47:24,914 views Début de l'envoi des invitations
+INFO 2025-12-09 19:47:24,914 views Début de l'envoi des invitations
+ERROR 2025-12-09 19:47:25,044 views Échec d'envoi à yassinboulabiar13@gmail.com
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event - Copie\events\views.py", line 498, in add_private_event
+    email_msg.attach(
+    ~~~~~~~~~~~~~~~~^
+        'qrcode.png',
+        ^^^^^^^^^^^^^
+    ...<5 lines>...
+        }
+        ^
+    )
+    ^
+TypeError: EmailMessage.attach() got an unexpected keyword argument 'headers'
+ERROR 2025-12-09 19:47:25,044 views Échec d'envoi à yassinboulabiar13@gmail.com
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event - Copie\events\views.py", line 498, in add_private_event
+    email_msg.attach(
+    ~~~~~~~~~~~~~~~~^
+        'qrcode.png',
+        ^^^^^^^^^^^^^
+    ...<5 lines>...
+        }
+        ^
+    )
+    ^
+TypeError: EmailMessage.attach() got an unexpected keyword argument 'headers'
+INFO 2025-12-09 19:47:25,091 basehttp "POST /add/private/ HTTP/1.1" 302 0
+INFO 2025-12-09 19:47:25,265 basehttp "GET /dashboard/ HTTP/1.1" 200 78234
+INFO 2025-12-09 19:48:29,351 autoreload C:\Users\ovic\smart_event - Copie\smart_event\settings.py changed, reloading.
+INFO 2025-12-09 19:48:32,112 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 20:00:21,853 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 20:01:49,565 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 20:05:15,326 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 20:05:15,714 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 20:05:19,304 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 20:05:19,587 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 20:06:51,778 autoreload C:\Users\ovic\smart_event - Copie\smart_event\settings.py changed, reloading.
+INFO 2025-12-09 20:06:52,188 autoreload C:\Users\ovic\smart_event - Copie\smart_event\settings.py changed, reloading.
+INFO 2025-12-09 20:06:55,491 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 20:06:55,824 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 20:07:03,345 autoreload C:\Users\ovic\smart_event - Copie\smart_event\settings.py changed, reloading.
+INFO 2025-12-09 20:07:03,696 autoreload C:\Users\ovic\smart_event - Copie\smart_event\settings.py changed, reloading.
+INFO 2025-12-09 20:07:07,112 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 20:07:36,037 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 20:07:38,796 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 20:07:48,255 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 20:07:51,123 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 20:09:08,369 basehttp "GET /dashboard/ HTTP/1.1" 200 78234
+INFO 2025-12-09 20:09:21,790 basehttp "GET /add/private/ HTTP/1.1" 200 9989
+INFO 2025-12-09 20:09:57,415 basehttp "POST /add/private/ HTTP/1.1" 302 0
+INFO 2025-12-09 20:09:57,572 basehttp "GET /dashboard/ HTTP/1.1" 200 81989
+INFO 2025-12-09 20:31:06,140 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 20:31:16,624 basehttp "GET /dashboard/ HTTP/1.1" 200 81989
+INFO 2025-12-09 20:31:22,475 basehttp "GET /admin/ HTTP/1.1" 200 11150
+INFO 2025-12-09 20:31:29,982 basehttp "GET /add/private/ HTTP/1.1" 200 9790
+INFO 2025-12-09 20:32:00,902 basehttp "POST /add/private/ HTTP/1.1" 302 0
+INFO 2025-12-09 20:32:01,049 basehttp "GET /dashboard/ HTTP/1.1" 200 85752
+INFO 2025-12-09 20:32:51,354 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 20:32:54,200 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 20:33:04,817 basehttp "GET /dashboard/ HTTP/1.1" 200 85752
+INFO 2025-12-09 20:33:22,809 basehttp "GET /add/private/ HTTP/1.1" 200 9986
+INFO 2025-12-09 20:34:19,193 basehttp "POST /add/private/ HTTP/1.1" 302 0
+INFO 2025-12-09 20:34:19,368 basehttp "GET /dashboard/ HTTP/1.1" 200 89495
+INFO 2025-12-09 20:35:25,059 autoreload C:\Users\ovic\smart_event - Copie\events\utils\email_utils.py changed, reloading.
+INFO 2025-12-09 20:35:28,015 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 20:35:45,025 basehttp "GET /add/private/ HTTP/1.1" 200 9986
+INFO 2025-12-09 20:36:19,243 basehttp "POST /add/private/ HTTP/1.1" 302 0
+INFO 2025-12-09 20:36:19,460 basehttp "GET /dashboard/ HTTP/1.1" 200 93319
+INFO 2025-12-09 20:39:37,419 autoreload C:\Users\ovic\smart_event - Copie\smart_event\settings.py changed, reloading.
+INFO 2025-12-09 20:39:40,523 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 20:39:43,695 autoreload C:\Users\ovic\smart_event - Copie\smart_event\settings.py changed, reloading.
+INFO 2025-12-09 20:39:46,643 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 20:40:06,813 basehttp "GET /dashboard/ HTTP/1.1" 200 93319
+INFO 2025-12-09 20:40:09,661 basehttp "GET /dashboard/ HTTP/1.1" 200 93319
+INFO 2025-12-09 20:40:12,913 basehttp "GET /add/private/ HTTP/1.1" 200 9986
+INFO 2025-12-09 20:40:39,800 basehttp "POST /add/private/ HTTP/1.1" 302 0
+INFO 2025-12-09 20:40:40,021 basehttp "GET /dashboard/ HTTP/1.1" 200 97065
+INFO 2025-12-09 20:44:54,335 autoreload C:\Users\ovic\smart_event - Copie\smart_event\settings.py changed, reloading.
+INFO 2025-12-09 20:44:57,292 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 20:52:47,276 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 20:52:47,464 base Session data corrupted
+INFO 2025-12-09 20:52:47,502 basehttp "GET /add/private/ HTTP/1.1" 302 0
+INFO 2025-12-09 20:52:47,525 basehttp "GET /login/?next=/add/private/ HTTP/1.1" 200 7337
+INFO 2025-12-09 20:52:51,894 basehttp "POST /login/?next=/add/private/ HTTP/1.1" 302 0
+INFO 2025-12-09 20:52:51,965 basehttp "GET /add/private/ HTTP/1.1" 200 9790
+INFO 2025-12-09 20:53:25,570 basehttp "POST /add/private/ HTTP/1.1" 302 0
+INFO 2025-12-09 20:53:25,856 basehttp "GET /dashboard/ HTTP/1.1" 200 100820
+INFO 2025-12-09 20:54:49,018 autoreload C:\Users\ovic\smart_event - Copie\events\utils\email_utils.py changed, reloading.
+INFO 2025-12-09 20:54:51,999 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 20:55:14,390 basehttp "GET /add/private/ HTTP/1.1" 200 9986
+INFO 2025-12-09 20:55:45,298 basehttp "POST /add/private/ HTTP/1.1" 302 0
+INFO 2025-12-09 20:55:45,521 basehttp "GET /dashboard/ HTTP/1.1" 200 104632
+INFO 2025-12-09 21:00:31,329 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 21:02:31,715 basehttp "GET /dashboard/ HTTP/1.1" 200 104632
+INFO 2025-12-09 21:02:39,497 basehttp "GET /add/private/ HTTP/1.1" 200 9986
+INFO 2025-12-09 21:03:16,232 basehttp "POST /add/private/ HTTP/1.1" 302 0
+INFO 2025-12-09 21:03:16,442 basehttp "GET /dashboard/ HTTP/1.1" 200 108636
+INFO 2025-12-09 21:05:41,951 basehttp "GET /rsvp/044ebf92-88d4-40d7-9a28-fed3d4d301e3/ HTTP/1.1" 200 8428
+INFO 2025-12-09 21:05:45,428 basehttp "POST /rsvp/044ebf92-88d4-40d7-9a28-fed3d4d301e3/ HTTP/1.1" 200 8428
+INFO 2025-12-09 21:05:52,240 basehttp "GET /dashboard/ HTTP/1.1" 200 108636
+INFO 2025-12-09 21:06:02,173 basehttp "POST /rsvp/044ebf92-88d4-40d7-9a28-fed3d4d301e3/ HTTP/1.1" 200 8428
+INFO 2025-12-09 21:06:06,364 basehttp "POST /rsvp/044ebf92-88d4-40d7-9a28-fed3d4d301e3/ HTTP/1.1" 200 8428
+INFO 2025-12-09 21:06:13,917 basehttp "GET /dashboard/ HTTP/1.1" 200 108636
+INFO 2025-12-09 21:06:19,871 basehttp "POST /rsvp/044ebf92-88d4-40d7-9a28-fed3d4d301e3/ HTTP/1.1" 200 8428
+INFO 2025-12-09 21:06:23,557 basehttp "GET /dashboard/ HTTP/1.1" 200 108636
+INFO 2025-12-09 21:07:52,147 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 21:07:54,254 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 21:08:36,396 basehttp "GET /rsvp/044ebf92-88d4-40d7-9a28-fed3d4d301e3/ HTTP/1.1" 200 8428
+INFO 2025-12-09 21:08:38,813 basehttp "POST /rsvp/044ebf92-88d4-40d7-9a28-fed3d4d301e3/ HTTP/1.1" 200 8428
+INFO 2025-12-09 21:08:41,237 basehttp "POST /rsvp/044ebf92-88d4-40d7-9a28-fed3d4d301e3/ HTTP/1.1" 200 8428
+INFO 2025-12-09 21:08:45,175 basehttp "GET /dashboard/ HTTP/1.1" 200 108636
+INFO 2025-12-09 21:09:02,328 basehttp "GET /rsvp/044ebf92-88d4-40d7-9a28-fed3d4d301e3/ HTTP/1.1" 200 8428
+INFO 2025-12-09 21:09:04,626 basehttp "POST /rsvp/044ebf92-88d4-40d7-9a28-fed3d4d301e3/ HTTP/1.1" 200 8428
+INFO 2025-12-09 21:09:07,092 basehttp "POST /rsvp/044ebf92-88d4-40d7-9a28-fed3d4d301e3/ HTTP/1.1" 200 8428
+INFO 2025-12-09 21:09:15,184 basehttp "GET /dashboard/ HTTP/1.1" 200 108636
+INFO 2025-12-09 21:11:57,702 basehttp "GET /add/private/ HTTP/1.1" 200 10627
+INFO 2025-12-09 21:12:34,660 basehttp "POST /add/private/ HTTP/1.1" 302 0
+INFO 2025-12-09 21:12:34,921 basehttp "GET /dashboard/ HTTP/1.1" 200 112389
+INFO 2025-12-09 21:12:47,662 basehttp "GET /rsvp/e9ddc785-a050-401a-bb17-314d5dc169cd/ HTTP/1.1" 200 8235
+INFO 2025-12-09 21:12:55,110 basehttp "POST /rsvp/e9ddc785-a050-401a-bb17-314d5dc169cd/ HTTP/1.1" 302 0
+WARNING 2025-12-09 21:12:55,184 log Not Found: /event/public/24/
+WARNING 2025-12-09 21:12:55,187 basehttp "GET /event/public/24/ HTTP/1.1" 404 5409
+INFO 2025-12-09 21:13:02,080 basehttp "POST /rsvp/e9ddc785-a050-401a-bb17-314d5dc169cd/ HTTP/1.1" 302 0
+INFO 2025-12-09 21:13:02,319 basehttp "GET /dashboard/ HTTP/1.1" 200 112467
+INFO 2025-12-09 21:13:15,500 basehttp "GET /rsvp/e9ddc785-a050-401a-bb17-314d5dc169cd/ HTTP/1.1" 302 0
+INFO 2025-12-09 21:13:15,718 basehttp "GET /dashboard/ HTTP/1.1" 200 112467
+INFO 2025-12-09 21:13:31,125 basehttp "GET /add/private/ HTTP/1.1" 200 10306
+INFO 2025-12-09 21:14:10,979 basehttp "POST /add/private/ HTTP/1.1" 302 0
+INFO 2025-12-09 21:14:11,230 basehttp "GET /dashboard/ HTTP/1.1" 200 116239
+INFO 2025-12-09 21:14:26,506 basehttp "GET /rsvp/7ca002c1-de54-4713-a707-f6327d551006/ HTTP/1.1" 200 8250
+INFO 2025-12-09 21:14:32,940 basehttp "POST /rsvp/7ca002c1-de54-4713-a707-f6327d551006/ HTTP/1.1" 302 0
+WARNING 2025-12-09 21:14:32,994 log Not Found: /event/public/25/
+WARNING 2025-12-09 21:14:32,997 basehttp "GET /event/public/25/ HTTP/1.1" 404 5409
+INFO 2025-12-09 21:14:37,388 basehttp "POST /rsvp/7ca002c1-de54-4713-a707-f6327d551006/ HTTP/1.1" 302 0
+INFO 2025-12-09 21:14:37,614 basehttp "GET /dashboard/ HTTP/1.1" 200 116328
+INFO 2025-12-09 21:14:53,574 basehttp "GET /rsvp/7ca002c1-de54-4713-a707-f6327d551006/ HTTP/1.1" 302 0
+INFO 2025-12-09 21:14:53,842 basehttp "GET /dashboard/ HTTP/1.1" 200 116328
+INFO 2025-12-09 21:15:01,970 basehttp "GET /rsvp/e8364b84-4b1f-44d8-9532-8e4770d1ce13/ HTTP/1.1" 200 8233
+INFO 2025-12-09 21:15:06,995 basehttp "POST /rsvp/e8364b84-4b1f-44d8-9532-8e4770d1ce13/ HTTP/1.1" 302 0
+WARNING 2025-12-09 21:15:07,049 log Not Found: /event/public/13/
+WARNING 2025-12-09 21:15:07,053 basehttp "GET /event/public/13/ HTTP/1.1" 404 5409
+INFO 2025-12-09 21:17:31,463 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-09 21:17:33,357 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 21:17:46,975 log Not Found: /event/public/13/
+WARNING 2025-12-09 21:17:46,978 basehttp "GET /event/public/13/ HTTP/1.1" 404 5409
+WARNING 2025-12-09 21:17:47,942 log Not Found: /event/public/13/
+WARNING 2025-12-09 21:17:47,948 basehttp "GET /event/public/13/ HTTP/1.1" 404 5409
+INFO 2025-12-09 21:17:53,519 basehttp "GET /dashboard/ HTTP/1.1" 200 116408
+INFO 2025-12-09 21:17:57,643 basehttp "GET /rsvp/feeffece-6baa-4bc3-bc7a-f2e8d707a689/ HTTP/1.1" 200 8224
+INFO 2025-12-09 21:18:03,425 basehttp "POST /rsvp/feeffece-6baa-4bc3-bc7a-f2e8d707a689/ HTTP/1.1" 302 0
+INFO 2025-12-09 21:18:03,653 basehttp "GET /dashboard/ HTTP/1.1" 200 116487
+INFO 2025-12-09 21:18:15,257 basehttp "GET /rsvp/3d0ac8cc-2e9e-4761-9033-7567933d22d5/ HTTP/1.1" 200 8219
+INFO 2025-12-09 21:18:22,909 basehttp "POST /rsvp/3d0ac8cc-2e9e-4761-9033-7567933d22d5/ HTTP/1.1" 302 0
+INFO 2025-12-09 21:18:23,163 basehttp "GET /dashboard/ HTTP/1.1" 200 116395
+INFO 2025-12-10 21:01:26,624 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:02:17,394 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-12-10 21:02:17,584 basehttp "GET /dashboard/ HTTP/1.1" 200 116395
+WARNING 2025-12-10 21:02:18,251 log Not Found: /favicon.ico
+WARNING 2025-12-10 21:02:18,252 basehttp "GET /favicon.ico HTTP/1.1" 404 10182
+INFO 2025-12-10 21:04:05,351 autoreload C:\Users\ovic\smart_event - Copie\events\models.py changed, reloading.
+INFO 2025-12-10 21:04:07,380 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:04:25,991 autoreload C:\Users\ovic\smart_event - Copie\events\apps.py changed, reloading.
+INFO 2025-12-10 21:04:28,232 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:05:09,831 autoreload C:\Users\ovic\smart_event - Copie\events\forms.py changed, reloading.
+INFO 2025-12-10 21:05:11,789 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:06:14,073 autoreload C:\Users\ovic\smart_event - Copie\events\urls.py changed, reloading.
+INFO 2025-12-10 21:06:16,162 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:06:24,186 autoreload C:\Users\ovic\smart_event - Copie\events\auth_views.py changed, reloading.
+INFO 2025-12-10 21:06:26,051 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:06:30,840 autoreload C:\Users\ovic\smart_event - Copie\events\auth_views.py changed, reloading.
+INFO 2025-12-10 21:06:32,843 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:06:41,796 autoreload C:\Users\ovic\smart_event - Copie\smart_event\settings.py changed, reloading.
+INFO 2025-12-10 21:06:43,701 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:08:00,722 autoreload C:\Users\ovic\smart_event - Copie\events\urls.py changed, reloading.
+INFO 2025-12-10 21:08:02,321 autoreload Watching for file changes with StatReloader
+ERROR 2025-12-10 21:08:09,215 log Internal Server Error: /logout/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 516, in __get__
+    rel_obj = self.related.get_cached_value(instance)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\fields\mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'two_factor_auth'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: events_twofactorauth
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event - Copie\events\auth_views.py", line 133, in __call__
+    two_fa = request.user.two_factor_auth
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\utils\functional.py", line 253, in inner
+    return func(_wrapped, *args)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 523, in __get__
+    rel_obj = self.get_queryset(instance=instance).get(**filter_args)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: events_twofactorauth
+ERROR 2025-12-10 21:08:09,227 basehttp "GET /logout/ HTTP/1.1" 500 149464
+ERROR 2025-12-10 21:08:15,639 log Internal Server Error: /logout/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 516, in __get__
+    rel_obj = self.related.get_cached_value(instance)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\fields\mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'two_factor_auth'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: events_twofactorauth
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event - Copie\events\auth_views.py", line 133, in __call__
+    two_fa = request.user.two_factor_auth
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\utils\functional.py", line 253, in inner
+    return func(_wrapped, *args)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 523, in __get__
+    rel_obj = self.get_queryset(instance=instance).get(**filter_args)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: events_twofactorauth
+ERROR 2025-12-10 21:08:15,643 basehttp "GET /logout/ HTTP/1.1" 500 149595
+INFO 2025-12-10 21:08:57,722 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:08:57,763 basehttp "GET /login/ HTTP/1.1" 200 7337
+INFO 2025-12-10 21:09:01,273 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:09:01,402 basehttp "GET /dashboard/ HTTP/1.1" 200 116681
+INFO 2025-12-10 21:10:14,118 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:10:14,124 basehttp "GET /login/ HTTP/1.1" 200 7337
+INFO 2025-12-10 21:10:16,930 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:10:17,019 basehttp "GET /dashboard/ HTTP/1.1" 200 116681
+INFO 2025-12-10 21:10:21,634 basehttp "GET /dashboard/ HTTP/1.1" 200 116681
+INFO 2025-12-10 21:10:23,511 basehttp "GET /dashboard/ HTTP/1.1" 200 116681
+INFO 2025-12-10 21:10:25,754 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:10:25,760 basehttp "GET /login/ HTTP/1.1" 200 7337
+INFO 2025-12-10 21:10:27,911 basehttp "GET /login/ HTTP/1.1" 200 7337
+INFO 2025-12-10 21:10:31,391 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:10:31,475 basehttp "GET /dashboard/ HTTP/1.1" 200 116681
+INFO 2025-12-10 21:11:34,075 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:11:39,738 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:11:39,762 basehttp "GET /login/ HTTP/1.1" 200 7337
+INFO 2025-12-10 21:11:43,457 basehttp "GET /login/ HTTP/1.1" 200 7337
+INFO 2025-12-10 21:11:46,573 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:11:46,734 basehttp "GET /dashboard/ HTTP/1.1" 200 116681
+INFO 2025-12-10 21:13:06,189 autoreload C:\Users\ovic\smart_event - Copie\events\auth_views.py changed, reloading.
+INFO 2025-12-10 21:13:07,944 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:13:22,232 autoreload C:\Users\ovic\smart_event - Copie\events\urls.py changed, reloading.
+INFO 2025-12-10 21:13:24,066 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:13:38,211 autoreload C:\Users\ovic\smart_event - Copie\events\auth_views.py changed, reloading.
+INFO 2025-12-10 21:13:40,155 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:13:43,975 autoreload C:\Users\ovic\smart_event - Copie\events\custom_auth.py changed, reloading.
+INFO 2025-12-10 21:13:46,042 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:14:00,248 autoreload C:\Users\ovic\smart_event - Copie\events\auth_views.py changed, reloading.
+INFO 2025-12-10 21:14:02,225 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:14:13,327 autoreload C:\Users\ovic\smart_event - Copie\events\auth_views.py changed, reloading.
+INFO 2025-12-10 21:14:15,189 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:14:26,153 autoreload C:\Users\ovic\smart_event - Copie\events\auth_views.py changed, reloading.
+INFO 2025-12-10 21:14:27,816 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:14:33,588 autoreload C:\Users\ovic\smart_event - Copie\events\auth_views.py changed, reloading.
+INFO 2025-12-10 21:14:35,577 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:14:46,878 autoreload C:\Users\ovic\smart_event - Copie\events\auth_views.py changed, reloading.
+INFO 2025-12-10 21:14:48,920 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:16:11,601 basehttp "GET /logout/ HTTP/1.1" 302 0
+ERROR 2025-12-10 21:16:11,819 log Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ovic\smart_event - Copie\events\custom_auth.py", line 49, in login_with_2fa
+    return render(request, 'registration/login.html', {'form': form})
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: registration/login.html
+ERROR 2025-12-10 21:16:11,823 basehttp "GET /login/ HTTP/1.1" 500 84248
+ERROR 2025-12-10 21:16:56,658 log Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ovic\smart_event - Copie\events\custom_auth.py", line 49, in login_with_2fa
+    return render(request, 'registration/login.html', {'form': form})
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2025-12-10 21:16:56,666 basehttp "GET /login/ HTTP/1.1" 500 131008
+ERROR 2025-12-10 21:18:15,687 log Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ovic\smart_event - Copie\events\custom_auth.py", line 49, in login_with_2fa
+    return render(request, 'registration/login.html', {'form': form})
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2025-12-10 21:18:15,695 basehttp "GET /login/ HTTP/1.1" 500 131008
+ERROR 2025-12-10 21:18:17,301 log Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ovic\smart_event - Copie\events\custom_auth.py", line 49, in login_with_2fa
+    return render(request, 'registration/login.html', {'form': form})
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2025-12-10 21:18:17,305 basehttp "GET /login/ HTTP/1.1" 500 131008
+ERROR 2025-12-10 21:18:18,936 log Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ovic\smart_event - Copie\events\custom_auth.py", line 49, in login_with_2fa
+    return render(request, 'registration/login.html', {'form': form})
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2025-12-10 21:18:18,939 basehttp "GET /login/ HTTP/1.1" 500 131008
+INFO 2025-12-10 21:19:14,901 autoreload C:\Users\ovic\smart_event - Copie\smart_event\settings.py changed, reloading.
+INFO 2025-12-10 21:19:16,686 autoreload Watching for file changes with StatReloader
+ERROR 2025-12-10 21:19:28,513 log Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ovic\smart_event - Copie\events\custom_auth.py", line 49, in login_with_2fa
+    return render(request, 'registration/login.html', {'form': form})
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'password_reset' not found. 'password_reset' is not a valid view function or pattern name.
+ERROR 2025-12-10 21:19:28,521 basehttp "GET /login/ HTTP/1.1" 500 157573
+INFO 2025-12-10 21:19:52,743 autoreload C:\Users\ovic\smart_event - Copie\events\urls.py changed, reloading.
+INFO 2025-12-10 21:19:54,713 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:28:09,564 autoreload C:\Users\ovic\smart_event - Copie\events\models.py changed, reloading.
+INFO 2025-12-10 21:28:11,703 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:28:30,154 autoreload C:\Users\ovic\smart_event - Copie\events\custom_auth.py changed, reloading.
+INFO 2025-12-10 21:28:32,444 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:28:54,995 autoreload C:\Users\ovic\smart_event - Copie\events\auth_views.py changed, reloading.
+INFO 2025-12-10 21:28:57,056 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:31:21,340 basehttp "GET /login/ HTTP/1.1" 200 13109
+ERROR 2025-12-10 21:34:23,966 log Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ovic\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 85, in inner
+    return func(*args, **kwds)
+  File "C:\Users\ovic\smart_event - Copie\events\custom_auth.py", line 64, in login_with_2fa
+    return render(request, 'registration/login.html', {'form': form})
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 577, in invalid_block_tag
+    raise self.error(
+    ...<3 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 278: 'endblock'. Did you forget to register or load this tag?
+ERROR 2025-12-10 21:34:23,975 basehttp "GET /login/ HTTP/1.1" 500 180778
+INFO 2025-12-10 21:36:52,520 basehttp "GET /login/ HTTP/1.1" 200 10592
+INFO 2025-12-10 21:36:59,904 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:36:59,924 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:36:59,950 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:36:59,976 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:00,002 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:00,040 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:00,070 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:00,101 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:00,128 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:00,155 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:00,183 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:00,208 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:00,274 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:00,299 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:00,327 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:00,353 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:00,382 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:00,414 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:00,437 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:00,459 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:01,539 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:01,566 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:01,601 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:01,630 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:01,654 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:01,672 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:01,694 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:01,716 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:01,739 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:01,756 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:01,776 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:01,793 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:01,817 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:01,839 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:01,862 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:01,886 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:01,911 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:01,933 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:01,957 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:01,980 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:07,045 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:07,064 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:07,086 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:07,101 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:07,116 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:07,130 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:07,143 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:07,158 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:07,173 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:07,187 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:07,201 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:07,216 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:07,230 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:07,244 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:07,257 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:07,271 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:07,285 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:07,298 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:07,311 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:07,326 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:35,068 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:35,096 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:35,120 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:35,138 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:35,156 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:35,181 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:35,203 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:35,226 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:35,251 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:35,275 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:35,304 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:35,332 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:35,362 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:35,391 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:35,457 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:35,490 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:35,515 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:35,541 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:35,566 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:37:35,591 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:38:05,663 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:38:05,687 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:38:05,713 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:38:05,740 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:38:05,766 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:38:05,794 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:38:05,819 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:38:05,843 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:38:05,865 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:38:05,891 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:38:05,919 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:38:05,947 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:38:05,971 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:38:05,993 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:38:06,019 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:38:06,041 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:38:06,066 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:38:06,091 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:38:06,118 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:38:06,146 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:06,245 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:06,269 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:06,295 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:06,318 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:06,338 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:06,357 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:06,379 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:06,406 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:06,432 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:06,456 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:06,478 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:06,500 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:06,522 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:06,545 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:06,572 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:06,595 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:06,620 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:06,646 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:06,671 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:06,694 basehttp "GET /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 21:39:43,941 autoreload C:\Users\ovic\smart_event - Copie\smart_event\settings.py changed, reloading.
+INFO 2025-12-10 21:43:35,836 autoreload Watching for file changes with StatReloader
+ERROR 2025-12-10 21:43:40,291 log Internal Server Error: /two-factor/verify/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ovic\smart_event - Copie\events\auth_views.py", line 78, in two_factor_verify
+    return render(request, 'registration/two_factor_verify.html', {
+        'form': form,
+        'email': user.email,
+        'code_sent': True
+    })
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'password_change' not found. 'password_change' is not a valid view function or pattern name.
+ERROR 2025-12-10 21:43:40,299 basehttp "GET /two-factor/verify/ HTTP/1.1" 500 158572
+INFO 2025-12-10 21:44:54,937 autoreload C:\Users\ovic\smart_event - Copie\events\urls.py changed, reloading.
+INFO 2025-12-10 21:44:56,967 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:46:07,528 basehttp "GET /two-factor/verify/ HTTP/1.1" 200 17556
+INFO 2025-12-10 21:47:13,334 basehttp "POST /two-factor/verify/ HTTP/1.1" 200 17556
+INFO 2025-12-10 21:47:36,965 basehttp "POST /two-factor/verify/ HTTP/1.1" 200 17556
+INFO 2025-12-10 21:47:53,226 basehttp "POST /two-factor/verify/ HTTP/1.1" 200 17556
+INFO 2025-12-10 21:50:30,302 autoreload C:\Users\ovic\smart_event - Copie\events\auth_views.py changed, reloading.
+INFO 2025-12-10 21:50:31,889 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:50:46,956 autoreload C:\Users\ovic\smart_event - Copie\events\models.py changed, reloading.
+INFO 2025-12-10 21:50:48,628 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 22:07:22,176 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 22:07:22,486 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 22:07:23,553 basehttp "GET /two-factor/verify/ HTTP/1.1" 200 17852
+INFO 2025-12-10 22:07:28,262 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 22:07:29,361 basehttp "GET /two-factor/verify/ HTTP/1.1" 200 17852
+INFO 2025-12-10 22:07:33,377 basehttp "GET /profile/ HTTP/1.1" 302 0
+INFO 2025-12-10 22:07:34,480 basehttp "GET /two-factor/verify/ HTTP/1.1" 200 17852
+INFO 2025-12-10 22:11:07,085 autoreload C:\Users\ovic\smart_event - Copie\smart_event\settings.py changed, reloading.
+INFO 2025-12-10 22:11:09,081 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 22:11:16,934 autoreload C:\Users\ovic\smart_event - Copie\smart_event\settings.py changed, reloading.
+INFO 2025-12-10 22:11:18,889 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 22:21:08,106 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 22:21:10,601 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-10 22:21:12,345 basehttp "GET /two-factor/verify/ HTTP/1.1" 200 17556
+INFO 2025-12-10 22:21:24,973 basehttp "POST /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-10 22:21:25,092 basehttp "GET /dashboard/ HTTP/1.1" 200 116685
+INFO 2025-12-10 22:21:44,244 basehttp "GET /statistiques/ HTTP/1.1" 200 13413
+INFO 2025-12-10 22:25:21,339 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 22:25:23,075 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 22:25:30,039 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 22:25:31,984 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 22:25:49,163 basehttp "GET /statistiques/ HTTP/1.1" 200 13457
+INFO 2025-12-10 22:26:12,725 basehttp "GET /event/private/1/ HTTP/1.1" 200 14434
+INFO 2025-12-10 22:28:55,983 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 22:28:57,755 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 22:29:07,572 basehttp "GET /statistiques/ HTTP/1.1" 200 13457
+INFO 2025-12-10 22:29:27,156 autoreload C:\Users\ovic\smart_event - Copie\events\urls.py changed, reloading.
+INFO 2025-12-10 22:29:29,151 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 22:29:37,095 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 22:29:39,053 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 22:30:11,149 basehttp "GET /home/ HTTP/1.1" 200 10213
+INFO 2025-12-10 22:30:22,038 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 22:30:23,819 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 22:32:03,446 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 22:32:05,341 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 22:33:35,669 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 22:33:37,448 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 22:34:56,896 basehttp "GET /home/ HTTP/1.1" 200 10213
+INFO 2025-12-10 22:35:05,018 basehttp "GET /home/ HTTP/1.1" 200 10213
+INFO 2025-12-10 22:35:09,855 basehttp "GET /dashboard/?type=all HTTP/1.1" 200 116685
+ERROR 2025-12-10 22:35:13,793 log Internal Server Error: /event/private/1/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ovic\smart_event - Copie\events\views.py", line 773, in event_detail
+    total_accepted = Guest.objects.filter(
+                     ~~~~~~~~~~~~~~~~~~~~^
+        Q(event_public=event) | Q(event_private=event),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        status=Guest.STATUS_ACCEPTED
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).count()
+    ^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\sql\query.py", line 1503, in build_filter
+    return self._add_q(
+           ~~~~~~~~~~~^
+        filter_expr,
+        ^^^^^^^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\sql\query.py", line 1563, in build_filter
+    self.check_related_objects(join_info.final_field, value, join_info.opts)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\sql\query.py", line 1372, in check_related_objects
+    self.check_query_object_type(value, opts, field)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\db\models\sql\query.py", line 1349, in check_query_object_type
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Cannot query "event1": Must be "PublicEvent" instance.
+ERROR 2025-12-10 22:35:13,799 basehttp "GET /event/private/1/ HTTP/1.1" 500 140873
+INFO 2025-12-10 22:36:24,549 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 22:36:26,356 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 22:36:33,365 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 22:36:35,159 autoreload Watching for file changes with StatReloader
+ERROR 2025-12-10 22:36:36,042 log Internal Server Error: /event/private/1/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ovic\smart_event - Copie\events\views.py", line 824, in event_detail
+    return render(request, 'events/event_detail.html', {
+        'event': event,
+    ...<9 lines>...
+        'total_paid': total_paid,
+    })
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 682, in __init__
+    raise TemplateSyntaxError(
+    ...<2 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Could not parse some characters: participants.paginator.count| if participants.paginator else participants||length
+ERROR 2025-12-10 22:36:36,051 basehttp "GET /event/private/1/ HTTP/1.1" 500 311095
+ERROR 2025-12-10 22:37:23,024 log Internal Server Error: /event/private/1/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ovic\smart_event - Copie\events\views.py", line 824, in event_detail
+    return render(request, 'events/event_detail.html', {
+        'event': event,
+    ...<9 lines>...
+        'total_paid': total_paid,
+    })
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 710, in __init__
+    raise TemplateSyntaxError(
+    ...<2 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' if participants.number else 1' from 'participants.number if participants.number else 1'
+ERROR 2025-12-10 22:37:23,029 basehttp "GET /event/private/1/ HTTP/1.1" 500 314858
+INFO 2025-12-10 22:38:10,751 basehttp "GET /event/private/1/ HTTP/1.1" 200 15578
+INFO 2025-12-10 22:38:10,781 basehttp "GET /media/profiles/ceasar_challenge.png HTTP/1.1" 304 0
+INFO 2025-12-10 22:38:18,381 basehttp "GET /user/1/ HTTP/1.1" 200 8218
+INFO 2025-12-10 22:39:27,642 basehttp "GET /profile/ HTTP/1.1" 200 19235
+INFO 2025-12-10 22:43:59,745 basehttp "GET /profile/ HTTP/1.1" 200 19439
+INFO 2025-12-10 22:44:02,567 basehttp "GET /home/ HTTP/1.1" 200 10213
+WARNING 2025-12-10 22:44:28,342 log Not Found: /admin/stats/
+WARNING 2025-12-10 22:44:28,344 basehttp "GET /admin/stats/ HTTP/1.1" 404 6713
+INFO 2025-12-10 22:44:35,502 basehttp "GET /admin/ HTTP/1.1" 200 11103
+INFO 2025-12-10 22:44:35,524 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:35,527 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:35,529 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:35,531 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:35,531 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:35,532 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:35,537 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:35,543 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:35,544 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:35,544 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:44,459 basehttp "GET /admin/events/guest/ HTTP/1.1" 200 23718
+INFO 2025-12-10 22:44:44,481 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:44,490 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:44,492 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:44,492 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:44,494 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:44,495 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:44,498 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:44,499 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:44,499 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:44,511 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:44,545 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8634
+INFO 2025-12-10 22:44:44,567 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-12-10 22:44:51,474 basehttp "GET /admin/ HTTP/1.1" 200 10939
+INFO 2025-12-10 22:45:00,850 basehttp "GET /home/ HTTP/1.1" 200 10213
+INFO 2025-12-10 22:45:07,470 basehttp "GET /statistiques/ HTTP/1.1" 200 13457
+INFO 2025-12-10 22:45:17,259 basehttp "GET /dashboard/?type=public HTTP/1.1" 200 23041
+INFO 2025-12-10 22:45:22,174 basehttp "GET /add/public/ HTTP/1.1" 200 15914
+INFO 2025-12-10 22:45:56,008 basehttp "POST /add/public/ HTTP/1.1" 200 16309
+INFO 2025-12-10 22:46:13,056 basehttp "POST /add/public/ HTTP/1.1" 302 0
+INFO 2025-12-10 22:46:13,133 basehttp "GET /dashboard/ HTTP/1.1" 200 118653
+INFO 2025-12-10 22:46:13,300 basehttp "GET /media/events/images/6f2be295-2351-45e4-98df-7e095211d54a.jpg HTTP/1.1" 200 56034
+INFO 2025-12-10 22:46:22,348 basehttp "GET /event/public/6/ HTTP/1.1" 200 15490
+INFO 2025-12-10 22:46:22,379 basehttp "GET /media/events/images/6f2be295-2351-45e4-98df-7e095211d54a.jpg HTTP/1.1" 304 0
+INFO 2025-12-10 22:46:25,565 basehttp "GET /join-public-event/6/ HTTP/1.1" 302 0
+INFO 2025-12-10 22:46:25,645 basehttp "GET /dashboard/ HTTP/1.1" 200 118653
+INFO 2025-12-10 22:46:25,670 basehttp "GET /media/events/images/6f2be295-2351-45e4-98df-7e095211d54a.jpg HTTP/1.1" 304 0
+INFO 2025-12-10 22:46:31,074 basehttp "GET /event/public/6/ HTTP/1.1" 200 16268
+INFO 2025-12-10 22:46:31,099 basehttp "GET /media/events/images/6f2be295-2351-45e4-98df-7e095211d54a.jpg HTTP/1.1" 304 0
+INFO 2025-12-10 22:46:54,238 basehttp "GET /statistiques/ HTTP/1.1" 200 13472
+INFO 2025-12-10 22:47:53,904 basehttp "GET /dashboard/?type=public HTTP/1.1" 200 25009
+INFO 2025-12-10 22:47:53,938 basehttp "GET /media/events/images/6f2be295-2351-45e4-98df-7e095211d54a.jpg HTTP/1.1" 304 0
+INFO 2025-12-10 22:47:58,607 basehttp "GET /event/public/2/ HTTP/1.1" 200 16752
+INFO 2025-12-10 22:48:16,444 basehttp "POST /event/public/2/ HTTP/1.1" 200 16752
+INFO 2025-12-10 22:48:21,824 basehttp "GET /event/public/2/ HTTP/1.1" 200 16752
+INFO 2025-12-10 22:53:03,347 basehttp "GET /add/public/ HTTP/1.1" 200 16212
+INFO 2025-12-10 22:53:35,833 basehttp "POST /add/public/ HTTP/1.1" 302 0
+INFO 2025-12-10 22:53:35,919 basehttp "GET /dashboard/ HTTP/1.1" 200 120621
+INFO 2025-12-10 22:53:35,948 basehttp "GET /media/events/images/6f2be295-2351-45e4-98df-7e095211d54a.jpg HTTP/1.1" 304 0
+INFO 2025-12-10 22:53:35,971 basehttp "GET /media/events/images/remboursement_et_retours.png HTTP/1.1" 200 139883
+INFO 2025-12-10 22:53:40,761 basehttp "GET /event/public/7/ HTTP/1.1" 200 15496
+INFO 2025-12-10 22:53:40,792 basehttp "GET /media/events/images/remboursement_et_retours.png HTTP/1.1" 304 0
+INFO 2025-12-10 22:53:43,343 basehttp "GET /join-public-event/7/ HTTP/1.1" 302 0
+INFO 2025-12-10 22:53:43,460 basehttp "GET /dashboard/ HTTP/1.1" 200 120621
+INFO 2025-12-10 22:53:43,489 basehttp "GET /media/events/images/remboursement_et_retours.png HTTP/1.1" 304 0
+INFO 2025-12-10 22:53:48,207 basehttp "GET /event/public/7/ HTTP/1.1" 200 16274
+INFO 2025-12-10 22:53:48,238 basehttp "GET /media/events/images/remboursement_et_retours.png HTTP/1.1" 304 0
+INFO 2025-12-10 23:02:24,373 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 23:02:27,658 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 23:04:03,385 basehttp "GET /add/public/ HTTP/1.1" 200 16218
+INFO 2025-12-10 23:04:37,417 basehttp "POST /add/public/ HTTP/1.1" 302 0
+INFO 2025-12-10 23:04:37,507 basehttp "GET /dashboard/ HTTP/1.1" 200 122610
+INFO 2025-12-10 23:04:37,555 basehttp "GET /media/events/images/6f2be295-2351-45e4-98df-7e095211d54a.jpg HTTP/1.1" 304 0
+INFO 2025-12-10 23:04:37,572 basehttp "GET /media/events/images/remboursement_et_retours.png HTTP/1.1" 304 0
+INFO 2025-12-10 23:04:37,675 basehttp "GET /media/events/images/ca637379-0a7c-41eb-9ce2-b2a89991e63e.jpg HTTP/1.1" 200 65170
+INFO 2025-12-10 23:04:41,934 basehttp "GET /event/public/8/ HTTP/1.1" 200 15522
+INFO 2025-12-10 23:04:41,967 basehttp "GET /media/events/images/ca637379-0a7c-41eb-9ce2-b2a89991e63e.jpg HTTP/1.1" 304 0
+INFO 2025-12-10 23:04:46,041 basehttp "GET /join-public-event/8/ HTTP/1.1" 302 0
+INFO 2025-12-10 23:04:46,132 basehttp "GET /dashboard/ HTTP/1.1" 200 122610
+INFO 2025-12-10 23:04:46,162 basehttp "GET /media/events/images/ca637379-0a7c-41eb-9ce2-b2a89991e63e.jpg HTTP/1.1" 304 0
+INFO 2025-12-10 23:04:50,644 basehttp "GET /event/public/8/ HTTP/1.1" 200 16300
+INFO 2025-12-10 23:04:50,671 basehttp "GET /media/events/images/ca637379-0a7c-41eb-9ce2-b2a89991e63e.jpg HTTP/1.1" 304 0
+INFO 2025-12-10 23:07:26,715 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 23:07:28,296 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 23:07:37,070 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 23:07:38,521 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 23:07:45,184 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 23:07:46,492 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 23:08:02,554 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 23:08:04,047 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 23:09:27,055 basehttp "GET /add/public/ HTTP/1.1" 200 16221
+INFO 2025-12-10 23:10:02,682 basehttp "POST /add/public/ HTTP/1.1" 302 0
+INFO 2025-12-10 23:10:02,750 basehttp "GET /dashboard/ HTTP/1.1" 200 124766
+INFO 2025-12-10 23:10:02,797 basehttp "GET /media/events/images/6f2be295-2351-45e4-98df-7e095211d54a.jpg HTTP/1.1" 304 0
+INFO 2025-12-10 23:10:02,814 basehttp "GET /media/events/images/ca637379-0a7c-41eb-9ce2-b2a89991e63e.jpg HTTP/1.1" 304 0
+INFO 2025-12-10 23:10:02,833 basehttp "GET /media/events/images/remboursement_et_retours.png HTTP/1.1" 304 0
+INFO 2025-12-10 23:10:02,940 basehttp "GET /media/events/images/diagram-export-09-11-2025-13_41_31.png HTTP/1.1" 200 153498
+INFO 2025-12-10 23:10:13,377 basehttp "GET /event/public/9/ HTTP/1.1" 200 17217
+INFO 2025-12-10 23:10:13,411 basehttp "GET /media/events/images/diagram-export-09-11-2025-13_41_31.png HTTP/1.1" 304 0
+INFO 2025-12-10 23:14:18,965 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 23:15:17,992 basehttp "POST /event/public/9/ HTTP/1.1" 200 17217
+INFO 2025-12-10 23:15:18,032 basehttp "GET /media/events/images/diagram-export-09-11-2025-13_41_31.png HTTP/1.1" 304 0
+INFO 2025-12-10 23:15:45,177 basehttp "POST /event/public/9/ HTTP/1.1" 200 17217
+INFO 2025-12-10 23:17:28,575 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 23:17:30,766 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 23:17:42,122 basehttp "POST /event/public/9/ HTTP/1.1" 200 17217
+INFO 2025-12-10 23:17:42,160 basehttp "GET /media/events/images/diagram-export-09-11-2025-13_41_31.png HTTP/1.1" 304 0
+INFO 2025-12-10 23:17:59,050 basehttp "POST /event/public/9/ HTTP/1.1" 200 17217
+INFO 2025-12-10 23:20:18,380 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 23:20:20,375 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 23:21:11,538 basehttp "POST /event/public/9/ HTTP/1.1" 200 17240
+INFO 2025-12-10 23:21:11,582 basehttp "GET /media/events/images/diagram-export-09-11-2025-13_41_31.png HTTP/1.1" 304 0
+INFO 2025-12-10 23:21:33,106 basehttp "POST /event/public/9/ HTTP/1.1" 200 17240
+INFO 2025-12-10 23:21:39,413 basehttp "GET /dashboard/?type=all HTTP/1.1" 200 124766
+INFO 2025-12-10 23:21:39,461 basehttp "GET /media/events/images/6f2be295-2351-45e4-98df-7e095211d54a.jpg HTTP/1.1" 304 0
+INFO 2025-12-10 23:21:39,505 basehttp "GET /media/events/images/remboursement_et_retours.png HTTP/1.1" 304 0
+INFO 2025-12-10 23:21:39,522 basehttp "GET /media/events/images/ca637379-0a7c-41eb-9ce2-b2a89991e63e.jpg HTTP/1.1" 304 0
+INFO 2025-12-10 23:21:43,051 basehttp "GET /event/public/9/ HTTP/1.1" 200 17240
+INFO 2025-12-10 23:22:49,834 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 23:22:51,778 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 23:23:21,268 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 23:23:22,893 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 23:23:37,231 basehttp "GET /event/public/9/ HTTP/1.1" 200 17240
+INFO 2025-12-10 23:23:37,267 basehttp "GET /media/events/images/diagram-export-09-11-2025-13_41_31.png HTTP/1.1" 304 0
+INFO 2025-12-10 23:23:39,362 basehttp "GET /event/public/9/ HTTP/1.1" 200 17240
+INFO 2025-12-10 23:23:40,088 basehttp "GET /event/public/9/ HTTP/1.1" 200 17240
+INFO 2025-12-10 23:23:40,268 basehttp "GET /event/public/9/ HTTP/1.1" 200 17240
+INFO 2025-12-10 23:23:40,469 basehttp "GET /event/public/9/ HTTP/1.1" 200 17240
+INFO 2025-12-10 23:23:40,672 basehttp "GET /event/public/9/ HTTP/1.1" 200 17240
+INFO 2025-12-10 23:24:01,262 basehttp "POST /event/public/9/ HTTP/1.1" 200 17240
+INFO 2025-12-10 23:25:58,358 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 23:26:00,022 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 23:27:07,564 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 23:27:09,785 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 23:27:52,370 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 23:27:54,331 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 23:28:07,940 basehttp "POST /event/public/9/ HTTP/1.1" 200 17240
+INFO 2025-12-10 23:28:07,977 basehttp "GET /media/events/images/diagram-export-09-11-2025-13_41_31.png HTTP/1.1" 304 0
+INFO 2025-12-10 23:28:12,269 basehttp "POST /event/public/9/ HTTP/1.1" 200 17240
+INFO 2025-12-10 23:28:19,444 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 23:28:24,079 basehttp "POST /event/public/9/ HTTP/1.1" 200 17240
+INFO 2025-12-10 23:28:46,950 basehttp "POST /event/public/9/ HTTP/1.1" 200 17240
+INFO 2025-12-10 23:28:58,448 basehttp "POST /event/public/9/ HTTP/1.1" 200 17240
+INFO 2025-12-10 23:29:02,525 basehttp "GET /event/public/9/ HTTP/1.1" 200 17240
+INFO 2025-12-10 23:29:05,295 basehttp "GET /add/public/ HTTP/1.1" 200 16060
+INFO 2025-12-10 23:29:36,021 basehttp "POST /add/public/ HTTP/1.1" 302 0
+INFO 2025-12-10 23:29:36,052 basehttp "GET /event/public/10/ HTTP/1.1" 200 17255
+INFO 2025-12-10 23:29:56,793 basehttp "POST /event/public/10/ HTTP/1.1" 200 17255
+INFO 2025-12-10 23:30:31,580 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 23:30:33,706 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 23:31:47,863 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 23:31:50,107 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 23:31:53,945 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 23:31:55,875 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 23:32:07,046 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 23:32:09,152 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 23:32:36,109 basehttp "POST /event/public/10/ HTTP/1.1" 200 17255
+INFO 2025-12-10 23:32:40,072 basehttp "POST /event/public/10/ HTTP/1.1" 200 17255
+INFO 2025-12-10 23:33:51,974 basehttp "POST /event/public/10/ HTTP/1.1" 200 17255
+INFO 2025-12-10 23:35:46,053 basehttp "POST /event/public/10/ HTTP/1.1" 200 17255
+INFO 2025-12-10 23:39:28,859 basehttp "POST /event/public/10/ HTTP/1.1" 200 17255
+INFO 2025-12-10 23:39:48,391 basehttp "POST /event/public/10/ HTTP/1.1" 200 17255
+INFO 2025-12-10 23:40:38,209 basehttp "POST /event/public/10/ HTTP/1.1" 200 17255
+INFO 2025-12-10 23:54:32,739 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 23:54:34,835 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 23:54:55,383 basehttp "POST /event/public/10/ HTTP/1.1" 200 17255
+INFO 2025-12-10 23:54:59,643 basehttp "POST /event/public/10/ HTTP/1.1" 200 17255
+INFO 2025-12-10 23:55:05,655 basehttp "GET /event/public/10/ HTTP/1.1" 200 17255
+INFO 2025-12-10 23:55:31,098 basehttp "POST /event/public/10/ HTTP/1.1" 200 17255
+INFO 2025-12-10 23:55:42,280 basehttp "POST /event/public/10/ HTTP/1.1" 200 17255
+INFO 2025-12-10 23:58:21,855 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-10 23:58:23,773 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 23:59:44,513 basehttp "POST /event/public/10/ HTTP/1.1" 200 17255
+INFO 2025-12-11 00:00:38,639 basehttp "POST /event/public/10/ HTTP/1.1" 200 17255
+INFO 2025-12-11 00:05:40,725 basehttp "POST /event/public/10/ HTTP/1.1" 200 16028
+INFO 2025-12-11 00:06:05,757 basehttp "POST /event/public/10/ HTTP/1.1" 200 16028
+INFO 2025-12-11 00:06:19,405 basehttp "POST /event/public/10/ HTTP/1.1" 200 16028
+INFO 2025-12-11 00:08:45,063 basehttp "GET /dashboard/?type=all HTTP/1.1" 200 126986
+INFO 2025-12-11 00:08:45,103 basehttp "GET /media/events/images/6f2be295-2351-45e4-98df-7e095211d54a.jpg HTTP/1.1" 304 0
+INFO 2025-12-11 00:08:45,130 basehttp "GET /media/events/images/diagram-export-09-11-2025-13_41_31.png HTTP/1.1" 304 0
+INFO 2025-12-11 00:08:45,143 basehttp "GET /media/events/images/remboursement_et_retours.png HTTP/1.1" 304 0
+INFO 2025-12-11 00:08:45,161 basehttp "GET /media/events/images/ca637379-0a7c-41eb-9ce2-b2a89991e63e.jpg HTTP/1.1" 304 0
+INFO 2025-12-11 00:08:51,545 basehttp "GET /event/private/12/ HTTP/1.1" 200 15914
+INFO 2025-12-11 00:09:07,077 basehttp "GET /event/public/10/ HTTP/1.1" 200 16028
+INFO 2025-12-11 00:09:40,358 basehttp "GET /add/public/ HTTP/1.1" 200 16060
+INFO 2025-12-11 00:10:01,277 basehttp "POST /add/public/ HTTP/1.1" 302 0
+INFO 2025-12-11 00:10:01,325 basehttp "GET /event/public/11/ HTTP/1.1" 200 15978
+INFO 2025-12-11 01:15:28,382 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-11 01:15:32,701 autoreload Watching for file changes with StatReloader
+INFO 2025-12-11 01:16:11,702 basehttp "GET /event/public/11/ HTTP/1.1" 200 15978
+INFO 2025-12-11 01:16:12,810 basehttp "GET /event/public/11/ HTTP/1.1" 200 15978
+INFO 2025-12-11 01:16:18,832 basehttp "GET /add/public/ HTTP/1.1" 200 16060
+INFO 2025-12-11 01:17:54,503 basehttp "POST /add/public/ HTTP/1.1" 302 0
+INFO 2025-12-11 01:17:54,573 basehttp "GET /event/public/12/ HTTP/1.1" 200 16008
+INFO 2025-12-11 01:18:19,210 basehttp "POST /event/public/12/ HTTP/1.1" 200 16008
+INFO 2025-12-11 01:20:27,149 basehttp "GET /event/public/12/ HTTP/1.1" 200 16008
+INFO 2025-12-11 01:20:29,489 basehttp "GET /add/public/ HTTP/1.1" 200 16060
+INFO 2025-12-11 01:20:31,997 basehttp "GET /event/public/11/ HTTP/1.1" 200 15978
+INFO 2025-12-11 01:20:33,637 basehttp "GET /add/public/ HTTP/1.1" 200 15914
+INFO 2025-12-11 01:20:34,815 basehttp "GET /dashboard/?type=all HTTP/1.1" 200 131397
+INFO 2025-12-11 01:20:40,569 basehttp "GET /event/public/6/ HTTP/1.1" 200 16157
+INFO 2025-12-11 01:20:40,607 basehttp "GET /media/events/images/6f2be295-2351-45e4-98df-7e095211d54a.jpg HTTP/1.1" 304 0
+INFO 2025-12-11 01:22:53,909 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-11 01:22:57,739 autoreload Watching for file changes with StatReloader
+INFO 2025-12-11 01:23:32,256 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-11 01:23:35,850 autoreload Watching for file changes with StatReloader
+INFO 2025-12-11 01:23:43,299 basehttp "GET /add/public/ HTTP/1.1" 200 15914
+INFO 2025-12-11 01:24:06,905 basehttp "POST /add/public/ HTTP/1.1" 302 0
+ERROR 2025-12-11 01:24:07,279 log Internal Server Error: /event/public/13/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ovic\smart_event - Copie\events\views.py", line 810, in event_detail
+    paginator = Paginator(participants_list, 10)  # 10 participants par page
+                ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'Paginator' where it is not associated with a value
+ERROR 2025-12-11 01:24:07,292 basehttp "GET /event/public/13/ HTTP/1.1" 500 78536
+INFO 2025-12-11 01:24:28,195 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-11 01:24:31,783 autoreload Watching for file changes with StatReloader
+INFO 2025-12-11 01:24:39,042 basehttp "GET /event/public/13/ HTTP/1.1" 200 15987
+INFO 2025-12-11 01:25:23,429 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-11 01:25:27,144 autoreload Watching for file changes with StatReloader
+INFO 2025-12-11 01:25:31,625 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-11 01:25:35,321 autoreload Watching for file changes with StatReloader
+INFO 2025-12-11 01:25:57,739 basehttp "GET /add/public/ HTTP/1.1" 200 16060
+INFO 2025-12-11 01:27:13,262 basehttp "POST /add/public/ HTTP/1.1" 302 0
+INFO 2025-12-11 01:27:13,371 basehttp "GET /event/public/14/ HTTP/1.1" 200 16850
+INFO 2025-12-11 01:27:44,123 basehttp "POST /event/public/14/ HTTP/1.1" 200 16850
+INFO 2025-12-11 01:28:14,603 basehttp "GET /dashboard/?type=public HTTP/1.1" 200 42158
+INFO 2025-12-11 01:28:14,666 basehttp "GET /media/events/images/ca637379-0a7c-41eb-9ce2-b2a89991e63e.jpg HTTP/1.1" 304 0
+INFO 2025-12-11 01:28:14,691 basehttp "GET /media/events/images/remboursement_et_retours.png HTTP/1.1" 304 0
+INFO 2025-12-11 01:28:14,717 basehttp "GET /media/events/images/diagram-export-09-11-2025-13_41_31.png HTTP/1.1" 304 0
+INFO 2025-12-11 01:28:17,816 basehttp "GET /event/public/6/ HTTP/1.1" 200 16118
+INFO 2025-12-11 01:34:06,362 basehttp "GET /dashboard/?type=public HTTP/1.1" 200 42158
+ERROR 2025-12-11 01:35:41,617 log Internal Server Error: /event/public/10/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ovic\smart_event - Copie\events\views.py", line 961, in event_detail
+    return render(request, 'events/event_detail.html', {
+        'event': event,
+    ...<10 lines>...
+        'user_participation': user_participation if 'user_participation' in locals() else None,
+    })
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\defaulttags.py", line 976, in do_if
+    nodelist = parser.parse(("endif",))
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+        (
+    ...<2 lines>...
+        )
+    )
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\defaulttags.py", line 1540, in do_with
+    nodelist = parser.parse(("endwith",))
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\defaulttags.py", line 976, in do_if
+    nodelist = parser.parse(("endif",))
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'split'
+ERROR 2025-12-11 01:35:41,675 basehttp "GET /event/public/10/ HTTP/1.1" 500 422260
+INFO 2025-12-11 01:36:12,582 autoreload C:\Users\ovic\smart_event - Copie\events\templatetags\__init__.py changed, reloading.
+INFO 2025-12-11 01:36:15,891 autoreload Watching for file changes with StatReloader
+ERROR 2025-12-11 01:38:01,105 log Internal Server Error: /event/public/10/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\defaulttags.py", line 1035, in find_library
+    return parser.libraries[name]
+           ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'extra_filters'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ovic\smart_event - Copie\events\views.py", line 961, in event_detail
+    return render(request, 'events/event_detail.html', {
+        'event': event,
+    ...<10 lines>...
+        'user_participation': user_participation if 'user_participation' in locals() else None,
+    })
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\defaulttags.py", line 1097, in load
+    lib = find_library(parser, name)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\defaulttags.py", line 1037, in find_library
+    raise TemplateSyntaxError(
+    ...<5 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: 'extra_filters' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+custom_tags
+i18n
+l10n
+log
+static
+tz
+widget_tweaks
+ERROR 2025-12-11 01:38:01,144 basehttp "GET /event/public/10/ HTTP/1.1" 500 244714
+INFO 2025-12-11 01:38:27,057 autoreload C:\Users\ovic\smart_event - Copie\events\templatetags\custom_tags.py changed, reloading.
+INFO 2025-12-11 01:38:30,261 autoreload Watching for file changes with StatReloader
+INFO 2025-12-11 01:39:42,209 basehttp "GET /event/public/10/ HTTP/1.1" 200 17157
+INFO 2025-12-11 01:40:00,275 basehttp "POST /event/public/10/ HTTP/1.1" 200 17157
+INFO 2025-12-11 13:24:10,055 autoreload Watching for file changes with StatReloader
+INFO 2025-12-11 13:31:00,060 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-11 13:31:03,102 autoreload Watching for file changes with StatReloader
+INFO 2025-12-11 13:32:28,823 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-11 13:32:31,863 autoreload Watching for file changes with StatReloader
+INFO 2025-12-11 13:32:51,117 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-11 13:32:53,987 autoreload Watching for file changes with StatReloader
+INFO 2025-12-11 13:34:54,338 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-12-11 13:34:54,347 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-11 13:34:54,435 basehttp "GET /login/?next=/dashboard/ HTTP/1.1" 200 10592
+INFO 2025-12-11 13:34:54,477 basehttp "GET /static/Evently/assets/vendor/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-12-11 13:34:54,482 basehttp "GET /static/Evently/assets/vendor/bootstrap-icons/bootstrap-icons.css HTTP/1.1" 304 0
+INFO 2025-12-11 13:34:54,504 basehttp "GET /static/Evently/assets/img/background.jpg HTTP/1.1" 304 0
+WARNING 2025-12-11 13:34:54,651 log Not Found: /favicon.ico
+WARNING 2025-12-11 13:34:54,655 basehttp "GET /favicon.ico HTTP/1.1" 404 12978
+INFO 2025-12-11 13:35:03,553 basehttp "POST /login/?next=/dashboard/ HTTP/1.1" 200 10871
+INFO 2025-12-11 13:35:26,657 basehttp "POST /login/?next=/dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-11 13:35:28,522 basehttp "GET /two-factor/verify/ HTTP/1.1" 200 18780
+INFO 2025-12-11 13:35:28,756 basehttp "GET /static/events/css/participants.css HTTP/1.1" 200 2522
+INFO 2025-12-11 13:35:40,777 basehttp "POST /two-factor/verify/ HTTP/1.1" 302 0
+INFO 2025-12-11 13:35:41,012 basehttp "GET /dashboard/ HTTP/1.1" 200 135801
+INFO 2025-12-11 13:35:41,137 basehttp "GET /media/events/images/77BC41C5-7570-433C-B92C-11D1198A3C94.jpeg HTTP/1.1" 200 671895
+INFO 2025-12-11 13:35:41,158 basehttp "GET /media/events/images/c99f34d8-45b4-43eb-be45-9543f4602f2e.jpg HTTP/1.1" 200 254883
+INFO 2025-12-11 13:35:41,178 basehttp "GET /media/events/images/6f2be295-2351-45e4-98df-7e095211d54a.jpg HTTP/1.1" 200 56034
+INFO 2025-12-11 13:35:41,199 basehttp "GET /media/events/images/fb579de1-c0ec-4fda-9d98-352830016ce6.jpg HTTP/1.1" 200 51335
+INFO 2025-12-11 13:35:41,216 basehttp "GET /media/events/images/ca637379-0a7c-41eb-9ce2-b2a89991e63e.jpg HTTP/1.1" 200 65170
+INFO 2025-12-11 13:35:41,240 basehttp "GET /media/events/images/remboursement_et_retours.png HTTP/1.1" 200 139883
+INFO 2025-12-11 13:35:41,259 basehttp "GET /media/events/images/diagram-export-09-11-2025-13_41_31.png HTTP/1.1" 200 153498
+INFO 2025-12-11 13:35:53,569 basehttp "GET /add/public/ HTTP/1.1" 200 16063
+INFO 2025-12-11 13:36:17,883 basehttp "POST /add/public/ HTTP/1.1" 200 16176
+INFO 2025-12-11 13:36:24,433 basehttp "POST /add/public/ HTTP/1.1" 302 0
+ERROR 2025-12-11 13:36:24,555 log Internal Server Error: /event/public/15/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ovic\smart_event - Copie\events\views.py", line 981, in event_detail
+    'form': form,
+            ^^^^
+NameError: name 'form' is not defined. Did you mean: 'format'?
+ERROR 2025-12-11 13:36:24,566 basehttp "GET /event/public/15/ HTTP/1.1" 500 80524
+INFO 2025-12-11 13:36:51,364 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-11 13:36:54,446 autoreload Watching for file changes with StatReloader
+INFO 2025-12-11 13:37:07,291 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-11 13:37:10,308 autoreload Watching for file changes with StatReloader
+INFO 2025-12-11 13:37:14,554 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-11 13:37:17,545 autoreload Watching for file changes with StatReloader
+INFO 2025-12-11 13:37:21,961 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-11 13:37:25,004 autoreload Watching for file changes with StatReloader
+ERROR 2025-12-11 13:37:46,684 log Internal Server Error: /event/public/15/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ovic\smart_event - Copie\events\views.py", line 982, in event_detail
+    'form': form,
+            ^^^^
+NameError: name 'form' is not defined. Did you mean: 'format'?
+ERROR 2025-12-11 13:37:46,692 basehttp "GET /event/public/15/ HTTP/1.1" 500 80318
+ERROR 2025-12-11 13:37:48,040 log Internal Server Error: /event/public/15/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ovic\smart_event - Copie\events\views.py", line 982, in event_detail
+    'form': form,
+            ^^^^
+NameError: name 'form' is not defined. Did you mean: 'format'?
+ERROR 2025-12-11 13:37:48,047 basehttp "GET /event/public/15/ HTTP/1.1" 500 80318
+INFO 2025-12-11 13:38:08,410 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-11 13:38:11,493 autoreload Watching for file changes with StatReloader
+ERROR 2025-12-11 13:38:20,910 log Internal Server Error: /event/public/15/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'else'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ovic\smart_event - Copie\events\views.py", line 980, in event_detail
+    return render(request, 'events/event_detail.html', {
+        'event': event,
+    ...<10 lines>...
+        'user_participation': user_participation if 'user_participation' in locals() else None,
+    })
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\defaulttags.py", line 970, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\defaulttags.py", line 976, in do_if
+    nodelist = parser.parse(("endif",))
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 567, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 165: 'else', expected 'endif'. Did you forget to register or load this tag?
+ERROR 2025-12-11 13:38:20,976 basehttp "GET /event/public/15/ HTTP/1.1" 500 334086
+ERROR 2025-12-11 13:40:01,051 log Internal Server Error: /event/public/15/
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ovic\smart_event - Copie\events\views.py", line 980, in event_detail
+    return render(request, 'events/event_detail.html', {
+        'event': event,
+    ...<10 lines>...
+        'user_participation': user_participation if 'user_participation' in locals() else None,
+    })
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\defaulttags.py", line 976, in do_if
+    nodelist = parser.parse(("endif",))
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\template\base.py", line 567, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 327: 'endfor', expected 'endif'. Did you forget to register or load this tag?
+ERROR 2025-12-11 13:40:01,076 basehttp "GET /event/public/15/ HTTP/1.1" 500 297356
+INFO 2025-12-11 13:40:41,772 basehttp "GET /event/public/15/ HTTP/1.1" 200 18875
+INFO 2025-12-11 13:43:12,029 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-11 13:43:15,079 autoreload Watching for file changes with StatReloader
+INFO 2025-12-11 13:44:47,715 basehttp "GET /event/public/15/ HTTP/1.1" 200 23171
+INFO 2025-12-11 13:45:24,644 basehttp "POST /event/public/15/ HTTP/1.1" 302 0
+INFO 2025-12-11 13:45:24,743 basehttp "GET /event/public/15/ HTTP/1.1" 200 22264
+INFO 2025-12-11 13:45:53,073 basehttp "GET /dashboard/ HTTP/1.1" 200 140194
+INFO 2025-12-11 13:45:58,315 basehttp "GET /add/public/ HTTP/1.1" 200 16196
+INFO 2025-12-11 13:46:15,278 basehttp "POST /add/public/ HTTP/1.1" 302 0
+INFO 2025-12-11 13:46:15,349 basehttp "GET /event/public/16/ HTTP/1.1" 200 19888
+INFO 2025-12-11 13:46:20,181 basehttp "GET /join-public-event/16/ HTTP/1.1" 302 0
+INFO 2025-12-11 13:46:20,259 basehttp "GET /event/public/16/ HTTP/1.1" 200 20991
+INFO 2025-12-11 13:46:29,248 basehttp "GET /dashboard/ HTTP/1.1" 200 144010
+INFO 2025-12-11 13:47:45,965 basehttp "GET /add/private/ HTTP/1.1" 200 10353
+INFO 2025-12-11 13:48:21,137 basehttp "POST /add/private/ HTTP/1.1" 302 0
+WARNING 2025-12-11 13:48:21,206 log Not Found: /event/public/26/
+WARNING 2025-12-11 13:48:21,208 basehttp "GET /event/public/26/ HTTP/1.1" 404 7926
+WARNING 2025-12-11 13:49:46,193 log Not Found: /event/public/26/
+WARNING 2025-12-11 13:49:46,195 basehttp "GET /event/public/26/ HTTP/1.1" 404 7926
+WARNING 2025-12-11 13:49:47,864 log Not Found: /event/public/26/
+WARNING 2025-12-11 13:49:47,866 basehttp "GET /event/public/26/ HTTP/1.1" 404 7926
+INFO 2025-12-11 13:50:30,115 basehttp "POST /add/private/ HTTP/1.1" 302 0
+WARNING 2025-12-11 13:50:30,160 log Not Found: /event/public/27/
+WARNING 2025-12-11 13:50:30,162 basehttp "GET /event/public/27/ HTTP/1.1" 404 7926
+INFO 2025-12-11 13:52:41,985 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-11 13:52:45,143 autoreload Watching for file changes with StatReloader
+INFO 2025-12-11 13:53:28,663 basehttp "POST /add/private/ HTTP/1.1" 302 0
+WARNING 2025-12-11 13:53:28,702 log Not Found: /event/public/28/
+WARNING 2025-12-11 13:53:28,704 basehttp "GET /event/public/28/ HTTP/1.1" 404 7926
+INFO 2025-12-11 13:53:46,191 autoreload Watching for file changes with StatReloader
+INFO 2025-12-11 13:55:50,442 basehttp "GET /add/private/ HTTP/1.1" 200 10507
+INFO 2025-12-11 13:56:10,451 basehttp "POST /add/private/ HTTP/1.1" 302 0
+WARNING 2025-12-11 13:56:10,500 log Not Found: /event/public/29/
+WARNING 2025-12-11 13:56:10,501 basehttp "GET /event/public/29/ HTTP/1.1" 404 7926
+INFO 2025-12-11 13:57:36,834 autoreload C:\Users\ovic\smart_event - Copie\events\views.py changed, reloading.
+INFO 2025-12-11 13:57:39,858 autoreload Watching for file changes with StatReloader
+INFO 2025-12-11 14:05:07,896 autoreload C:\Users\ovic\smart_event - Copie\smart_event\settings.py changed, reloading.
+INFO 2025-12-11 14:05:11,039 autoreload Watching for file changes with StatReloader

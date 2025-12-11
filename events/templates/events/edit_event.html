@@ -1,0 +1,140 @@
+{% extends 'events/base.html' %}
+{% load widget_tweaks %}
+
+{% block title %}Modifier l'événement{% endblock %}
+{% block hero_title %}Modifier l'Événement{% endblock %}
+
+{% block content %}
+<section class="dashboard-section py-5">
+  <div class="container">
+    <div class="event-card-glow p-4 mb-5">
+      <div class="event-header" style="--accent:#03a9f4;">✏️ Modifier l’événement</div>
+
+      <div class="event-body">
+        <form method="POST" class="needs-validation" novalidate>
+          {% csrf_token %}
+
+          <!-- 🏷️ Titre -->
+          <div class="mb-3">
+            <label class="form-label text-light fw-bold">Titre de l’événement</label>
+            {{ form.title|add_class:"form-control-dark" }}
+          </div>
+
+          <!-- 📝 Description -->
+          <div class="mb-3">
+            <label class="form-label text-light fw-bold">Description</label>
+            {{ form.description|add_class:"form-control-dark" }}
+          </div>
+
+          <!-- ⏰ Date -->
+          <div class="mb-3">
+            <label class="form-label text-light fw-bold">Date et heure</label>
+            {{ form.date|add_class:"form-control-dark" }}
+          </div>
+
+          <!-- 📍 Lieu -->
+          <div class="mb-3">
+            <label class="form-label text-light fw-bold">Lieu</label>
+            {{ form.location|add_class:"form-control-dark" }}
+          </div>
+
+          <!-- ✉️ Invités -->
+          {% if form.guests_emails %}
+          <div class="mb-3">
+            <label class="form-label text-light fw-bold">Invités (emails séparés par des virgules)</label>
+            {{ form.guests_emails|add_class:"form-control-dark" }}
+            <small class="text-muted">Exemple : jean@gmail.com, marie@yahoo.fr</small>
+          </div>
+          {% endif %}
+
+          <!-- Boutons -->
+          <div class="text-center mt-4">
+            <button type="submit" class="btn-neon success px-4 py-2">
+              💾 Enregistrer
+            </button>
+            <a href="{% url 'dashboard' %}" class="btn-neon neutral px-4 py-2 ms-2">
+              ⬅ Annuler
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* === STYLE MODIFIER ÉVÉNEMENT (même thème Dashboard) === */
+.dashboard-section {
+  background: rgba(0,0,0,0.85);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 0 25px rgba(138,95,255,0.15);
+}
+
+.event-card-glow {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.event-card-glow:hover {
+  box-shadow: 0 0 30px var(--accent, #6a5acd);
+}
+
+.event-header {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.event-body {
+  padding: 1.5rem;
+}
+
+/* Champs de formulaire */
+.form-control-dark {
+  width: 100%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  transition: all 0.3s ease;
+}
+.form-control-dark:focus {
+  background: rgba(255,255,255,0.15);
+  border-color: #03a9f4;
+  box-shadow: 0 0 10px #03a9f4;
+  outline: none;
+}
+
+/* Texte et labels */
+label.form-label {
+  font-size: 1rem;
+}
+small.text-muted {
+  color: #999 !important;
+}
+
+/* Boutons */
+.btn-neon {
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-neon:hover {
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 0 12px currentColor;
+}
+.btn-neon.success { color: #03a9f4; }
+.btn-neon.neutral { color: #9e9e9e; }
+</style>
+{% endblock %}

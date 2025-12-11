@@ -1,0 +1,22 @@
+{% extends 'events/base.html' %}
+{% block title %}Paiement réussi{% endblock %}
+{% block hero_title %}Paiement confirmé ✅{% endblock %}
+
+{% block content %}
+<section class="py-5 text-center">
+  <div class="container">
+    <div class="card shadow-lg p-5 mx-auto" style="max-width: 600px;">
+      <h2 class="mb-3 text-success">Merci {{ request.user.username }} !</h2>
+      <p class="lead">
+        Votre paiement pour <strong>{{ event.title }}</strong> a été validé avec succès.
+      </p>
+      <p>
+        Vous êtes désormais inscrit à cet événement. Vous pouvez retrouver toutes vos inscriptions dans votre tableau de bord.
+      </p>
+      <a href="{% url 'dashboard' %}" class="btn btn-primary mt-3">
+        Aller à mon tableau de bord
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}

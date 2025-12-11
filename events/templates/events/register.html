@@ -1,20 +1,108 @@
 {% extends 'events/base.html' %}
-
 {% block title %}Inscription{% endblock %}
+{% load widget_tweaks %}
+
+{% block hero_title %}📝 Créer un compte Smart Event{% endblock %}
 
 {% block content %}
-<h2 class="text-center mb-4">📝 Inscription</h2>
+<section class="d-flex justify-content-center py-5">
+  <div class="container" style="max-width: 500px;">
+    <div class="card-glass p-5 rounded-4 shadow-lg">
+      <h2 class="text-center mb-4 fw-bold text-gradient">🚀 Créer un compte</h2>
 
-<div class="row justify-content-center">
-    <div class="col-md-4">
-        <form method="POST" class="card p-4 shadow-sm">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-primary w-100">S'inscrire</button>
-        </form>
-        <p class="text-center mt-2">
-            <a href="{% url 'login' %}">Déjà un compte ? Connexion</a>
-        </p>
+      <form method="POST" class="needs-validation" novalidate>
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+
+        <!-- Nom d'utilisateur -->
+        <div class="mb-3">
+          <label for="{{ form.username.id_for_label }}" class="form-label text-info fw-semibold">
+            Nom d'utilisateur
+          </label>
+          {{ form.username|add_class:"form-control form-control-lg bg-dark text-light border-info rounded-3" }}
+          {% for error in form.username.errors %}
+            <div class="text-danger small">{{ error }}</div>
+          {% endfor %}
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label for="{{ form.email.id_for_label }}" class="form-label text-info fw-semibold">
+            Adresse e-mail
+          </label>
+          {{ form.email|add_class:"form-control form-control-lg bg-dark text-light border-info rounded-3" }}
+          {% for error in form.email.errors %}
+            <div class="text-danger small">{{ error }}</div>
+          {% endfor %}
+        </div>
+
+        <!-- Mot de passe -->
+        <div class="mb-3">
+          <label for="{{ form.password1.id_for_label }}" class="form-label text-info fw-semibold">
+            Mot de passe
+          </label>
+          {{ form.password1|add_class:"form-control form-control-lg bg-dark text-light border-info rounded-3" }}
+          {% for error in form.password1.errors %}
+            <div class="text-danger small">{{ error }}</div>
+          {% endfor %}
+        </div>
+
+        <!-- Confirmation mot de passe -->
+        <div class="mb-4">
+          <label for="{{ form.password2.id_for_label }}" class="form-label text-info fw-semibold">
+            Confirmer le mot de passe
+          </label>
+          {{ form.password2|add_class:"form-control form-control-lg bg-dark text-light border-info rounded-3" }}
+          {% for error in form.password2.errors %}
+            <div class="text-danger small">{{ error }}</div>
+          {% endfor %}
+        </div>
+
+        <!-- Bouton -->
+        <button type="submit" class="btn-neon w-100 py-2 rounded-pill">
+          S'inscrire
+        </button>
+      </form>
+
+      <p class="text-center mt-4 mb-0 text-muted">
+        Déjà un compte ?
+        <a href="{% url 'login' %}" class="fw-bold text-decoration-none text-info">
+          Se connecter
+        </a>
+      </p>
     </div>
-</div>
+  </div>
+</section>
+
+<style>
+/* 🌐 Style futuriste cohérent */
+.card-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+.card-glass:hover {
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.25);
+  transform: translateY(-3px);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #00bcd4, #007bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-neon {
+  background: linear-gradient(90deg, #007bff, #00bcd4);
+  color: white;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+}
+.btn-neon:hover {
+  box-shadow: 0 0 20px #00bcd4;
+  transform: translateY(-2px);
+}
+</style>
 {% endblock %}

@@ -1,0 +1,186 @@
+{% extends 'events/base.html' %}
+
+{% block title %}Tableau de bord administrateur - Smart Event{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="alert alert-info">
+        <strong>Débogage :</strong> Connecté en tant que <strong>{{ user.username }}</strong> 
+        {% if user.is_superuser %}(Superutilisateur){% else %}(Utilisateur normal){% endif %}
+    </div>
+    <h1 class="text-center mb-5">📊 Tableau de bord administrateur</h1>
+    
+    <!-- Cartes de statistiques -->
+    <div class="row mb-5">
+        <div class="col-md-3 mb-4">
+            <div class="card bg-dark text-white border-primary">
+                <div class="card-body text-center">
+                    <h2 class="display-4">{{ total_users }}</h2>
+                    <p class="card-text">Utilisateurs</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card bg-dark text-white border-success">
+                <div class="card-body text-center">
+                    <h2 class="display-4">{{ total_events }}</h2>
+                    <p class="card-text">Événements</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card bg-dark text-white border-info">
+                <div class="card-body text-center">
+                    <h2 class="display-4">{{ public_events_count }}</h2>
+                    <p class="card-text">Événements publics</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card bg-dark text-white border-warning">
+                <div class="card-body text-center">
+                    <h2 class="display-4">{{ private_events_count }}</h2>
+                    <p class="card-text">Événements privés</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Graphique d'évolution des événements -->
+    <div class="card bg-dark border-light mb-5">
+        <div class="card-header">
+            <h3>📈 Évolution des événements créés</h3>
+        </div>
+        <div class="card-body">
+            <canvas id="eventsChart" height="100"></canvas>
+        </div>
+    </div>
+
+    <!-- Derniers événements -->
+    <div class="card bg-dark border-light">
+        <div class="card-header">
+            <h3>🆕 Derniers événements créés</h3>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-dark table-hover">
+                    <thead>
+                        <tr>
+                            <th>Titre</th>
+                            <th>Date</th>
+                            <th>Lieu</th>
+                            <th>Type</th>
+                            <th>Créé par</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for event in recent_events %}
+                        <tr>
+                            <td>{{ event.title }}</td>
+                            <td>{{ event.date|date:"d/m/Y H:i" }}</td>
+                            <td>{{ event.location }}</td>
+                            <td>{% if event.is_public %}Public{% else %}Privé{% endif %}</td>
+                            <td>{{ event.owner.username }}</td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="5" class="text-center">Aucun événement récent</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Récupérer les données du contexte Django
+    const monthsData = {{ months|safe }};
+    const eventCounts = {{ event_counts|safe }};
+    
+    // Créer le graphique
+    const ctx = document.getElementById('eventsChart');
+    if (ctx) {
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: monthsData,
+                datasets: [{
+                    label: 'Événements créés',
+                    data: eventCounts,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1,
+                    fill: true,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            color: '#fff'
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        ticks: {
+                            color: '#fff'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        ticks: {
+                            color: '#fff',
+                            stepSize: 1
+                        }
+                    }
+                }
+            }
+        });
+    }
+});
+</script>
+
+<style>
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.table {
+    color: #fff;
+}
+
+.table th, .table td {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+</style>
+{% endblock %}

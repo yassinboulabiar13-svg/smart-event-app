@@ -1,0 +1,152 @@
+{% load static %}
+<nav class="navbar">
+  <ul>
+    <li><a href="{% url 'home' %}">Accueil</a></li>
+    <li><a href="{% url 'about' %}">À propos</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+
+    {% if user.is_authenticated %}
+      <li class="dropdown" id="dropdown">
+        <a href="#" class="dropdown-toggle">Événements ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="{% url 'dashboard' %}?type=all">Tous les événements</a></li>
+          <li><a href="{% url 'dashboard' %}?type=private">Événements privés</a></li>
+          <li><a href="{% url 'dashboard' %}?type=public">Événements publics</a></li>
+          <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.2); margin: 0.5rem 0;">
+          <li><a href="{% url 'add_private_event' %}">🔒 Ajouter un événement privé</a></li>
+          <li><a href="{% url 'add_public_event' %}">🌐 Ajouter un événement public</a></li>
+        </ul>
+      </li>
+
+      <li><a href="{% url 'statistiques' %}">📊 Statistiques</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Profil ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="{% url 'profile' %}">👤 Mon profil</a></li>
+          <li><a href="{% url 'toggle_two_factor' %}">
+            {% if user.two_factor_auth.is_enabled %}
+              🔒 Désactiver la 2FA
+            {% else %}
+              🔓 Activer la 2FA
+            {% endif %}
+          </a></li>
+        </ul>
+      </li>
+      
+      {% if user.is_superuser %}
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Administration ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="{% url 'admin_stats' %}">📊 Tableau de bord</a></li>
+          <li><a href="/admin/">Interface d'administration</a></li>
+        </ul>
+      </li>
+      {% endif %}
+      
+      <li><a href="{% url 'logout' %}">Déconnexion</a></li>
+
+    {% else %}
+      <li><a href="{% url 'login' %}">Connexion</a></li>
+      <li><a href="{% url 'register' %}">Inscription</a></li>
+    {% endif %}
+  </ul>
+</nav>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background: rgba(0,0,0,0.8);
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  transition: background 0.2s;
+}
+
+.navbar a:hover {
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+}
+
+/* === Dropdown === */
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+/* ✅ Sous-menu caché par défaut */
+.dropdown-menu {
+  display: none !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0,0,0,0.9);
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  min-width: 220px;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* ✅ S'affiche seulement si actif */
+.dropdown.active > .dropdown-menu {
+  display: flex !important;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdowns = document.querySelectorAll('.dropdown');
+
+  dropdowns.forEach(dropdown => {
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      dropdown.classList.toggle('active');
+      dropdowns.forEach(d => {
+        if (d !== dropdown) d.classList.remove('active');
+      });
+    });
+  });
+
+  document.addEventListener('click', function() {
+    dropdowns.forEach(d => d.classList.remove('active'));
+  });
+});
+</script>

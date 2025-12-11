@@ -1,0 +1,338 @@
+{% extends 'events/base.html' %}
+{% load static widget_tweaks %}
+
+{% block title %}Modifier l'événement privé{% endblock %}
+{% block hero_title %}Modifier l'événement privé{% endblock %}
+
+{% block content %}
+<section class="dashboard-section py-5">
+  <div class="container">
+    <div class="event-card-glow p-4 mb-5">
+      <div class="event-header" style="--accent:#03a9f4;">
+        <i class="fas fa-edit me-2"></i>Modifier l'événement privé
+      </div>
+
+      <div class="event-body">
+        <form method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+          {% csrf_token %}
+
+          <!-- Aperçu de l'image actuelle -->
+          {% if event.image %}
+          <div class="mb-4">
+            <label class="form-label text-light fw-bold">Image actuelle</label>
+            <div class="current-image-preview">
+              <img src="{{ event.image.url }}" class="current-image">
+              <div class="image-overlay">
+                <span class="badge bg-info">Image actuelle</span>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+
+          <!-- Image -->
+          <div class="mb-4">
+            <label class="form-label text-light fw-bold">
+              <i class="fas fa-image me-2"></i>Image de l'événement
+            </label>
+
+            {{ form.image|add_class:"form-control-dark image-upload-input" }}
+
+            <div class="image-upload-preview mt-3" id="imagePreview" style="display:none;">
+              <img id="previewImage" class="upload-preview-image">
+              <button type="button" class="btn btn-sm btn-outline-danger mt-2" onclick="clearImagePreview()">
+                <i class="fas fa-times me-1"></i>Supprimer l'aperçu
+              </button>
+            </div>
+
+            <div class="form-text text-muted">
+              Formats supportés : JPG, PNG, WebP (max 5MB)
+            </div>
+          </div>
+
+          <!-- Titre -->
+          <div class="mb-4">
+            <label class="form-label text-light fw-bold">
+              <i class="fas fa-heading me-2"></i>Titre de l'événement
+            </label>
+            {{ form.title|add_class:"form-control-dark"|attr:"placeholder:Donnez un titre attractif" }}
+          </div>
+
+          <!-- Description -->
+          <div class="mb-4">
+            <label class="form-label text-light fw-bold">
+              <i class="fas fa-align-left me-2"></i>Description
+            </label>
+            {{ form.description|add_class:"form-control-dark"|attr:"rows:4"|attr:"placeholder:Décrivez votre événement..." }}
+          </div>
+
+          <!-- Date -->
+          <div class="mb-4">
+            <label class="form-label text-light fw-bold">
+              <i class="fas fa-calendar-alt me-2"></i>Date et heure
+            </label>
+            {{ form.date|add_class:"form-control-dark"|attr:"type:datetime-local" }}
+          </div>
+
+          <!-- Lieu -->
+          <div class="mb-4">
+            <label class="form-label text-light fw-bold">
+              <i class="fas fa-map-marker-alt me-2"></i>Lieu
+            </label>
+            {{ form.location|add_class:"form-control-dark"|attr:"placeholder:Lieu de l'événement" }}
+          </div>
+
+          <!-- Lien en ligne -->
+          <div class="mb-4">
+            <label class="form-label text-light fw-bold">
+              <i class="fas fa-link me-2"></i>Lien en ligne (optionnel)
+            </label>
+            {{ form.online_link|add_class:"form-control-dark"|attr:"placeholder:https://..." }}
+          </div>
+
+          <!-- Invitations par email -->
+          <div class="mb-4">
+            <label class="form-label text-light fw-bold">
+              <i class="fas fa-envelope me-2"></i>Inviter des personnes
+            </label>
+            {{ form.guests_emails|add_class:"form-control-dark"|attr:"rows:3"|attr:"placeholder:email1@ex..., email2@ex..." }}
+            <div class="form-text text-muted">
+              Séparez les emails par des virgules.
+            </div>
+          </div>
+
+          <!-- Erreurs globales -->
+          {% if form.non_field_errors %}
+          <div class="alert alert-danger">
+            <i class="fas fa-exclamation-triangle me-2"></i>
+            {{ form.non_field_errors }}
+          </div>
+          {% endif %}
+
+          <!-- Boutons -->
+          <div class="d-flex justify-content-between align-items-center mt-5 pt-4 border-top border-secondary">
+            <a href="{% url 'event_detail' 'private' event.id %}" class="btn btn-outline-secondary">
+              <i class="fas fa-times me-2"></i>Annuler
+            </a>
+
+            <div class="btn-group">
+              <a href="{% url 'delete_event' event.id %}" class="btn btn-outline-danger">
+                <i class="fas fa-trash me-2"></i>Supprimer
+              </a>
+
+              <button class="btn btn-primary" type="submit">
+                <i class="fas fa-save me-2"></i>Enregistrer les modifications
+              </button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  const imageInput = document.querySelector('.image-upload-input');
+  const imagePreview = document.getElementById('imagePreview');
+  const previewImage = document.getElementById('previewImage');
+
+  if (imageInput) {
+    imageInput.addEventListener('change', function () {
+      const file = this.files[0];
+      if (!file) {
+        imagePreview.style.display = 'none';
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = () => {
+        previewImage.src = reader.result;
+        imagePreview.style.display = 'block';
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+});
+
+function clearImagePreview() {
+  const input = document.querySelector('.image-upload-input');
+  input.value = "";
+  document.getElementById('imagePreview').style.display = 'none';
+}
+</script>
+
+<style>
+.dashboard-section {
+  background: rgba(0,0,0,0.85);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 0 25px rgba(138,95,255,0.15);
+}
+
+.event-card-glow {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.event-card-glow:hover {
+  box-shadow: 0 0 30px rgba(3,169,244,0.3);
+}
+
+.event-header {
+  background: linear-gradient(90deg, var(--accent), transparent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.event-body {
+  padding: 1.5rem 2rem;
+  color: #ddd;
+}
+
+.form-control-dark {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control-dark:focus {
+  background: rgba(255,255,255,0.15);
+  border-color: #03a9f4;
+  box-shadow: 0 0 10px rgba(3,169,244,0.5);
+  color: #fff;
+  outline: none;
+}
+
+.form-control-dark::placeholder {
+  color: #aaa;
+}
+
+.form-label {
+  color: #b0b9ff;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Styles pour l'aperçu d'image */
+.current-image-preview {
+  position: relative;
+  max-width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid rgba(3,169,244,0.3);
+}
+
+.current-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.image-upload-preview {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  border: 2px dashed rgba(3,169,244,0.3);
+}
+
+.upload-preview-image {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Boutons */
+.btn {
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #03a9f4, #0288d1);
+  border-color: #03a9f4;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0288d1, #0277bd);
+  border-color: #0288d1;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(3,169,244,0.4);
+}
+
+.btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+  background: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+
+.btn-outline-danger {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+  background: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-section {
+    padding: 1rem;
+  }
+  
+  .event-body {
+    padding: 1rem;
+  }
+  
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .btn-group {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Animation pour les champs obligatoires */
+.form-control-dark:required:not(:placeholder-shown):invalid {
+  border-color: #dc3545;
+  box-shadow: 0 0 10px rgba(220,53,69,0.5);
+}
+
+.form-control-dark:required:not(:placeholder-shown):valid {
+  border-color: #28a745;
+  box-shadow: 0 0 10px rgba(40,167,69,0.3);
+}
+</style>
+{% endblock %}

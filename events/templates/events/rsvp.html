@@ -1,21 +1,100 @@
 {% extends 'events/base.html' %}
+{% block title %}Invitation à {{ event.title }}{% endblock %}
+{% load widget_tweaks %}
 
-{% block title %}RSVP{% endblock %}
+{% block hero_title %}🎉 Invitation à {{ event.title }}{% endblock %}
 
 {% block content %}
-<h2>Réponse à l'invitation : {{ guest_email }}</h2>
+<section class="d-flex justify-content-center align-items-center py-5">
+  <div class="container" style="max-width: 600px;">
+    <div class="card-glass text-center p-5 rounded-4 shadow-lg">
 
-{% if error %}
-<div class="alert alert-danger">{{ error }}</div>
-{% else %}
-{% if message %}
-<div class="alert alert-success">{{ message }}</div>
-{% endif %}
+      <!-- 🏷️ Titre -->
+      <h3 class="fw-bold text-gradient mb-4">
+        Vous êtes invité à <br> « {{ event.title }} »
+      </h3>
 
-<form method="POST">
-    {% csrf_token %}
-    <button type="submit" name="status" value="Accepted" class="btn btn-success">Accepter ✅</button>
-    <button type="submit" name="status" value="Declined" class="btn btn-danger">Refuser ❌</button>
-</form>
-{% endif %}
+      <!-- 📅 Détails -->
+      <p class="mb-3 fs-5"><strong>📅</strong> {{ event.date|date:"d/m/Y H:i" }}</p>
+      <p class="mb-3 fs-5"><strong>📍</strong> {{ event.location }}</p>
+      <p class="text-muted fst-italic mb-4">
+        {{ event.description|default:"Aucune description disponible." }}
+      </p>
+
+      <!-- ✅ Formulaire de réponse -->
+      <form method="POST">
+        {% csrf_token %}
+        <div class="d-flex justify-content-center gap-3 mt-4">
+          <button type="submit" name="response" value="accepted" class="btn-neon-success rounded-pill px-4 py-2">
+            ✅ Accepter
+          </button>
+          <button type="submit" name="response" value="declined" class="btn-neon-danger rounded-pill px-4 py-2">
+            ❌ Refuser
+          </button>
+        </div>
+      </form>
+
+      <!-- 🔙 Retour -->
+      <div class="mt-5">
+        <a href="{% url 'dashboard' %}" class="link-muted small text-decoration-none">
+          ⬅ Retour au tableau de bord
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* 💎 Style général futuriste */
+.card-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+.card-glass:hover {
+  box-shadow: 0 0 25px rgba(0, 188, 212, 0.3);
+  transform: translateY(-3px);
+}
+
+/* ✨ Texte bleu-cyan dégradé */
+.text-gradient {
+  background: linear-gradient(90deg, #00bcd4, #007bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 🟢 Boutons néon */
+.btn-neon-success {
+  background: linear-gradient(90deg, #00c853, #64dd17);
+  color: white;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-neon-success:hover {
+  box-shadow: 0 0 20px rgba(100, 221, 23, 0.6);
+  transform: translateY(-2px);
+}
+
+.btn-neon-danger {
+  background: linear-gradient(90deg, #ff5252, #ff1744);
+  color: white;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-neon-danger:hover {
+  box-shadow: 0 0 20px rgba(255, 82, 82, 0.6);
+  transform: translateY(-2px);
+}
+
+.link-muted {
+  color: #aaa;
+  transition: 0.3s;
+}
+.link-muted:hover {
+  color: #00bcd4;
+}
+</style>
 {% endblock %}

@@ -1,34 +1,110 @@
 {% extends 'events/base.html' %}
-
+{% load widget_tweaks %}
 {% block title %}Liste des événements{% endblock %}
+{% block hero_title %}📅 Liste des événements{% endblock %}
 
 {% block content %}
-<h1 class="mb-4 text-center">📅 Liste des événements</h1>
+<section class="py-5">
+  <div class="container">
+    <!-- 🔖 En-tête -->
+    <div class="text-center mb-5">
+      <h1 class="fw-bold text-gradient">📅 Tous les événements</h1>
+      <p class="text-muted">Gérez, modifiez et explorez vos événements à venir.</p>
+    </div>
 
-<div class="text-center mb-3">
-    <a href="{% url 'add_event' %}" class="btn btn-primary">➕ Ajouter un événement</a>
-    <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary ms-2">📊 Tableau de bord</a>
-</div>
+    <!-- 🔘 Actions -->
+    <div class="text-center mb-5">
+      <a href="{% url 'add_event' %}" class="btn-neon create me-3">➕ Ajouter un événement</a>
+      <a href="{% url 'dashboard' %}" class="btn-neon neutral">📊 Retour au tableau de bord</a>
+    </div>
 
-<div class="row">
-    {% for event in events %}
+    <!-- 🗓️ Grille des événements -->
+    <div class="row">
+      {% for event in events %}
         <div class="col-md-6 col-lg-4 mb-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">{{ event.title }}</h5>
-                    <p class="card-text">
-                        📅 {{ event.date|date:"d/m/Y H:i" }}<br>
-                        📍 {{ event.location }}<br>
-                        {{ event.description }}
-                    </p>
-                </div>
-                <div class="card-footer text-center">
-                    <a href="#" class="btn btn-sm btn-outline-primary">Détails</a>
-                </div>
+          <div class="event-card-glow h-100">
+            <div class="event-header" style="--accent:#00bcd4;">
+              {{ event.title }}
             </div>
+            <div class="event-body">
+              <p class="mb-2"><strong>📅 Date :</strong> {{ event.date|date:"d/m/Y H:i" }}</p>
+              <p class="mb-2"><strong>📍 Lieu :</strong> {{ event.location }}</p>
+              <p class="text-muted small mb-0">
+                {{ event.description|truncatewords:20|default:"Aucune description." }}
+              </p>
+            </div>
+            <div class="text-center pb-4">
+              <a href="{% url 'event_details' e.get_type_display e.id %}" class="btn-neon view mt-2">
+                🔍 Voir les détails
+              </a>
+            </div>
+          </div>
         </div>
-    {% empty %}
-        <p class="text-muted text-center">Aucun événement pour le moment</p>
-    {% endfor %}
-</div>
+      {% empty %}
+        <div class="text-center mt-5">
+          <p class="text-muted fs-5">😕 Aucun événement pour le moment.</p>
+          <a href="{% url 'add_event' %}" class="btn-neon create mt-3">
+            ➕ Créer le premier événement
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+/* === STYLE HARMONISÉ AVEC LE DASHBOARD === */
+.text-gradient {
+  background: linear-gradient(90deg, #00bcd4, #007bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.event-card-glow {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.event-card-glow:hover {
+  box-shadow: 0 0 25px var(--accent, #6a5acd);
+  transform: translateY(-5px);
+}
+
+.event-header {
+  background: linear-gradient(90deg, var(--accent), transparent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.event-body {
+  padding: 1.5rem 1.8rem;
+  color: #ccc;
+}
+
+/* === Boutons néon === */
+.btn-neon {
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: transparent;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.btn-neon:hover {
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 0 12px currentColor;
+  transform: translateY(-2px);
+}
+.btn-neon.create { color: #00e676; }
+.btn-neon.view { color: #00bcd4; }
+.btn-neon.neutral { color: #9e9e9e; }
+
+.text-muted { color: #aaa !important; }
+</style>
 {% endblock %}

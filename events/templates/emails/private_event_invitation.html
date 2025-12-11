@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation à {{ event.title }}</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #4a6fa5 0%, #3a5a80 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .content {
+            padding: 25px;
+        }
+        .event-details {
+            background-color: #f5f7fa;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .event-details p {
+            margin: 8px 0;
+            color: #4a5568;
+        }
+        .event-details strong {
+            color: #2d3748;
+        }
+        .qrcode-container {
+            text-align: center;
+            margin: 25px 0;
+            padding: 20px 0;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .qrcode-container img {
+            max-width: 200px;
+            height: auto;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 10px;
+            background: white;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #4a6fa5;
+            color: white !important;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-weight: 600;
+            margin: 15px 0;
+            text-align: center;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #718096;
+            font-size: 14px;
+        }
+        .note {
+            font-size: 14px;
+            color: #718096;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎉 Vous êtes invité(e) !</h1>
+        </div>
+        
+        <div class="content">
+            <p>Bonjour,</p>
+            <p>Vous avez été invité(e) à participer à l'événement :</p>
+            
+            <div class="event-details">
+                <h2 style="margin-top: 0; color: #2d3748;">{{ event.title }}</h2>
+                <p><strong>📅 Date :</strong> {{ event.date|date:"l d F Y" }} à {{ event.date|time:"H:i" }}</p>
+                <p><strong>📍 Lieu :</strong> {{ event.location }}</p>
+                {% if event.description %}
+                <p><strong>📝 Description :</strong> {{ event.description|truncatewords:30 }}</p>
+                {% endif %}
+            </div>
+
+            <div class="qrcode-container">
+                <p>Scannez ce QR code avec votre appareil mobile pour confirmer votre présence :</p>
+                <img src="cid:qrcode" alt="QR Code d'invitation">
+                <p style="font-size: 12px; color: #718096;">Ou cliquez sur le bouton ci-dessous</p>
+            </div>
+
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="{{ rsvp_url }}" class="cta-button">
+                    Confirmer ma présence
+                </a>
+            </div>
+
+            <p class="note">
+                <strong>Note :</strong> Ce QR code est unique et personnel. Ne le partagez pas avec d'autres personnes.
+            </p>
+        </div>
+        
+        <div class="footer">
+            <p>Cet email a été envoyé par <strong>Smart Event</strong>.</p>
+            <p>© {% now "Y" %} Smart Event. Tous droits réservés.</p>
+        </div>
+    </div>
+</body>
+</html>

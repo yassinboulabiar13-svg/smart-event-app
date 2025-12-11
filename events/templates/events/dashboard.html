@@ -1,40 +1,546 @@
 {% extends 'events/base.html' %}
+{% load static %}
+{% load custom_tags %}
 
-{% block title %}Dashboard{% endblock %}
+{% block title %}Tableau de bord{% endblock %}
+{% block hero_title %}Mon Tableau de Bord{% endblock %}
 
 {% block content %}
-<h1 class="mb-4 text-center">📊 Tableau de bord</h1>
+<section class="dashboard-section py-5">
+  <div class="container">
 
-{% if event_data %}
-<div class="row g-4">
-    {% for item in event_data %}
-    <div class="col-md-6">
-        <div class="card shadow-sm h-100">
-            <div class="card-body">
-                <h5 class="card-title text-primary">{{ item.event.title }}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">{{ item.event.date|date:"d/m/Y H:i" }}</h6>
-                <p class="card-text mt-2">{{ item.event.description }}</p>
-                <p><strong>📍 Lieu :</strong> {{ item.event.location }}</p>
-                <p><strong>✉️ Invités :</strong> {{ item.event.guests_emails }}</p>
-
-                <hr>
-                <h6 class="fw-bold mb-2">Statistiques :</h6>
-                <ul class="list-group list-group-flush mb-3">
-                    <li class="list-group-item">✅ Accepté : <strong>{{ item.accepted }}</strong></li>
-                    <li class="list-group-item">❌ Refusé : <strong>{{ item.declined }}</strong></li>
-                    <li class="list-group-item">⏳ En attente : <strong>{{ item.pending }}</strong></li>
-                </ul>
-
-                <div class="text-center">
-                    <p class="fw-bold">QR Code :</p>
-                    <img src="data:image/png;base64,{{ item.qr_code }}" alt="QR Code" class="img-fluid">
-                </div>
-            </div>
+    <!-- Filtres -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="filter-buttons">
+          <a href="?type=all" class="btn btn-filter {% if event_type == 'all' %}active{% endif %}">
+            📋 Tous les événements
+          </a>
+          <a href="?type=private" class="btn btn-filter {% if event_type == 'private' %}active{% endif %}">
+            🔒 Événements privés
+          </a>
+          <a href="?type=public" class="btn btn-filter {% if event_type == 'public' %}active{% endif %}">
+            🌍 Événements publics
+          </a>
         </div>
+        <p class="text-muted mt-2">
+          Affichage : 
+          {% if event_type == 'private' %}Événements privés
+          {% elif event_type == 'public' %}Événements publics
+          {% else %}Tous les événements
+          {% endif %}
+        </p>
+      </div>
     </div>
-    {% endfor %}
-</div>
-{% else %}
-<div class="alert alert-info text-center">Aucun événement pour le moment.</div>
-{% endif %}
+
+    <!-- 👑 ÉVÉNEMENTS ORGANISÉS -->
+    <div class="dashboard-card mb-5">
+      <div class="card-header-primary">
+        <i class="fas fa-crown me-2"></i>Événements que j'organise
+        <span class="badge bg-primary ms-2">{{ created_events|length }}</span>
+      </div>
+      <div class="card-body">
+        {% if created_events %}
+          <div class="row">
+            {% for event in created_events %}
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="event-card">
+                  <!-- Image de l'événement -->
+                  <div class="event-image-container">
+                    {% if event.image %}
+                      <img src="{{ event.image.url }}" class="event-image" alt="{{ event.title }}">
+                    {% else %}
+                      <div class="event-image-placeholder">
+                        <i class="fas fa-calendar-alt fa-3x"></i>
+                        <span>{{ event.title }}</span>
+                      </div>
+                    {% endif %}
+                    <div class="event-type-badge {% if event.event_type == 'public' %}public{% else %}private{% endif %}">
+                      {% if event.event_type == 'public' %}
+                        <i class="fas fa-globe me-1"></i>Public
+                      {% else %}
+                        <i class="fas fa-lock me-1"></i>Privé
+                      {% endif %}
+                    </div>
+                  </div>
+
+                  <div class="event-content">
+                    <h5 class="event-title">
+                      <a href="{% url 'event_detail' event.event_type event.id %}">{{ event.title }}</a>
+                    </h5>
+                    <div class="event-meta">
+                      <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        {{ event.date|date:"d/m/Y H:i" }}
+                      </div>
+                      <div class="meta-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        {{ event.location }}
+                      </div>
+                      {% if event.event_type == 'public' and event.is_paid %}
+                        <div class="meta-item">
+                          <i class="fas fa-tag"></i>
+                          {{ event.price }} DT
+                        </div>
+                      {% endif %}
+                    </div>
+                    
+                    <div class="event-actions mt-3">
+                      <a href="{% url 'event_detail' event.event_type event.id %}" class="btn btn-primary btn-sm">
+                        <i class="fas fa-eye"></i> Voir
+                      </a>
+                      {% if event.event_type == 'public' %}
+                        <a href="{% url 'edit_public_event' event.id %}" class="btn btn-outline-secondary btn-sm">
+                          <i class="fas fa-edit"></i> Modifier
+                        </a>
+                      {% else %}
+                        <a href="{% url 'edit_private_event' event.id %}" class="btn btn-outline-secondary btn-sm">
+                          <i class="fas fa-edit"></i> Modifier
+                        </a>
+                      {% endif %}
+                      <a href="{% url 'delete_event' event.id %}" class="btn btn-outline-danger btn-sm">
+                        <i class="fas fa-trash"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          <div class="empty-state">
+            <i class="fas fa-calendar-plus fa-3x mb-3"></i>
+            <h5>Aucun événement organisé</h5>
+            <p>Créez votre premier événement pour commencer !</p>
+            <div class="mt-3">
+              <a href="{% url 'add_private_event' %}" class="btn btn-primary me-2">
+                <i class="fas fa-plus"></i> Événement privé
+              </a>
+              <a href="{% url 'add_public_event' %}" class="btn btn-success">
+                <i class="fas fa-plus"></i> Événement public
+              </a>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- 💌 INVITATIONS EN ATTENTE -->
+    <div class="dashboard-card mb-5">
+      <div class="card-header-warning">
+        <i class="fas fa-envelope me-2"></i>Invitations en attente
+        <span class="badge bg-warning ms-2">{{ pending_events|length }}</span>
+      </div>
+      <div class="card-body">
+        {% if pending_events %}
+          <div class="row">
+            {% for event in pending_events %}
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="event-card pending">
+                  <div class="event-image-container">
+                    {% if event.image %}
+                      <img src="{{ event.image.url }}" class="event-image" alt="{{ event.title }}">
+                    {% else %}
+                      <div class="event-image-placeholder">
+                        <i class="fas fa-calendar-alt fa-3x"></i>
+                        <span>{{ event.title }}</span>
+                      </div>
+                    {% endif %}
+                    <div class="event-status-badge pending">
+                      <i class="fas fa-clock me-1"></i>En attente
+                    </div>
+                  </div>
+
+                  <div class="event-content">
+                    <h5 class="event-title">
+                      <a href="{% url 'event_detail' event.event_type event.id %}">{{ event.title }}</a>
+                    </h5>
+                    <div class="event-meta">
+                      <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        {{ event.date|date:"d/m/Y H:i" }}
+                      </div>
+                      <div class="meta-item">
+                        <i class="fas fa-user"></i>
+                        Organisé par {{ event.owner.username }}
+                      </div>
+                    </div>
+                    
+                    <div class="event-actions mt-3">
+                      <a href="{% url 'rsvp' guest_tokens|get_item:event.id %}" class="btn btn-warning btn-sm">
+                        <i class="fas fa-reply"></i> Répondre
+                      </a>
+                      <a href="{% url 'event_detail' event.event_type event.id %}" class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-info-circle"></i> Détails
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          <div class="empty-state">
+            <i class="fas fa-inbox fa-3x mb-3"></i>
+            <h5>Aucune invitation en attente</h5>
+            <p>Les invitations que vous recevrez apparaîtront ici.</p>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- 🎉 ÉVÉNEMENTS ACCEPTÉS -->
+    <div class="dashboard-card mb-5">
+      <div class="card-header-success">
+        <i class="fas fa-check-circle me-2"></i>Événements acceptés
+        <span class="badge bg-success ms-2">{{ attending_events|length }}</span>
+      </div>
+      <div class="card-body">
+        {% if attending_events %}
+          <div class="row">
+            {% for event in attending_events %}
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="event-card accepted">
+                  <div class="event-image-container">
+                    {% if event.image %}
+                      <img src="{{ event.image.url }}" class="event-image" alt="{{ event.title }}">
+                    {% else %}
+                      <div class="event-image-placeholder">
+                        <i class="fas fa-calendar-alt fa-3x"></i>
+                        <span>{{ event.title }}</span>
+                      </div>
+                    {% endif %}
+                    <div class="event-status-badge accepted">
+                      <i class="fas fa-check me-1"></i>Accepté
+                    </div>
+                    {% if event.event_type == 'public' and event.is_paid %}
+                      <div class="event-paid-badge">
+                        <i class="fas fa-tag me-1"></i>Payant
+                      </div>
+                    {% endif %}
+                  </div>
+
+                  <div class="event-content">
+                    <h5 class="event-title">
+                      <a href="{% url 'event_detail' event.event_type event.id %}">{{ event.title }}</a>
+                    </h5>
+                    <div class="event-meta">
+                      <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        {{ event.date|date:"d/m/Y H:i" }}
+                      </div>
+                      <div class="meta-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        {{ event.location }}
+                      </div>
+                      {% if event.event_type == 'public' and event.is_paid %}
+                        <div class="meta-item">
+                          <i class="fas fa-tag"></i>
+                          {{ event.price }} DT
+                        </div>
+                      {% endif %}
+                    </div>
+                    
+                    <div class="event-actions mt-3">
+                      <a href="{% url 'event_detail' event.event_type event.id %}" class="btn btn-success btn-sm">
+                        <i class="fas fa-eye"></i> Voir
+                      </a>
+                      {% if event.date > now %}
+                        <a href="{% url 'rsvp' guest_tokens|get_item:event.id %}" class="btn btn-outline-warning btn-sm">
+                          <i class="fas fa-sync-alt"></i> Modifier
+                        </a>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          <div class="empty-state">
+            <i class="fas fa-calendar-check fa-3x mb-3"></i>
+            <h5>Aucun événement accepté</h5>
+            <p>Les événements que vous acceptez apparaîtront ici.</p>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- ❌ ÉVÉNEMENTS REFUSÉS -->
+    <div class="dashboard-card mb-5">
+      <div class="card-header-danger">
+        <i class="fas fa-times-circle me-2"></i>Événements refusés
+        <span class="badge bg-danger ms-2">{{ declined_events|length }}</span>
+      </div>
+      <div class="card-body">
+        {% if declined_events %}
+          <div class="row">
+            {% for event in declined_events %}
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="event-card declined">
+                  <div class="event-image-container">
+                    {% if event.image %}
+                      <img src="{{ event.image.url }}" class="event-image" alt="{{ event.title }}">
+                    {% else %}
+                      <div class="event-image-placeholder">
+                        <i class="fas fa-calendar-alt fa-3x"></i>
+                        <span>{{ event.title }}</span>
+                      </div>
+                    {% endif %}
+                    <div class="event-status-badge declined">
+                      <i class="fas fa-times me-1"></i>Refusé
+                    </div>
+                  </div>
+
+                  <div class="event-content">
+                    <h5 class="event-title">
+                      <a href="{% url 'event_detail' event.event_type event.id %}" class="text-muted">{{ event.title }}</a>
+                    </h5>
+                    <div class="event-meta">
+                      <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        {{ event.date|date:"d/m/Y H:i" }}
+                      </div>
+                      <div class="meta-item">
+                        <i class="fas fa-user"></i>
+                        Organisé par {{ event.owner.username }}
+                      </div>
+                    </div>
+                    
+                    <div class="event-actions mt-3">
+                      {% if event.date > now %}
+                        <a href="{% url 'rsvp' guest_tokens|get_item:event.id %}" class="btn btn-outline-primary btn-sm">
+                          <i class="fas fa-redo"></i> Reconsidérer
+                        </a>
+                      {% endif %}
+                      <a href="{% url 'event_detail' event.event_type event.id %}" class="btn btn-outline-secondary btn-sm">
+                        <i class="fas fa-info-circle"></i> Détails
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          <div class="empty-state">
+            <i class="fas fa-calendar-times fa-3x mb-3"></i>
+            <h5>Aucun événement refusé</h5>
+            <p>Les événements que vous refusez apparaîtront ici.</p>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.dashboard-section {
+  background: rgba(0,0,0,0.85);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 0 25px rgba(138,95,255,0.15);
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-filter {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-filter:hover,
+.btn-filter.active {
+  background: rgba(138,95,255,0.3);
+  border-color: #8a5fff;
+  box-shadow: 0 0 15px rgba(138,95,255,0.5);
+}
+
+.dashboard-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 0 30px rgba(138,95,255,0.3);
+}
+
+.card-header-primary,
+.card-header-warning,
+.card-header-success,
+.card-header-danger {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.card-header-primary { background: linear-gradient(90deg, #007bff, transparent); }
+.card-header-warning { background: linear-gradient(90deg, #ff9800, transparent); }
+.card-header-success { background: linear-gradient(90deg, #4caf50, transparent); }
+.card-header-danger { background: linear-gradient(90deg, #e91e63, transparent); }
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.event-card {
+  background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  border-color: rgba(138,95,255,0.5);
+}
+
+.event-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover .event-image {
+  transform: scale(1.05);
+}
+
+.event-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.event-image-placeholder span {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.event-type-badge,
+.event-status-badge,
+.event-paid-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+.event-type-badge.public { background: rgba(33,150,243,0.9); color: white; }
+.event-type-badge.private { background: rgba(255,152,0,0.9); color: white; }
+.event-status-badge.pending { background: rgba(255,152,0,0.9); color: white; }
+.event-status-badge.accepted { background: rgba(76,175,80,0.9); color: white; }
+.event-status-badge.declined { background: rgba(233,30,99,0.9); color: white; }
+.event-paid-badge { background: rgba(156,39,176,0.9); color: white; top: 45px; }
+
+.event-content {
+  padding: 1.25rem;
+}
+
+.event-title {
+  margin-bottom: 0.75rem;
+}
+
+.event-title a {
+  color: #b0b9ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.event-title a:hover {
+  color: #fff;
+}
+
+.event-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.meta-item i {
+  width: 16px;
+  text-align: center;
+}
+
+.event-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.empty-state {
+  text-align: center;
+  color: #777;
+  padding: 3rem 1rem;
+}
+
+.empty-state i {
+  opacity: 0.5;
+}
+
+.empty-state h5 {
+  margin: 1rem 0 0.5rem;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filter-buttons {
+    justify-content: center;
+  }
+  
+  .event-actions {
+    justify-content: center;
+  }
+  
+  .event-card {
+    margin-bottom: 1rem;
+  }
+}
+</style>
 {% endblock %}

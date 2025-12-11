@@ -1,0 +1,110 @@
+{% extends 'events/base.html' %}
+{% load static %}
+
+{% block title %}Paiement - {{ event.title }}{% endblock %}
+{% block hero_title %}Paiement de l'Événement{% endblock %}
+
+{% block content %}
+<section class="py-5">
+  <div class="container">
+
+    <div class="event-card-glow mb-5">
+      <div class="event-header" style="--accent:#fbc02d;">
+        <h2 class="fw-bold mb-0">
+          <i class="fas fa-credit-card me-2"></i>Paiement pour : {{ event.title }}
+        </h2>
+
+        <div class="event-meta-header">
+          <span class="meta-item price-tag">
+            {{ event.price }} DT
+          </span>
+        </div>
+      </div>
+
+      <div class="event-body">
+        <p class="mb-4">
+          Veuillez saisir les informations de votre carte pour confirmer votre participation.
+        </p>
+
+        <form method="post" class="payment-form">
+          {% csrf_token %}
+          {% if form %}
+            <div class="row g-3">
+              <div class="col-12">{{ form.card_holder.label_tag }}{{ form.card_holder }}</div>
+              <div class="col-12">{{ form.card_number.label_tag }}{{ form.card_number }}</div>
+              <div class="col-md-6">{{ form.expiry_date.label_tag }}{{ form.expiry_date }}</div>
+              <div class="col-md-6">{{ form.cvv.label_tag }}{{ form.cvv }}</div>
+              <div class="col-12">{{ form.amount.label_tag }}{{ form.amount }}</div>
+            </div>
+            <button class="btn btn-warning btn-lg w-100 mt-3"> <i class="fas fa-lock me-2"></i>Payer {{ event.price }} DT </button>
+          {% else %}
+            <!-- Fallback simple inputs if form missing -->
+            <div class="mb-3">
+              <label class="form-label">Nom sur la carte</label>
+              <input type="text" name="card_holder" class="form-control" placeholder="Votre nom complet" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Numéro de carte</label>
+              <input type="text" name="card_number" class="form-control" placeholder="1234 5678 9012 3456" required>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Expiration</label>
+                <input type="text" name="expiry_date" class="form-control" placeholder="MM/AA" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">CVV</label>
+                <input type="text" name="cvv" class="form-control" placeholder="123" required>
+              </div>
+            </div>
+            <button class="btn btn-warning btn-lg w-100 mt-3"> <i class="fas fa-lock me-2"></i>Payer {{ event.price }} DT </button>
+          {% endif %}
+        </form>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="{% url 'event_detail' 'public' event.id %}" class="btn btn-outline-primary">
+        <i class="fas fa-arrow-left me-2"></i>Retour à l'événement
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+/* Utilise les mêmes styles globaux que tes autres pages : */
+.payment-form input {
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.event-card-glow {
+  background: white;
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: 0 0 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.event-header {
+  background: linear-gradient(90deg, var(--accent), #ffd54f);
+  padding: 20px 25px;
+  color: white;
+  border-bottom: 3px solid rgba(255,255,255,0.4);
+}
+
+.event-body {
+  padding: 30px;
+}
+
+.price-tag {
+  background: rgba(0,0,0,0.2);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+}
+</style>
+
+{% endblock %}

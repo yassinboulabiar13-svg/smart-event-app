@@ -1,0 +1,210 @@
+{% extends 'events/base.html' %}
+
+{% block title %}Statistiques - Smart Event{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-5">📊 Tableau de bord statistique</h1>
+    
+    <!-- Cartes de statistiques -->
+    <div class="row mb-5">
+        <div class="col-md-4 mb-4">
+            <div class="card bg-dark text-white border-primary">
+                <div class="card-body text-center">
+                    <h2 class="display-4">{{ total_utilisateurs }}</h2>
+                    <p class="card-text">Utilisateurs inscrits</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card bg-dark text-white border-success">
+                <div class="card-body text-center">
+                    <h2 class="display-4">{{ total_evenements }}</h2>
+                    <p class="card-text">Événements créés</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card bg-dark text-white border-info">
+                <div class="card-body text-center">
+                    <h2 class="display-4">{{ total_participations }}</h2>
+                    <p class="card-text">Participations totales</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Graphique d'évolution des événements -->
+    <div class="card bg-dark border-light mb-5">
+        <div class="card-header">
+            <h3>📈 Évolution des événements par mois</h3>
+        </div>
+        <div class="card-body">
+            <canvas id="eventsChart" height="100"></canvas>
+        </div>
+    </div>
+
+    <!-- Derniers événements -->
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card bg-dark border-light h-100">
+                <div class="card-header">
+                    <h3>🎯 Événements à venir</h3>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-dark table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Événement</th>
+                                    <th>Date</th>
+                                    <th>Participants</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for event in evenements_a_venir %}
+                                <tr>
+                                    <td>{{ event.title }}</td>
+                                    <td>{{ event.date|date:"d/m/Y" }}</td>
+                                    <td>{{ event.participants_count }}/{{ event.max_participants|default:"∞" }}</td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="3" class="text-center">Aucun événement à venir</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <div class="card bg-dark border-light h-100">
+                <div class="card-header">
+                    <h3>🏆 Top événements</h3>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-dark table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Événement</th>
+                                    <th>Date</th>
+                                    <th>Participants</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for event in top_evenements %}
+                                <tr>
+                                    <td>{{ event.title }}</td>
+                                    <td>{{ event.date|date:"d/m/Y" }}</td>
+                                    <td>{{ event.participants_count }} participants</td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="3" class="text-center">Aucun événement avec des participants</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Données pour le graphique
+    const ctx = document.getElementById('eventsChart');
+    if (ctx) {
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: {{ mois|safe }},
+                datasets: [{
+                    label: 'Événements créés',
+                    data: {{ evenements_par_mois|safe }},
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1,
+                    fill: true,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            color: '#fff'
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        ticks: {
+                            color: '#fff'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        ticks: {
+                            color: '#fff',
+                            stepSize: 1
+                        }
+                    }
+                }
+            }
+        });
+    }
+});
+</script>
+
+<style>
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.table {
+    color: #fff;
+}
+
+.table th, .table td {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.display-4 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+</style>
+{% endblock %}

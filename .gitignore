@@ -15,3 +15,12 @@ media/
 # VSCode / IDE
 .vscode/
 .idea/
+
+# Fichiers sensibles
+.env
+*.env.local
+*.env.production
+
+# Fichiers de sauvegarde
+*.bak
+*.backup

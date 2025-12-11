@@ -1,0 +1,632 @@
+{% extends 'events/base.html' %}
+{% load static %}
+{% load custom_tags %}
+{% load widget_tweaks %}
+
+{% block title %}{{ event.title }}{% endblock %}
+{% block hero_title %}Détails de l'Événement{% endblock %}
+
+{% block content %}
+<section class="py-5">
+  <div class="container">
+
+    <!-- Image principale -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <div class="event-image-main">
+          {% if event.image %}
+            <img src="{{ event.image.url }}" class="event-main-image" alt="{{ event.title }}">
+          {% else %}
+            <div class="event-image-placeholder-main">
+              <i class="fas fa-calendar-alt fa-5x"></i>
+              <h3>{{ event.title }}</h3>
+            </div>
+          {% endif %}
+
+          <div class="event-header-overlay">
+            <div class="event-type-badge-main {% if event_type == 'public' %}public{% else %}private{% endif %}">
+              {% if event_type == 'public' %}
+                <i class="fas fa-globe me-2"></i>Événement Public
+              {% else %}
+                <i class="fas fa-lock me-2"></i>Événement Privé
+              {% endif %}
+              {% if event_type == 'public' and not event.is_paid %}
+                <span class="price-badge">Gratuit</span>
+              {% elif event_type == 'public' and event.is_paid %}
+                <span class="price-badge">{{ event.price|default:"0.00" }} DT</span>
+              {% endif %}
+            </div>
+
+            {% if event.owner == request.user %}
+              <div class="owner-badge">
+                <i class="fas fa-crown me-1"></i>Organisateur
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carte principale -->
+    <div class="event-card-glow mb-5">
+      <div class="event-header" style="--accent:#00bcd4;">
+        <h2 class="fw-bold mb-0">{{ event.title }}</h2>
+        <div class="event-meta-header">
+          <span class="meta-item">
+            <i class="fas fa-user me-1"></i>Organisé par {{ event.owner.username }}
+          </span>
+          {% if event_type == 'public' %}
+          <span class="meta-item price-tag">
+            {% if not event.is_paid %}
+              Gratuit
+            {% else %}
+              {{ event.price|default:"0.00" }} DT
+            {% endif %}
+          </span>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="event-body">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="info-grid">
+              <div class="info-item">
+                <div class="info-icon"><i class="fas fa-calendar"></i></div>
+                <div class="info-content">
+                  <strong>Date et heure</strong>
+                  <p>{{ event.date|date:"l d F Y" }} à {{ event.date|date:"H:i" }}</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="info-content">
+                  <strong>Lieu</strong>
+                  <p>{{ event.location }}</p>
+                </div>
+              </div>
+
+              {% if event.online_link %}
+              <div class="info-item">
+                <div class="info-icon"><i class="fas fa-link"></i></div>
+                <div class="info-content">
+                  <strong>Lien en ligne</strong>
+                  <p><a href="{{ event.online_link }}" target="_blank">{{ event.online_link }}</a></p>
+                </div>
+              </div>
+              {% endif %}
+
+              {% if event.description %}
+              <div class="info-item full-width">
+                <div class="info-icon"><i class="fas fa-file-alt"></i></div>
+                <div class="info-content">
+                  <strong>Description</strong>
+                  <p class="event-description">{{ event.description|linebreaks }}</p>
+                </div>
+              </div>
+              {% endif %}
+            </div>
+
+            <!-- Bouton participation + formulaire paiement -->
+            <div class="mt-4">
+              {% if event_type == 'private' %}
+                {% if not user_has_joined %}
+                  <a href="{% url 'join_event' event.id %}" class="btn btn-success btn-lg">
+                    <i class="fas fa-check-circle me-2"></i>Je participe à cet événement
+                  </a>
+                {% else %}
+                  <span class="text-success fw-bold">Vous participez déjà à cet événement</span>
+                {% endif %}
+              {% elif event_type == 'public' %}
+                {% if not event.is_paid %}
+                  {% if not user_has_joined %}
+                  <a href="{% url 'join_public_event' event.id %}" class="btn btn-success btn-lg">
+                    <i class="fas fa-check-circle me-2"></i>Je participe à cet événement
+                  </a>
+                  {% else %}
+                  <span class="text-success fw-bold">Vous participez déjà à cet événement</span>
+                  {% endif %}
+                {% else %}
+                  {% if request.user.is_authenticated %}
+                    <!-- Bouton pour afficher formulaire paiement -->
+                    <button id="showPaymentBtn" class="btn btn-warning btn-lg">
+                      <i class="fas fa-credit-card me-2"></i>Payer {{ event.price }} DT
+                    </button>
+
+                    <!-- Formulaire de paiement caché (utilise les noms du MockPaymentForm) -->
+                    <form method="POST" id="paymentForm" class="payment-form mt-4" style="display:none;">
+                      {% if payment_form %}
+                        {% csrf_token %}
+                        <div class="row">
+                          {% for field in payment_form %}
+                            <div class="col-12 mb-3">
+                              <label class="form-label">{{ field.label }}</label>
+                              {{ field|add_class:"form-control" }}
+                              {% if field.help_text %}
+                                <small class="form-text text-muted">{{ field.help_text }}</small>
+                              {% endif %}
+                              {% for error in field.errors %}
+                                <div class="invalid-feedback d-block">{{ error }}</div>
+                              {% endfor %}
+                            </div>
+                          {% endfor %}
+                        </div>
+
+                        <button type="submit" class="btn btn-warning btn-lg w-100">
+                          <i class="fas fa-lock me-2"></i>Payer {{ event.price|default:"0.00" }} DT
+                        </button>
+                      {% else %}
+                        <div class="alert alert-success">
+                          <i class="fas fa-check-circle me-2"></i>
+                          Vous avez déjà payé pour cet événement.
+                        </div>
+                      {% endif %}
+                    </form>
+                  {% else %}
+                    <div class="alert alert-info">
+                      <i class="fas fa-info-circle me-2"></i>
+                      Connectez-vous pour effectuer le paiement.
+                    </div>
+                  {% endif %}
+                {% endif %}
+              {% endif %}
+            </div>
+
+          </div>
+
+          <div class="col-lg-4">
+            <div class="action-sidebar">
+              <h5 class="sidebar-title">Actions</h5>
+              {% if event.owner == request.user and event.date > now %}
+                <a href="{% url 'edit_public_event' event.id %}" class="btn btn-primary btn-block mb-2">
+                  <i class="fas fa-edit me-2"></i>Modifier
+                </a>
+                <a href="{% url 'delete_event' event.id %}" class="btn btn-outline-danger btn-block">
+                  <i class="fas fa-trash me-2"></i>Supprimer
+                </a>
+              {% endif %}
+              <div class="sidebar-info mt-4">
+                <div class="info-card">
+                  <h6><i class="fas fa-info-circle me-2"></i>Statut</h6>
+                  {% if event.date > now %}
+                    <span class="badge bg-success">À venir</span>
+                  {% else %}
+                    <span class="badge bg-secondary">Terminé</span>
+                  {% endif %}
+                  <p class="mb-0 small text-muted">Créé le {{ event.created_at|date:"d/m/Y" }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Liste des participants -->
+    <div class="card mb-4 border-0 shadow-sm">
+      <div class="card-header bg-white d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">
+          <i class="fas fa-users me-2 text-primary"></i>
+          Liste des participants
+          <span class="badge bg-primary rounded-pill ms-2">
+            {% if participants %}{% if participants.paginator %}{{ participants.paginator.count }}{% else %}{{ participants|length }}{% endif %}{% else %}0{% endif %}
+          </span>
+        </h5>
+        <div class="d-flex align-items-center">
+          <span class="badge bg-success me-2">
+            <i class="fas fa-check-circle me-1"></i> {{ total_accepted|default:0 }} Inscrits
+          </span>
+          {% if event.is_paid %}
+          <span class="badge bg-warning text-dark">
+            <i class="fas fa-euro-sign me-1"></i> {{ total_paid|default:0 }} Payés
+          </span>
+          {% endif %}
+        </div>
+      </div>
+      
+      <div class="card-body p-0">
+        {% if not participants %}
+        <div class="text-center p-5 bg-light rounded">
+          <i class="fas fa-users-slash fa-3x text-muted mb-3"></i>
+          <p class="text-muted mb-0">
+            {% if event.is_paid %}
+              Aucun participant n'a encore payé pour cet événement.
+            {% else %}
+              Aucun participant n'est encore inscrit à cet événement.
+            {% endif %}
+          </p>
+        </div>
+        {% else %}
+        <div class="participants-grid">
+          {% for participant in participants %}
+          <div class="participant-card card mb-3">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <div class="flex-shrink-0 me-3">
+                  {% if participant.user and participant.user.userprofile.avatar %}
+                    <img src="{{ participant.user.userprofile.avatar.url }}" alt="" class="rounded-circle" width="50" height="50">
+                  {% else %}
+                    <div class="avatar-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; border-radius: 50%;">
+                      {{ participant.user.username|first|upper|default:participant.guest.email|first|upper }}
+                    </div>
+                  {% endif %}
+                </div>
+                <div class="flex-grow-1">
+                  <h6 class="mb-0">
+                    {% if participant.user %}
+                      <a href="{% url 'user_profile' participant.user.id %}" class="text-dark text-decoration-none">
+                        {{ participant.user.get_full_name|default:participant.user.username }}
+                      </a>
+                    {% else %}
+                      {{ participant.guest.email }}
+                    {% endif %}
+                    {% if participant.user == event.owner %}
+                      <span class="badge bg-primary ms-2">Organisateur</span>
+                    {% endif %}
+                  </h6>
+                  <div class="text-muted small">
+                    {% if participant.user %}
+                      @{{ participant.user.username }}
+                    {% else %}
+                      <span class="badge bg-secondary">Invitée</span>
+                    {% endif %}
+                  </div>
+                  <div class="mt-2">
+                    {% if participant.is_accepted %}
+                      <span class="badge bg-success">
+                        <i class="fas fa-check-circle me-1"></i> Accepté
+                      </span>
+                    {% else %}
+                      <span class="badge bg-warning text-dark">
+                        <i class="fas fa-hourglass-half me-1"></i> En attente
+                      </span>
+                    {% endif %}
+                    
+                    {% if event.is_paid %}
+                      <span class="ms-2">
+                        {% if participant.is_paid %}
+                          <span class="badge bg-success">
+                            <i class="fas fa-check-circle me-1"></i> Payé
+                            {% if participant.guest.payment_date %}
+                              <small class="ms-1">({{ participant.guest.payment_date|date:"d/m/Y H:i" }})</small>
+                            {% endif %}
+                          </span>
+                        {% else %}
+                          <span class="badge bg-secondary">
+                            <i class="fas fa-times-circle me-1"></i> Non payé
+                          </span>
+                        {% endif %}
+                      </span>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+
+        <!-- Pagination -->
+        {% if participants.has_other_pages %}
+        <div class="card-footer bg-white border-top">
+          <nav aria-label="Pagination" class="d-flex justify-content-between align-items-center">
+            <div>
+              <p class="small text-muted mb-0">
+                Affichage de <b>{{ participants.start_index }}</b> à <b>{{ participants.end_index }}</b> sur <b>{{ participants.paginator.count }}</b> participants
+              </p>
+            </div>
+            <ul class="pagination pagination-sm mb-0">
+              {% if participants.has_previous %}
+                <li class="page-item">
+                  <a class="page-link" href="?page={{ participants.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">
+                    <i class="fas fa-chevron-left"></i>
+                  </a>
+                </li>
+              {% else %}
+                <li class="page-item disabled">
+                  <span class="page-link"><i class="fas fa-chevron-left"></i></span>
+                </li>
+              {% endif %}
+
+              {% for num in participants.paginator.page_range %}
+                {% if participants.number == num %}
+                  <li class="page-item active"><span class="page-link">{{ num }}</span></li>
+                {% elif num > participants.number|add:'-3' and num < participants.number|add:'3' %}
+                  <li class="page-item">
+                    <a class="page-link" href="?page={{ num }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">{{ num }}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+
+              {% if participants.has_next %}
+                <li class="page-item">
+                  <a class="page-link" href="?page={{ participants.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">
+                    <i class="fas fa-chevron-right"></i>
+                  </a>
+                </li>
+              {% else %}
+                <li class="page-item disabled">
+                  <span class="page-link"><i class="fas fa-chevron-right"></i></span>
+                </li>
+              {% endif %}
+            </ul>
+          </nav>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% if user_participation and not participants %}
+    <!-- Carte de participation de l'utilisateur -->
+    <div class="event-card-glow mb-5">
+      <div class="event-header" style="--accent:#4caf50;">
+        <i class="fas fa-user-check me-2"></i>Votre participation
+      </div>
+      <div class="event-body">
+        <div class="guests-grid">
+          <div class="guest-card">
+            <div class="guest-avatar">
+              {% if user_participation.user.userprofile.profile_picture %}
+                <img src="{{ user_participation.user.userprofile.profile_picture.url }}" class="avatar-img" alt="">
+              {% else %}
+                <div class="avatar-placeholder">{{ user_participation.user.username|first|upper }}</div>
+              {% endif %}
+            </div>
+            <div class="guest-info">
+              <strong class="guest-name">{{ user_participation.user.username }}</strong>
+              <small class="text-muted">{{ user_participation.user.email }}</small>
+              <div class="d-flex gap-2 mt-2">
+                <div class="badge {% if user_participation.is_accepted %}bg-success{% else %}bg-secondary{% endif %}">
+                  {% if user_participation.is_accepted %}Accepté{% else %}En attente{% endif %}
+                </div>
+                <div class="badge {% if user_participation.is_rsvp %}bg-primary{% else %}bg-secondary{% endif %}">
+                  {% if user_participation.is_rsvp %}RSVP{% else %}—{% endif %}
+                </div>
+                <div class="badge {% if user_participation.is_paid %}bg-warning text-dark{% else %}bg-secondary{% endif %}">
+                  {% if user_participation.is_paid %}Payé{% else %}—{% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="text-center mt-5">
+      <a href="{% url 'dashboard' %}" class="btn btn-outline-primary btn-lg">
+        <i class="fas fa-arrow-left me-2"></i>Retour au tableau de bord
+      </a>
+    </div>
+  </div>
+
+  <!-- Script pour afficher le formulaire paiement -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Gestion de l'affichage du formulaire de paiement
+      const showPaymentBtn = document.getElementById('showPaymentBtn');
+      const paymentForm = document.getElementById('paymentForm');
+
+      if (showPaymentBtn && paymentForm) {
+        showPaymentBtn.addEventListener('click', function() {
+          paymentForm.style.display = 'block';
+          this.style.display = 'none';
+          // Faire défiler jusqu'au formulaire
+          paymentForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      }
+
+      // Formatage du numéro de carte
+      const cardNumberInput = document.querySelector('input[name="card_number"]');
+      if (cardNumberInput) {
+        cardNumberInput.addEventListener('input', function(e) {
+          let value = e.target.value.replace(/\s+/g, '');
+          if (value.length > 0) {
+            value = value.match(new RegExp('.{1,4}', 'g')).join(' ');
+          }
+          e.target.value = value;
+        });
+      }
+
+      // Formatage de la date d'expiration
+      const expiryDateInput = document.querySelector('input[name="expiry_date"]');
+      if (expiryDateInput) {
+        expiryDateInput.addEventListener('input', function(e) {
+          let value = e.target.value.replace(/\D/g, '');
+          if (value.length > 2) {
+            value = value.substring(0, 2) + '/' + value.substring(2, 4);
+          }
+          e.target.value = value;
+        });
+      }
+
+      // Validation du formulaire avant soumission
+      const paymentFormElement = document.getElementById('paymentForm');
+      if (paymentFormElement) {
+        paymentFormElement.addEventListener('submit', function(e) {
+          const cardNumber = document.querySelector('input[name="card_number"]').value.replace(/\s+/g, '');
+          const expiryDate = document.querySelector('input[name="expiry_date"]').value;
+          const cvv = document.querySelector('input[name="cvv"]').value;
+          const cardHolder = document.querySelector('input[name="card_holder"]').value;
+          
+          if (cardNumber.length < 13 || cardNumber.length > 19) {
+            e.preventDefault();
+            alert('Le numéro de carte doit contenir entre 13 et 19 chiffres');
+            return false;
+          }
+          
+          if (!/^(0[1-9]|1[0-2])\/[0-9]{2}$/.test(expiryDate)) {
+            e.preventDefault();
+            alert('Format de date d\'expiration invalide (MM/AA)');
+            return false;
+          }
+          
+          if (cvv.length < 3 || cvv.length > 4) {
+            e.preventDefault();
+            alert('Le code CVV doit contenir 3 ou 4 chiffres');
+            return false;
+          }
+          
+          if (cardHolder.trim() === '') {
+            e.preventDefault();
+            alert('Veuillez entrer le nom du titulaire de la carte');
+            return false;
+          }
+          
+          // Afficher un indicateur de chargement
+          const submitBtn = this.querySelector('button[type="submit"]');
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Traitement...';
+          }
+        });
+      }
+    });
+  </script>
+</section>
+
+<style>
+.event-image-main { position: relative; border-radius:16px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.5); height:400px; }
+.event-main-image { width:100%; height:100%; object-fit:cover; }
+.event-image-placeholder-main { width:100%; height:100%; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; color:white; text-align:center; }
+.event-header-overlay { position:absolute; top:20px; right:20px; display:flex; flex-direction:column; gap:10px; align-items:flex-end; }
+.event-type-badge-main { padding:0.5rem 1rem; border-radius:25px; font-weight:600; backdrop-filter:blur(10px); border:2px solid rgba(255,255,255,0.3); }
+.event-type-badge-main.public { background:rgba(33,150,243,0.9); color:white; }
+.event-type-badge-main.private { background:rgba(255,152,0,0.9); color:white; }
+.price-badge { background:rgba(156,39,176,0.9); padding:0.2rem 0.5rem; border-radius:12px; font-size:0.8rem; margin-left:0.5rem; }
+.owner-badge { background:rgba(255,193,7,0.9); color:#000; padding:0.4rem 0.8rem; border-radius:20px; font-weight:600; font-size:0.9rem; }
+.info-grid { display:flex; flex-direction:column; gap:1rem; }
+.info-item { display:flex; align-items:flex-start; gap:1rem; padding:1rem; background:rgba(255,255,255,0.03); border-radius:10px; border:1px solid rgba(255,255,255,0.1); }
+.info-item.full-width { flex-direction:column; }
+.info-icon { width:40px; height:40px; background:rgba(0,188,212,0.2); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#00bcd4; flex-shrink:0; }
+.info-content strong { color:#b0b9ff; display:block; margin-bottom:0.25rem; }
+.info-content p { margin:0; color:#ddd; }
+.action-sidebar { background: rgba(255,255,255,0.03); border-radius:12px; padding:1.5rem; border:1px solid rgba(255,255,255,0.1); }
+.sidebar-title { color:#b0b9ff; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:0.75rem; margin-bottom:1rem; }
+.btn-block { width:100%; display:block; }
+.guests-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:1rem; }
+.guest-card { display:flex; align-items:center; gap:1rem; padding:1rem; background:rgba(255,255,255,0.03); border-radius:10px; border:1px solid rgba(255,255,255,0.1); transition:all 0.3s ease; }
+.guest-card:hover { background:rgba(255,255,255,0.05); transform:translateY(-2px); }
+.guest-avatar { width:50px; height:50px; border-radius:50%; overflow:hidden; flex-shrink:0; }
+.avatar-img { width:100%; height:100%; object-fit:cover; }
+.avatar-placeholder { width:100%; height:100%; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:1.2rem; }
+.guest-info { flex:1; }
+.guest-name { color:#fff; display:block; margin-bottom:0.25rem; }
+.guest-status-badge { padding:0.25rem 0.5rem; border-radius:8px; font-size:0.75rem; font-weight:600; }
+.guest-status-badge.accepted { background:rgba(76,175,80,0.2); color:#4caf50; border:1px solid rgba(76,175,80,0.3); }
+.guest-status-badge.declined { background:rgba(233,30,99,0.2); color:#e91e63; border:1px solid rgba(233,30,99,0.3); }
+.guest-status-badge.pending { background:rgba(255,152,0,0.2); color:#ff9800; border:1px solid rgba(255,152,0,0.3); }
+.price-tag { background:rgba(156,39,176,0.2); color:#9c27b0; padding:0.3rem 0.6rem; border-radius:8px; font-weight:600; }
+.payment-form input { border-radius: 10px; padding: 12px; }
+
+/* Styles pour la liste des participants */
+.participants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.participant-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #e0e0e0;
+}
+
+.participant-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.participant-card .card-body {
+  padding: 1.25rem;
+}
+
+.avatar-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.avatar-circle-sm {
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+/* Amélioration des badges */
+.badge {
+  font-weight: 500;
+  padding: 0.35em 0.65em;
+  font-size: 0.85em;
+}
+
+.badge i {
+  font-size: 0.9em;
+  margin-right: 0.25em;
+}
+
+/* Style pour le formulaire de paiement */
+.payment-form {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border: 1px solid #e9ecef;
+}
+
+.payment-form .form-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #495057;
+}
+
+/* Style pour les messages d'alerte */
+.alert {
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+}
+
+.alert i {
+  margin-right: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .participants-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .participant-card {
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width:768px) { 
+  .event-header-overlay { position:static; flex-direction:row; justify-content:space-between; margin-top:1rem; } 
+  .guests-grid { grid-template-columns:1fr; } 
+  .info-item { flex-direction:column; text-align:center; } 
+}
+</style>
+{% endblock %}

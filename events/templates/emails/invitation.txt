@@ -1,0 +1,12 @@
+Bonjour,
+
+Vous êtes invité·e à {{ event.title }}.
+
+Date : {{ event.date|date:"d/m/Y H:i" }}
+Lieu : {{ event.location }}
+
+Pour répondre (Accepter / Refuser), cliquez ici :
+{{ rsvp_url }}
+
+Cordialement,
+{{ site_name }}

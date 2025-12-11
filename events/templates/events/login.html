@@ -1,27 +1,108 @@
 {% extends 'events/base.html' %}
-
 {% block title %}Connexion{% endblock %}
+{% load widget_tweaks %}
+
+{% block hero_title %}🔐 Connexion{% endblock %}
 
 {% block content %}
-<h2 class="text-center mb-4">🔑 Connexion</h2>
+<section class="d-flex justify-content-center align-items-center min-vh-100">
+  <div class="login-card text-center p-5 rounded-4">
+    <h2 class="fw-bold mb-4 text-gradient">🔐 Connexion à Smart Event</h2>
+    <form method="post" class="text-start">
+      {% csrf_token %}
 
-<div class="row justify-content-center">
-    <div class="col-md-4">
-        <form method="post" class="card p-4 shadow-sm">
-            {% csrf_token %}
-            <div class="mb-3">
-                <label class="form-label">Nom d'utilisateur</label>
-                <input type="text" name="username" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Mot de passe</label>
-                <input type="password" name="password" class="form-control" required>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Se connecter</button>
-        </form>
-        <p class="text-center mt-2">
-            <a href="{% url 'register' %}">Créer un compte</a>
-        </p>
-    </div>
-</div>
+      <!-- Nom d'utilisateur -->
+      <div class="mb-4">
+        <label for="username" class="form-label text-light fw-semibold">Nom d'utilisateur</label>
+        <input type="text" name="username" id="username" class="form-control form-control-lg input-neon"
+               placeholder="Entrez votre nom d'utilisateur" required>
+      </div>
+
+      <!-- Mot de passe -->
+      <div class="mb-4">
+        <label for="password" class="form-label text-light fw-semibold">Mot de passe</label>
+        <input type="password" name="password" id="password" class="form-control form-control-lg input-neon"
+               placeholder="Entrez votre mot de passe" required>
+      </div>
+
+      <!-- Bouton -->
+      <div class="d-grid mt-4">
+        <button type="submit" class="btn-neon w-100 py-3">
+          🚀 Se connecter
+        </button>
+      </div>
+    </form>
+
+    <p class="text-muted mt-4 mb-0">
+      Vous n'avez pas encore de compte ?
+      <a href="{% url 'register' %}" class="link-neon">Créer un compte</a>
+    </p>
+  </div>
+</section>
+
+<style>
+/* === STYLE FUTURISTE === */
+.login-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 0 25px rgba(0, 123, 255, 0.2);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #00bcd4, #007bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.input-neon {
+  background-color: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.input-neon:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 10px #00bcd4;
+  background-color: rgba(255,255,255,0.12);
+}
+
+.btn-neon {
+  background: linear-gradient(90deg, #007bff, #00bcd4);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.btn-neon:hover {
+  box-shadow: 0 0 20px #00bcd4;
+  transform: translateY(-2px);
+}
+
+.link-neon {
+  color: #00bcd4;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.link-neon:hover {
+  color: #80deea;
+}
+
+/* Animation douce */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
 {% endblock %}

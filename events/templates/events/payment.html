@@ -1,0 +1,31 @@
+{% extends 'events/base.html' %}
+{% block title %}Paiement - {{ event.title }}{% endblock %}
+{% block hero_title %}Paiement pour {{ event.title }}{% endblock %}
+
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <h3>Informations de paiement</h3>
+    <form method="post">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="country">Pays :</label>
+        <input type="text" name="country" id="country" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="card_number">Numéro de carte :</label>
+        <input type="text" name="card_number" id="card_number" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="expiration">Date d’expiration :</label>
+        <input type="text" name="expiration" id="expiration" class="form-control" placeholder="MM/AA" required>
+      </div>
+      <div class="mb-3">
+        <label for="cvv">CVV :</label>
+        <input type="text" name="cvv" id="cvv" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Payer maintenant</button>
+    </form>
+  </div>
+</section>
+{% endblock %}

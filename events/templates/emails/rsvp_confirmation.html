@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation de votre réponse - {{ event.title }}</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 25px;
+        }
+        .header h1 {
+            color: #2c3e50;
+            margin: 0;
+            font-size: 24px;
+        }
+        .content {
+            margin-bottom: 30px;
+        }
+        .event-details {
+            background-color: #f5f7fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .event-details h2 {
+            color: #2c3e50;
+            margin-top: 0;
+            font-size: 20px;
+        }
+        .info-item {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .info-item i {
+            margin-right: 10px;
+            color: #3498db;
+            width: 20px;
+            text-align: center;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin: 15px 0;
+            text-align: center;
+            width: fit-content;
+        }
+        .status-accepted {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+        .status-declined {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #3498db;
+            color: white !important;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin: 15px 0;
+        }
+        .logo {
+            max-width: 180px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Confirmation de votre réponse</h1>
+        </div>
+        
+        <div class="content">
+            <p>Bonjour,</p>
+            
+            <p>Nous vous confirmons que votre réponse à l'invitation pour l'événement a bien été enregistrée.</p>
+            
+            <div class="status-badge {% if status_display == 'acceptée' %}status-accepted{% else %}status-declined{% endif %}">
+                Votre réponse : {{ status_display|upper }}
+            </div>
+            
+            <div class="event-details">
+                <h2>Détails de l'événement</h2>
+                
+                <div class="info-item">
+                    <i>📌</i>
+                    <span><strong>Événement :</strong> {{ event.title }}</span>
+                </div>
+                
+                <div class="info-item">
+                    <i>📅</i>
+                    <span><strong>Date :</strong> {{ event.date|date:"l d F Y à H:i" }}</span>
+                </div>
+                
+                <div class="info-item">
+                    <i>📍</i>
+                    <span><strong>Lieu :</strong> {{ event.location }}</span>
+                </div>
+                
+                {% if event.description %}
+                <div class="info-item">
+                    <i>📝</i>
+                    <span><strong>Description :</strong> {{ event.description }}</span>
+                </div>
+                {% endif %}
+            </div>
+            
+            <p>Merci d'avoir répondu à cette invitation. Votre réponse a bien été enregistrée.</p>
+            
+            {% if status_display == 'acceptée' %}
+            <p>Nous avons hâte de vous voir à l'événement !</p>
+            {% else %}
+            <p>Nous regrettons que vous ne puissiez pas être des nôtres cette fois-ci.</p>
+            {% endif %}
+            
+            <p>Pour toute question, n'hésitez pas à répondre à cet email.</p>
+        </div>
+        
+        <div class="footer">
+            <p>© {{ current_year }} {{ site_name }}. Tous droits réservés.</p>
+            <p>
+                <a href="{{ request.scheme }}://{{ request.get_host }}" style="color: #3498db; text-decoration: none;">
+                    Accéder à {{ site_name }}
+                </a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

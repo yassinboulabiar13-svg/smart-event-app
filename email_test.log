@@ -1,0 +1,66 @@
+2025-12-09 19:48:19,044 - email_test - INFO - Début du test d'envoi d'email
+2025-12-09 19:48:20,425 - email_test - ERROR - Erreur lors de l'envoi de l'email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b79f4498ed9sm1463991266b.16 - gsmtp')
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event - Copie\test_email.py", line 26, in <module>
+    result = send_mail(
+        'Test d\'envoi depuis Smart Event',
+    ...<3 lines>...
+        fail_silently=False,
+    )
+  File "C:\Users\ovic\AppData\Local\Programs\Python\Python314\Lib\site-packages\django\core\mail\__init__.py", line 92, in send_mail
+    return mail.send()
+           ~~~~~~~~~^^
+  File "C:\Users\ovic\AppData\Local\Programs\Python\Python314\Lib\site-packages\django\core\mail\message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\ovic\AppData\Local\Programs\Python\Python314\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\ovic\AppData\Local\Programs\Python\Python314\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\AppData\Local\Programs\Python\Python314\Lib\smtplib.py", line 762, in login
+    raise last_exception
+  File "C:\Users\ovic\AppData\Local\Programs\Python\Python314\Lib\smtplib.py", line 751, in login
+    (code, resp) = self.auth(
+                   ~~~~~~~~~^
+        authmethod, getattr(self, method_name),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        initial_response_ok=initial_response_ok)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\AppData\Local\Programs\Python\Python314\Lib\smtplib.py", line 669, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b79f4498ed9sm1463991266b.16 - gsmtp')
+2025-12-09 19:48:58,776 - email_test - INFO - Début du test d'envoi d'email
+2025-12-09 19:49:00,219 - email_test - ERROR - Erreur lors de l'envoi de l'email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-647b2eda768sm14446210a12.8 - gsmtp')
+Traceback (most recent call last):
+  File "C:\Users\ovic\smart_event - Copie\test_email.py", line 26, in <module>
+    result = send_mail(
+        'Test d\'envoi depuis Smart Event',
+    ...<3 lines>...
+        fail_silently=False,
+    )
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\mail\__init__.py", line 92, in send_mail
+    return mail.send()
+           ~~~~~~~~~^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\mail\message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\ovic\smart_event\venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\ovic\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ~~~~~~~~~^
+        authmethod, getattr(self, method_name),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        initial_response_ok=initial_response_ok)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ovic\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-647b2eda768sm14446210a12.8 - gsmtp')
+2025-12-09 20:23:08,435 - email_test - INFO - Début du test d'envoi d'email
+2025-12-09 20:23:08,449 - email_test - INFO - Email envoyé avec succès ! Résultat: 1

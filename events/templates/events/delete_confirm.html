@@ -1,0 +1,81 @@
+{% extends 'events/base.html' %}
+{% load widget_tweaks %}
+
+{% block title %}Supprimer un événement{% endblock %}
+{% block hero_title %}Supprimer un Événement{% endblock %}
+
+{% block content %}
+<section class="py-5 d-flex align-items-center justify-content-center">
+  <div class="delete-card p-5 text-center">
+    <!-- Icône d'avertissement -->
+    <div class="warning-icon mb-4 mx-auto">
+      <i class="bi bi-exclamation-triangle"></i>
+    </div>
+
+    <h3 class="text-danger fw-bold mb-3">Supprimer l'événement</h3>
+    <p class="text-light mb-4">
+      Êtes-vous sûr de vouloir supprimer l'événement<br>
+      <strong class="text-warning">“{{ event.title }}”</strong> ?
+    </p>
+
+    <!-- Formulaire de confirmation -->
+    <form method="post" class="d-flex justify-content-center gap-3">
+      {% csrf_token %}
+      <button type="submit" class="btn-neon danger px-4 py-2">
+        <i class="bi bi-trash"></i> Oui, supprimer
+      </button>
+      <a href="{% url 'dashboard' %}" class="btn-neon neutral px-4 py-2">
+        Annuler
+      </a>
+    </form>
+  </div>
+</section>
+
+<style>
+/* === STYLE SUPPRESSION === */
+
+.delete-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.15);
+  max-width: 600px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+.delete-card:hover {
+  box-shadow: 0 0 35px rgba(255, 0, 0, 0.3);
+}
+
+.warning-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff4c4c;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+/* Boutons */
+.btn-neon {
+  padding: 0.6rem 1.4rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-neon:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px currentColor;
+}
+.btn-neon.danger { color: #ff4c4c; }
+.btn-neon.neutral { color: #aaa; }
+</style>
+{% endblock %}

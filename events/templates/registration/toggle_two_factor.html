@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Paramètres de sécurité{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">
+                        <i class="fas fa-shield-alt me-2"></i>Paramètres de sécurité
+                    </h4>
+                </div>
+                <div class="card-body">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                    <div class="mb-4">
+                        <h5 class="border-bottom pb-2 mb-3">
+                            <i class="fas fa-lock me-2"></i>Authentification à deux facteurs (2FA)
+                        </h5>
+                        
+                        <form method="post" class="needs-validation" novalidate>
+                            {% csrf_token %}
+                            
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="form-check form-switch me-3">
+                                    {{ form.enable_2fa }}
+                                    <label class="form-check-label" for="{{ form.enable_2fa.id_for_label }}">
+                                        {% if two_fa_enabled %}
+                                            <span class="text-success">Activée</span>
+                                        {% else %}
+                                            <span class="text-muted">Désactivée</span>
+                                        {% endif %}
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-sm {% if two_fa_enabled %}btn-outline-danger{% else %}btn-outline-primary{% endif %}">
+                                    {% if two_fa_enabled %}
+                                        <i class="fas fa-times me-1"></i>Désactiver
+                                    {% else %}
+                                        <i class="fas fa-check me-1"></i>Activer
+                                    {% endif %}
+                                </button>
+                            </div>
+                            
+                            <div class="form-text">
+                                <i class="fas fa-info-circle me-1"></i>
+                                L'authentification à deux facteurs ajoute une couche de sécurité supplémentaire à votre compte 
+                                en exigeant un code de vérification à chaque connexion.
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="alert alert-info">
+                        <h6><i class="fas fa-question-circle me-2"></i>Comment ça marche ?</h6>
+                        <ul class="mb-0">
+                            <li>Activez l'authentification à deux facteurs pour améliorer la sécurité de votre compte.</li>
+                            <li>Un code de vérification vous sera envoyé par email à chaque connexion.</li>
+                            <li>Vous devrez entrer ce code pour accéder à votre compte.</li>
+                            <li>Le code est valable 15 minutes et ne peut être utilisé qu'une seule fois.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer bg-light">
+                    <a href="{% url 'profile' %}" class="btn btn-outline-secondary">
+                        <i class="fas fa-arrow-left me-1"></i>Retour au profil
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block extra_js %}
+<script>
+// Script pour mettre à jour le texte du bouton en fonction de l'état du toggle
+const toggleSwitch = document.getElementById('{{ form.enable_2fa.id_for_label }}');
+const toggleButton = document.querySelector('button[type="submit"]');
+const toggleLabel = document.querySelector(`label[for="{{ form.enable_2fa.id_for_label }}"] span`);
+
+if (toggleSwitch) {
+    toggleSwitch.addEventListener('change', function() {
+        if (this.checked) {
+            toggleButton.classList.remove('btn-outline-danger');
+            toggleButton.classList.add('btn-outline-primary');
+            toggleButton.innerHTML = '<i class="fas fa-check me-1"></i>Activer';
+            toggleLabel.textContent = 'Désactivée';
+            toggleLabel.className = 'text-muted';
+        } else {
+            toggleButton.classList.remove('btn-outline-primary');
+            toggleButton.classList.add('btn-outline-danger');
+            toggleButton.innerHTML = '<i class="fas fa-times me-1"></i>Désactiver';
+            toggleLabel.textContent = 'Activée';
+            toggleLabel.className = 'text-success';
+        }
+    });
+}
+</script>
+{% endblock %}
+
+{% endblock %}

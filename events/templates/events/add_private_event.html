@@ -1,0 +1,159 @@
+{% extends 'events/base.html' %}
+{% load widget_tweaks %}
+
+{% block title %}Créer un événement privé{% endblock %}
+{% block hero_title %}➕ Créer un nouvel événement privé{% endblock %}
+
+{% block content %}
+<section class="dashboard-section py-5">
+  <div class="container">
+    <div class="event-card-glow p-4 mb-5">
+      <div class="event-header" style="--accent:#00bcd4;">➕ Créer un événement privé</div>
+
+      <div class="event-body">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+
+        <form method="POST" novalidate>
+          {% csrf_token %}
+
+          <!-- Titre -->
+          <div class="mb-3">
+            <label class="form-label text-light fw-bold">Titre de l’événement</label>
+            {{ form.title|add_class:"form-control-dark" }}
+            {% if form.title.errors %}
+              <div class="text-danger">{{ form.title.errors }}</div>
+            {% endif %}
+          </div>
+
+          <!-- Description -->
+          <div class="mb-3">
+            <label class="form-label text-light fw-bold">Description</label>
+            {{ form.description|add_class:"form-control-dark" }}
+            {% if form.description.errors %}
+              <div class="text-danger">{{ form.description.errors }}</div>
+            {% endif %}
+          </div>
+
+          <!-- Date et heure -->
+          <div class="mb-3">
+            <label for="{{ form.date.id_for_label }}" class="form-label text-light fw-bold">Date et heure</label>
+            <input type="datetime-local" name="{{ form.date.name }}" id="{{ form.date.id_for_label }}" 
+                   class="form-control-dark" value="{{ form.date.value|default:'' }}">
+            {% if form.date.errors %}
+              <div class="text-danger">{{ form.date.errors }}</div>
+            {% endif %}
+          </div>
+
+          <!-- Lieu -->
+          <div class="mb-3">
+            <label class="form-label text-light fw-bold">Lieu</label>
+            {{ form.location|add_class:"form-control-dark" }}
+            {% if form.location.errors %}
+              <div class="text-danger">{{ form.location.errors }}</div>
+            {% endif %}
+          </div>
+
+          <!-- Invités -->
+          <!-- Invités -->
+<div class="mb-3">
+  <label for="{{ form.guests_emails.id_for_label }}" class="form-label text-light fw-bold">
+    Invités (emails séparés par des virgules)
+  </label>
+  <textarea name="guests_emails" id="{{ form.guests_emails.id_for_label }}" rows="3"
+            class="form-control-dark"
+            placeholder="alice@gmail.com, bob@yahoo.fr">{{ form.guests_emails.value|default:'' }}</textarea>
+  {% if form.guests_emails.errors %}
+    <div class="text-danger">{{ form.guests_emails.errors }}</div>
+  {% endif %}
+</div>
+
+
+          <!-- Boutons -->
+          <div class="text-center mt-4">
+            <button type="submit" class="btn-neon edit px-4 py-2">💾 Créer l’événement</button>
+            <a href="{% url 'dashboard' %}" class="btn-neon neutral px-4 py-2 ms-2">⬅ Annuler</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* === Style Dashboard / futuriste cohérent === */
+.dashboard-section {
+  background: rgba(0,0,0,0.85);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 0 25px rgba(138,95,255,0.15);
+}
+
+.event-card-glow {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.event-card-glow:hover {
+  box-shadow: 0 0 30px var(--accent, #6a5acd);
+}
+
+.event-header {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.event-body {
+  padding: 1.5rem;
+}
+
+/* Champs formulaire */
+.form-control-dark {
+  width: 100%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  transition: all 0.3s ease;
+}
+.form-control-dark:focus {
+  background: rgba(255,255,255,0.15);
+  border-color: #00bcd4;
+  box-shadow: 0 0 10px #00bcd4;
+  outline: none;
+}
+
+/* Boutons */
+.btn-neon {
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-neon:hover {
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 0 12px currentColor;
+}
+.btn-neon.edit { color: #00bcd4; }
+.btn-neon.neutral { color: #9e9e9e; }
+
+/* Texte et labels */
+label.form-label {
+  font-size: 1rem;
+}
+.text-danger { color: #ff6b6b !important; }
+</style>
+{% endblock %}

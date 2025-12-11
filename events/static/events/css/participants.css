@@ -1,0 +1,120 @@
+/* Style pour la liste des participants */
+.avatar-circle-sm {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: #4e73df;
+    color: white;
+}
+
+/* Style pour les cartes d'événements */
+.event-card {
+    border: none;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Style pour les en-têtes de carte */
+.card-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 1.25rem 1.5rem;
+    background-color: #fff;
+}
+
+/* Style pour le tableau des participants */
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    border-top: none;
+    border-bottom: 1px solid #e3e6f0;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #5a5c69;
+    padding: 1rem 1.5rem;
+}
+
+.table tbody td {
+    padding: 1rem 1.5rem;
+    vertical-align: middle;
+    border-top: 1px solid #e3e6f0;
+}
+
+/* Style pour les badges de statut */
+.badge {
+    font-weight: 500;
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    letter-spacing: 0.5px;
+}
+
+/* Style pour la pagination */
+.pagination {
+    margin-bottom: 0;
+}
+
+.page-link {
+    color: #4e73df;
+    border: 1px solid #e3e6f0;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+.page-item.active .page-link {
+    background-color: #4e73df;
+    border-color: #4e73df;
+}
+
+.page-link:hover {
+    color: #224abe;
+    background-color: #eaecf4;
+    border-color: #e3e6f0;
+}
+
+/* Style pour les messages d'information */
+.alert-info {
+    background-color: #f8f9fc;
+    border-color: #e3e6f0;
+    color: #5a5c69;
+}
+
+/* Style pour les avatars des participants */
+.avatar-participant {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Style pour les lignes du tableau au survol */
+.table-hover tbody tr:hover {
+    background-color: #f8f9fc;
+}
+
+/* Style pour le pied de page de la carte */
+.card-footer {
+    background-color: #fff;
+    border-top: 1px solid #e3e6f0;
+    padding: 1rem 1.5rem;
+}
+
+/* Style pour les boutons d'action */
+.btn-action {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 0.2rem;
+}

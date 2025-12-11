@@ -1,11 +1,62 @@
-{% extends 'base.html' %}
+{% extends 'events/base.html' %}
+{% block title %}Réponse envoyée{% endblock %}
+{% load widget_tweaks %}
 
-{% block title %}RSVP{% endblock %}
+{% block hero_title %}📩 Réponse envoyée{% endblock %}
 
 {% block content %}
-<div class="text-center">
-    <h1 class="mb-4">🎉 Merci pour votre réponse !</h1>
-    <p>{{ message }}</p>
-    <a href="/" class="btn btn-primary mt-3">Retour à la page d'accueil</a>
-</div>
+<section class="d-flex justify-content-center align-items-center py-5">
+  <div class="container" style="max-width: 600px;">
+    <div class="card-glass text-center p-5 rounded-4 shadow-lg">
+      <h3 class="fw-bold text-gradient mb-4">✅ Réponse enregistrée</h3>
+
+      {% if response_message %}
+        <p class="fs-5 text-success mb-3">{{ response_message }}</p>
+      {% else %}
+        <p class="fs-5 text-success mb-3">Merci pour votre réponse 📨</p>
+      {% endif %}
+
+      <p class="text-muted mb-4">
+        Votre réponse a été enregistrée avec succès.<br>
+        Vous pouvez consulter vos événements depuis votre tableau de bord.
+      </p>
+
+      <a href="{% url 'dashboard' %}" class="btn-neon rounded-pill px-5 py-2">
+        ⬅ Retour au tableau de bord
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ✨ Effet vitre et néon futuriste */
+.card-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+.card-glass:hover {
+  box-shadow: 0 0 25px rgba(0, 188, 212, 0.3);
+  transform: translateY(-3px);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #00bcd4, #007bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-neon {
+  background: linear-gradient(90deg, #007bff, #00bcd4);
+  color: white;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+}
+.btn-neon:hover {
+  box-shadow: 0 0 20px #00bcd4;
+  transform: translateY(-2px);
+}
+</style>
 {% endblock %}

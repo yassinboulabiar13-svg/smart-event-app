@@ -1,0 +1,123 @@
+{% extends 'events/base.html' %}
+{% load widget_tweaks %}
+{% block title %}Modifier mon profil{% endblock %}
+{% block hero_title %}Modifier mon Profil{% endblock %}
+
+{% block content %}
+<section class="py-5 d-flex justify-content-center align-items-center">
+  <div class="profile-card p-5 text-light">
+    <div class="profile-header mb-4">
+      <h3 class="fw-bold mb-0"><i class="bi bi-person-circle me-2"></i>Modifier mon profil</h3>
+    </div>
+
+    <form method="POST" enctype="multipart/form-data" novalidate>
+      {% csrf_token %}
+
+      <!-- 🔤 Nom d'utilisateur -->
+      <div class="mb-4">
+        <label for="username" class="form-label text-light fw-semibold">Nom d'utilisateur</label>
+        <input type="text" name="username" id="username"
+               value="{{ user.username }}"
+               class="form-control-dark">
+      </div>
+
+      <!-- 📧 Email -->
+      <div class="mb-4">
+        <label for="email" class="form-label text-light fw-semibold">Adresse e-mail</label>
+        <input type="email" name="email" id="email"
+               value="{{ user.email }}"
+               class="form-control-dark">
+      </div>
+
+      <hr class="border-secondary opacity-25 my-4">
+
+      <!-- 👤 Autres champs -->
+      {% for field in form %}
+      <div class="mb-4">
+        <label class="form-label text-light fw-semibold">{{ field.label }}</label>
+        {{ field|add_class:"form-control-dark" }}
+        {% if field.help_text %}
+          <small class="text-muted d-block mt-1">{{ field.help_text }}</small>
+        {% endif %}
+        {% for error in field.errors %}
+          <div class="text-danger small mt-1">{{ error }}</div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+
+      <!-- Boutons -->
+      <div class="text-center mt-5">
+        <a href="{% url 'profile' %}" class="btn-neon neutral px-4 py-2 me-2">
+          ⬅ Annuler
+        </a>
+        <button type="submit" class="btn-neon success px-4 py-2">
+          💾 Enregistrer
+        </button>
+      </div>
+
+      <input type="hidden" name="user_id" value="{{ user.id }}">
+    </form>
+  </div>
+</section>
+
+<style>
+/* === STYLE FUTURISTE (profil) === */
+
+.profile-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 0 25px rgba(0, 123, 255, 0.15);
+  transition: all 0.3s ease;
+}
+.profile-card:hover {
+  box-shadow: 0 0 35px rgba(0, 188, 212, 0.35);
+}
+
+.profile-header {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #03a9f4;
+}
+
+/* Champs */
+.form-control-dark {
+  width: 100%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+.form-control-dark:focus {
+  background: rgba(255,255,255,0.15);
+  border-color: #03a9f4;
+  box-shadow: 0 0 10px #03a9f4;
+  outline: none;
+}
+
+/* Boutons */
+.btn-neon {
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-neon:hover {
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 0 12px currentColor;
+}
+.btn-neon.success { color: #03a9f4; }
+.btn-neon.neutral { color: #9e9e9e; }
+
+.text-muted {
+  color: #aaa !important;
+}
+</style>
+{% endblock %}

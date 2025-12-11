@@ -1,0 +1,247 @@
+{% extends 'events/base.html' %}
+{% block title %}Connexion{% endblock %}
+{% load widget_tweaks %}
+
+{% block hero_title %}🔐 Connexion{% endblock %}
+
+{% block content %}
+<section class="d-flex justify-content-center align-items-center min-vh-100">
+  <div class="login-card text-center p-5 rounded-4">
+    <h2 class="fw-bold mb-4 text-gradient">🔐 Connexion à Smart Event</h2>
+    
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      {% endfor %}
+    {% endif %}
+    
+    <form method="post" class="text-start">
+      {% csrf_token %}
+      
+      {% if form.non_field_errors %}
+        <div class="alert alert-danger">
+          {% for error in form.non_field_errors %}
+            {{ error }}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <!-- Nom d'utilisateur -->
+      <div class="mb-4">
+        <label for="{{ form.username.id_for_label }}" class="form-label text-light fw-semibold">{{ form.username.label }}</label>
+        {{ form.username|add_class:"form-control form-control-lg input-neon"|attr:"placeholder:Entrez votre nom d'utilisateur"|attr:"required" }}
+        {% if form.username.errors %}
+          <div class="invalid-feedback d-block">
+            {{ form.username.errors.0 }}
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- Mot de passe -->
+      <div class="mb-4">
+        <label for="{{ form.password.id_for_label }}" class="form-label text-light fw-semibold">{{ form.password.label }}</label>
+        <div class="input-group">
+          {{ form.password|add_class:"form-control form-control-lg input-neon"|attr:"placeholder:Entrez votre mot de passe"|attr:"id:password"|attr:"required" }}
+          <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+            <i class="fas fa-eye"></i>
+          </button>
+        </div>
+        {% if form.password.errors %}
+          <div class="invalid-feedback d-block">
+            {{ form.password.errors.0 }}
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- Case à cocher Se souvenir de moi -->
+      <div class="mb-4 form-check">
+        <input type="checkbox" class="form-check-input" id="remember_me" name="remember_me">
+        <label class="form-check-label text-light" for="remember_me">Se souvenir de moi</label>
+      </div>
+
+      <!-- Bouton de connexion -->
+      <div class="d-grid mt-4">
+        <button type="submit" class="btn-neon w-100 py-3">
+          🚀 Se connecter
+        </button>
+      </div>
+    </form>
+
+    <p class="text-muted mt-4 mb-0">
+      Vous n'avez pas encore de compte ?
+      <a href="{% url 'register' %}" class="link-neon">Créer un compte</a>
+    </p>
+    
+    <p class="text-muted mt-2">
+      <a href="{% url 'password_reset' %}" class="link-neon">Mot de passe oublié ?</a>
+    </p>
+  </div>
+</section>
+
+<style>
+/* === STYLE FUTURISTE === */
+.login-card {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 0 25px rgba(0, 123, 255, 0.2);
+  animation: fadeInUp 0.8s ease forwards;
+  margin: 20px;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #00bcd4, #007bff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+}
+
+.input-neon {
+  background-color: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.input-neon:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 10px #00bcd4;
+  background-color: rgba(255,255,255,0.12);
+  color: #fff;
+}
+
+.btn-neon {
+  background: linear-gradient(90deg, #007bff, #00bcd4);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.btn-neon:hover {
+  box-shadow: 0 0 20px #00bcd4;
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.link-neon {
+  color: #00bcd4;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: 500;
+}
+
+.link-neon:hover {
+  color: #80deea;
+  text-decoration: underline;
+}
+
+/* Style pour les cases à cocher */
+.form-check-input {
+  background-color: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.form-check-input:checked {
+  background-color: #00bcd4;
+  border-color: #00bcd4;
+}
+
+.form-check-label {
+  color: #e0e0e0 !important;
+  user-select: none;
+}
+
+/* Animation douce */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Style pour les petits écrans */
+@media (max-width: 576px) {
+  .login-card {
+    padding: 1.5rem !important;
+    margin: 10px;
+  }
+  
+  .text-gradient {
+    font-size: 1.75rem;
+  }
+  
+  .btn-neon {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Afficher/masquer le mot de passe
+  const togglePassword = document.querySelector('#togglePassword');
+  const password = document.querySelector('#password');
+  
+  if (togglePassword && password) {
+    togglePassword.addEventListener('click', function() {
+      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+      password.setAttribute('type', type);
+      this.querySelector('i').classList.toggle('fa-eye');
+      this.querySelector('i').classList.toggle('fa-eye-slash');
+    });
+  }
+  
+  // Gestion du focus pour les champs
+  const formControls = document.querySelectorAll('.form-control');
+  formControls.forEach(control => {
+    control.addEventListener('focus', function() {
+      this.parentElement.classList.add('focused');
+    });
+    
+    control.addEventListener('blur', function() {
+      this.parentElement.classList.remove('focused');
+    });
+    
+    if (control.value) {
+      control.parentElement.classList.add('has-value');
+    }
+  });
+  
+  // Activer la validation des formulaires Bootstrap
+  (function () {
+    'use strict'
+    
+    // Récupérer tous les formulaires auxquels nous voulons appliquer des styles de validation Bootstrap personnalisés
+    var forms = document.querySelectorAll('.needs-validation');
+    
+    // Boucle sur les formulaires et empêcher la soumission
+    Array.prototype.slice.call(forms).forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        
+        form.classList.add('was-validated');
+      }, false);
+    });
+  })();
+});
+</script>
+{% endblock %}

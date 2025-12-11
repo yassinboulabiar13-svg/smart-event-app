@@ -1,0 +1,93 @@
+{% extends 'events/base.html' %}
+{% block title %}Déconnexion{% endblock %}
+{% load widget_tweaks %}
+
+{% block hero_title %}👋 Déconnexion réussie{% endblock %}
+
+{% block content %}
+<section class="d-flex justify-content-center align-items-center min-vh-100">
+  <div class="logout-card text-center p-5 rounded-4">
+    <div class="icon-circle mx-auto mb-4">
+      <i class="bi bi-check-circle-fill fs-1 text-success"></i>
+    </div>
+
+    <h2 class="fw-bold mb-3 text-gradient">Vous êtes déconnecté</h2>
+    <p class="text-muted mb-4">
+      Merci d’avoir utilisé <strong>Smart Event</strong>.<br>
+      À très bientôt 👋
+    </p>
+
+    <div class="d-grid gap-3">
+      <a href="{% url 'login' %}" class="btn-neon w-100 py-3">
+        🔑 Se reconnecter
+      </a>
+      <a href="{% url 'register' %}" class="btn-outline-neon w-100 py-3">
+        📝 Créer un nouveau compte
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+/* === Style futuriste cohérent === */
+.logout-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 0 25px rgba(255, 64, 129, 0.25);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.icon-circle {
+  background: rgba(255, 64, 129, 0.15);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #ff4081, #e91e63);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-neon {
+  background: linear-gradient(90deg, #007bff, #00bcd4);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.btn-neon:hover {
+  box-shadow: 0 0 20px #00bcd4;
+  transform: translateY(-2px);
+}
+
+.btn-outline-neon {
+  background: transparent;
+  border: 2px solid #ff4081;
+  color: #ff80ab;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.btn-outline-neon:hover {
+  background: #ff4081;
+  color: #fff;
+  box-shadow: 0 0 20px #ff4081;
+  transform: translateY(-2px);
+}
+
+/* Animation fluide */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+{% endblock %}
