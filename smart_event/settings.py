@@ -244,3 +244,19 @@ print(f"EMAIL_USE_TLS: {EMAIL_USE_TLS}")
 print(f"EMAIL_HOST_USER: {EMAIL_HOST_USER}")
 print(f"DEFAULT_FROM_EMAIL: {DEFAULT_FROM_EMAIL}")
 print("="*50 + "\n")
+
+# settings.py
+STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Important pour la collecte
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+# Ajoutez WhiteNoise pour la gestion des fichiers statiques
+MIDDLEWARE = [
+    # ...
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Ajoutez cette ligne
+    'django.middleware.security.SecurityMiddleware',
+    # ...
+]
+
+# Activez la compression pour les fichiers statiques
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
