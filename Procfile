@@ -1,1 +1,1 @@
-"web: gunicorn smart_event.wsgi --log-file -" 
+web: gunicorn smart_event.wsgi --log-file -
